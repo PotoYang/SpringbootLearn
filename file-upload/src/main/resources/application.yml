@@ -1,0 +1,18 @@
+server:
+  port: 8001
+  tomcat:
+    protocolHeader: x-forwarded-proto
+    remoteIpHeader: x-forwarded-for
+    basedir:
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 1000Mb
+  redis:
+    host: 127.0.0.1
+    port: 6379
+# 配置上传文件夹及分片大小
+upload:
+  dir: D:/data/uploads/
+  chunkSize: 5242880
