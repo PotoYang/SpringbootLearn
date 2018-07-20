@@ -2,6 +2,7 @@ package com.potoyang.learn.fileupload.service.impl;
 
 import com.potoyang.learn.fileupload.config.Constants;
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
+import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.service.FileUploadService;
 import com.potoyang.learn.fileupload.util.FileMD5Util;
 import org.apache.commons.io.FileUtils;
@@ -21,6 +22,7 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * Created with Intellij IDEA.
@@ -132,6 +134,7 @@ public class FileUploadServiceImpl implements FileUploadService {
                 inputChannel.close();
                 input.close();
                 new File(uploadDirPath + "/" + i).delete();
+                i++;
             } while (i < param.getChunk());
             targetChannel.close();
             output.close();
@@ -183,4 +186,15 @@ public class FileUploadServiceImpl implements FileUploadService {
         }
     }
 
+    @Override
+    public List<FileCheckEntity> checkDirExist(List<FileCheckEntity> dirCheckEntities) {
+        dirCheckEntities.forEach(map -> map.setIsFileExist(1));
+        return dirCheckEntities;
+    }
+
+    @Override
+    public List<FileCheckEntity> checkFileExist(List<FileCheckEntity> fileCheckEntities) {
+        fileCheckEntities.forEach(map -> map.setIsFileExist(1));
+        return fileCheckEntities;
+    }
 }

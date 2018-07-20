@@ -18,13 +18,23 @@
     <div id="thelist" class="uploader-list"></div>
 </div>
 <!--引入JS-->
-<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/webuploader.min.js"></script>
+<script src="/js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="js/webuploader.js"></script>
 <script>
     var $btn = $('#ctlBtn');
     var $thelist = $('#thelist');
     var chunkSize = 5 * 1024 * 1024;
     var state = 'pending';//初始按钮状态
+
+    var dirCheckArray = [];
+    var fileCheckArray = [];
+
+    var flag = 0;
+
+    function FileCheck(fileName, isFileExist) {
+        this.fileName = fileName;
+        this.isFileExist = isFileExist;
+    }
 
     // HOOK 这个必须要再uploader实例化前面
     WebUploader.Uploader.register({
@@ -121,18 +131,65 @@
         fileSingleSizeLimit: 1024 * 1024 * 1024    // 1G
     });
 
+    //当文件被加入队列之前触发
+    uploader.on('beforeFileQueued', function (file) {
+        console.log("beforeFileQueued");
+        // 发起对服务器校验接口的访问，用于前端去重
+        // 第一阶段:单个文件夹选择
+        if (!flag) {
+            dirCheckArray.push(new FileCheck(file.source.source.webkitRelativePath.split("\/")[0], 0));
+            flag = 1;
+        }
+        fileCheckArray.push(new FileCheck(file.name, 0));
+    });
+
     // 当有文件被添加进队列的时候
-    uploader.on('fileQueued', function (file) {
-        console.log("fileQueued");
-        $thelist.append('<div id="' + file.id + '" class="item">' +
-            '<h4 class="info">' + file.name + '</h4>' +
-            '<p class="state">等待上传...</p>' +
-            '</div>');
+    uploader.on('filesQueued', function (files) {
+        console.log("filesQueued");
+
+        console.log(JSON.stringify(dirCheckArray));
+        console.log(JSON.stringify(fileCheckArray));
+
+        $.post("upload/checkExist",
+            {
+                dirCheckArray: JSON.stringify(dirCheckArray),
+                fileCheckArray: JSON.stringify(fileCheckArray)
+            },
+            function (data) {
+                dirCheckArray.splice(0, dirCheckArray.length);
+                fileCheckArray.splice(0, fileCheckArray.length);
+                flag = 0;
+                dirCheckArray.push(new FileCheck(data.data[0].fileName, data.data[0].isFileExist));
+                for (var i = 1; i < data.data.length; i++) {
+                    fileCheckArray.push(new FileCheck(data.data[i].fileName, data.data[i].isFileExist));
+                }
+                console.log(JSON.stringify(dirCheckArray));
+                console.log(JSON.stringify(fileCheckArray));
+            }
+        );
+
+        for (var i = 0; i < files.length; i++) {
+            $thelist.append('<div id="' + files[i].id + '" class="item">' +
+                '<h4 class="info">' + dirCheckArray[0].fileName + '/' + fileCheckArray[i].fileName + fileCheckArray[i].isFileExist + '</h4>' +
+                '<p class="state">等待上传...</p>' +
+                '</div>');
+        }
+
+        dirCheckArray.splice(0, dirCheckArray.length);
+        fileCheckArray.splice(0, fileCheckArray.length);
+        flag = 0;
     });
 
     //当某个文件的分块在发送前触发，主要用来询问是否要添加附带参数，大文件在开起分片上传的前提下此事件可能会触发多次。
     uploader.onUploadBeforeSend = function (obj, data) {
         console.log("onUploadBeforeSend");
+
+        // 如果是webkitdirectory控件选择的文件，会包含webkitRelativePath属性，添加进formData发送
+        console.log(obj);//打印此对象，可以查看webkitRelativePath值
+        data.relativepath = obj.file.source.source.webkitRelativePath ? obj.file.source.source.webkitRelativePath : '';
+        console.log("webkitRelativePath:" + data.relativepath);
+
+
         var file = obj.file;
         data.md5 = file.md5 || '';
         data.uid = file.uid;

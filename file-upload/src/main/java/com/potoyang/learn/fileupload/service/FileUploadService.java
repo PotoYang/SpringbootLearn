@@ -1,8 +1,10 @@
 package com.potoyang.learn.fileupload.service;
 
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
+import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created with Intellij IDEA.
@@ -39,4 +41,20 @@ public interface FileUploadService {
      * @throws IOException
      */
     void uploadFileByMappedByteBuffer(MultipartFileParam param) throws IOException;
+
+    /**
+     * 检测节目名是否存在
+     *
+     * @param dirCheckEntities
+     * @return
+     */
+    List<FileCheckEntity> checkDirExist(List<FileCheckEntity> dirCheckEntities);
+
+    /**
+     * 检测视频文件是否已经存在
+     *
+     * @param fileCheckEntities
+     * @return
+     */
+    List<FileCheckEntity> checkFileExist(List<FileCheckEntity> fileCheckEntities);
 }

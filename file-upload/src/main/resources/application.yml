@@ -12,7 +12,6 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-# 配置上传文件夹及分片大小
 upload:
   dir: D:/data/uploads/
   chunkSize: 5242880

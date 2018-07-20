@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringbootLearn.iml" filepath="$PROJECT_DIR$/SpringbootLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-upload/file-upload.iml" filepath="$PROJECT_DIR$/file-upload/file-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-oauth2/security-oauth2.iml" filepath="$PROJECT_DIR$/security-oauth2/security-oauth2.iml" />
     </modules>
   </component>
 </project>

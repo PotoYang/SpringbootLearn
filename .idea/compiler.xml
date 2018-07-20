@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="file-upload" />
+        <module name="security-oauth2" />
         <module name="SpringbootLearn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="file-upload" target="1.8" />
+      <module name="security-oauth2" target="1.8" />
       <module name="SpringbootLearn" target="1.5" />
     </bytecodeTargetLevel>
   </component>
