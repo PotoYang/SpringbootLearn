@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/file-upload/src/main/java/com/potoyang/learn/fileupload/config/gen.sql" dialect="MySQL" />
+    <file url="PROJECT" dialect="Sybase" />
+  </component>
+  <component name="SqlResolveMappings">
+    <file url="PROJECT" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;data-source&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@name&quot;:&quot;8db102e4-5b1a-4488-ba1b-5d411f78e9d4&quot;,     &quot;@quoted&quot;:&quot;1&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@name&quot;:&quot;test&quot;,       &quot;@quoted&quot;:&quot;1&quot;      }     }    }   }  } }}" />
+  </component>
+</project>

@@ -3,6 +3,8 @@ package com.potoyang.learn.fileupload.service.impl;
 import com.potoyang.learn.fileupload.config.Constants;
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
+import com.potoyang.learn.fileupload.entity.UserInfo;
+import com.potoyang.learn.fileupload.mapper.UserInfoMapper;
 import com.potoyang.learn.fileupload.service.FileUploadService;
 import com.potoyang.learn.fileupload.util.FileMD5Util;
 import org.apache.commons.io.FileUtils;
@@ -21,7 +23,6 @@ import java.nio.channels.WritableByteChannel;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -36,17 +37,24 @@ import java.util.List;
 public class FileUploadServiceImpl implements FileUploadService {
     private final Logger logger = LoggerFactory.getLogger(FileUploadServiceImpl.class);
     private Path rootPath;
-    private final StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    private UserInfoMapper userInfoMapper;
 
     @Value("${upload.chunkSize}")
     private static long CHUNK_SIZE;
     @Value("${upload.dir}")
     private String finalDirPath;
 
-    @Autowired
-    public FileUploadServiceImpl(@Value("${upload.dir}") String location, StringRedisTemplate stringRedisTemplate) {
-        this.rootPath = Paths.get(location);
-        this.stringRedisTemplate = stringRedisTemplate;
+    @Override
+    public String checkPermission(Integer userId) {
+        UserInfo userInfo = userInfoMapper.selectByPrimaryKey(userId);
+        if (null != userInfo) {
+            return userInfo.getPassword();
+        } else {
+            return "没有权限";
+        }
     }
 
     @Override
@@ -188,7 +196,7 @@ public class FileUploadServiceImpl implements FileUploadService {
 
     @Override
     public List<FileCheckEntity> checkDirExist(List<FileCheckEntity> dirCheckEntities) {
-        dirCheckEntities.forEach(map -> map.setIsFileExist(1));
+        dirCheckEntities.forEach(map -> map.setIsFileExist(0));
         return dirCheckEntities;
     }
 

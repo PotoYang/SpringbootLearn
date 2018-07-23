@@ -25,6 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -48,6 +49,11 @@ public class FileUploadController {
     private final StringRedisTemplate stringRedisTemplate;
     private final FileUploadService fileUploadService;
 
+    /**
+     * 允许上传的视频文件类型
+     */
+    private static final String VIDEO_FILE_TYPE = "mp4,avi,rmvb,rm,mov,flv,3gp,wmv,asf,asx,m4v,dat,mkv,vob";
+
     @Autowired
     public FileUploadController(StringRedisTemplate stringRedisTemplate, FileUploadService fileUploadService) {
         this.stringRedisTemplate = stringRedisTemplate;
@@ -63,7 +69,8 @@ public class FileUploadController {
     @ApiOperation("检测用户上传权限")
     @RequestMapping(value = "checkPermission", method = RequestMethod.POST)
     public Object checkPermission(Integer userId) {
-        return new ResultVo<>(ResultStatus.SUCCESS, userId);
+        String result = fileUploadService.checkPermission(userId);
+        return new ResultVo<>(ResultStatus.SUCCESS, "用户上传权限", result);
     }
 
     /**
@@ -74,8 +81,26 @@ public class FileUploadController {
      */
     @ApiOperation("检测视频文件的有效性")
     @RequestMapping(value = "checkVideoNameValidation", method = RequestMethod.POST)
-    public Object checkVideoValidation(String videoNames) {
-        return new ResultVo<>(ResultStatus.SUCCESS, videoNames);
+    public Object checkVideoValidation(String dirName, String videoNames) {
+        List<String> videoNameList = Arrays.asList(videoNames.split("\\|"));
+        List<String> allowFormat = Arrays.asList(VIDEO_FILE_TYPE.split(","));
+        List<FileCheckEntity> fileCheckEntities = new ArrayList<>();
+        for (String videoName : videoNameList) {
+            String videoFormat = videoName.substring(videoName.lastIndexOf(".") + 1, videoName.length());
+            if (allowFormat.contains(videoFormat)) {
+                fileCheckEntities.add(new FileCheckEntity(videoName, 0));
+            }
+        }
+        FileCheckEntity dirEntity = new FileCheckEntity(dirName, 0);
+        List<FileCheckEntity> dirCheckEntities = new ArrayList<FileCheckEntity>() {
+            private static final long serialVersionUID = 9072285961521635966L;
+
+            {
+                add(dirEntity);
+            }
+        };
+
+        return new ResultVo<>(ResultStatus.SUCCESS, "有效视频文件列表", checkExist(dirCheckEntities, fileCheckEntities));
     }
 
     @ApiOperation("检测表格文件的有效性")
@@ -89,12 +114,7 @@ public class FileUploadController {
      *
      * @return
      */
-    @ApiOperation("检查文件是否存在")
-    @RequestMapping(value = "checkExist", method = RequestMethod.POST)
-    public Object checkExist(String dirCheckArray, String fileCheckArray) {
-        List<FileCheckEntity> dirCheckEntities = arrayToList(dirCheckArray);
-        List<FileCheckEntity> fileCheckEntities = arrayToList(fileCheckArray);
-
+    private List<FileCheckEntity> checkExist(List<FileCheckEntity> dirCheckEntities, List<FileCheckEntity> fileCheckEntities) {
         dirCheckEntities = fileUploadService.checkDirExist(dirCheckEntities);
         dirCheckEntities.forEach(System.out::println);
 
@@ -102,7 +122,31 @@ public class FileUploadController {
         fileCheckEntities.forEach(System.out::println);
 
         dirCheckEntities.addAll(fileCheckEntities);
-        return new ResultVo<>(ResultStatus.SUCCESS, dirCheckEntities);
+        return dirCheckEntities;
+    }
+
+    /**
+     * 服务器校验节目名及视频是否存在
+     *
+     * @return
+     */
+    @ApiOperation("检查节目名及视频是否存在")
+    @RequestMapping(value = "checkExist", method = RequestMethod.POST)
+    private Object checkExist(String dirNameStr, String fileNameStr) {
+        List<FileCheckEntity> dirCheckEntities = arrayToList(dirNameStr);
+        List<FileCheckEntity> fileCheckEntities = arrayToList(fileNameStr);
+        dirCheckEntities = fileUploadService.checkDirExist(dirCheckEntities);
+        dirCheckEntities.forEach(System.out::println);
+        if (dirCheckEntities.get(0).getIsFileExist() == 0) {
+            dirCheckEntities.addAll(fileCheckEntities);
+            return new ResultVo<>(ResultStatus.SUCCESS, "视频是否存在检测结果", dirCheckEntities);
+        } else {
+            fileCheckEntities = fileUploadService.checkFileExist(fileCheckEntities);
+            fileCheckEntities.forEach(System.out::println);
+            dirCheckEntities.addAll(fileCheckEntities);
+            return new ResultVo<>(ResultStatus.SUCCESS, "视频是否存在检测结果", dirCheckEntities);
+        }
+
     }
 
     /**
@@ -148,7 +192,7 @@ public class FileUploadController {
     public ResultVo<String> fileUpload(MultipartFileParam param, HttpServletRequest request) {
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (isMultipart) {
-            logger.info("上传文件start。");
+            logger.info("上传文件start");
             try {
                 // 方法1
                 //storageService.uploadFileRandomAccessFile(param);
@@ -157,9 +201,9 @@ public class FileUploadController {
                 fileUploadService.uploadFileByMappedByteBuffer(param);
             } catch (IOException e) {
                 e.printStackTrace();
-                logger.error("文件上传失败。{}", param.toString());
+                logger.error("文件上传失败{}", param.toString());
             }
-            logger.info("上传文件end。");
+            logger.info("上传文件end");
         }
         return new ResultVo<>(ResultStatus.SUCCESS, "上传成功");
     }

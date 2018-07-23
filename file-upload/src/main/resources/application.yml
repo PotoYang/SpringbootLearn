@@ -9,9 +9,35 @@ spring:
     multipart:
       max-file-size: 10Mb
       max-request-size: 1000Mb
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    # Druid数据源配置
+    druid:
+      filters: stat
+      maxActive: 20
+      minIdle: 1
+      maxWait: 60000
+      initialSize: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 50
+#      aop-patterns: com.example.dev.service.*
   redis:
     host: 127.0.0.1
     port: 6379
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.potoyang.learn.fileupload.entity
 upload:
   dir: D:/data/uploads/
   chunkSize: 5242880

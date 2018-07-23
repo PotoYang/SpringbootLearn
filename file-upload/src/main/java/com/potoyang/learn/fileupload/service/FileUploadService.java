@@ -57,4 +57,12 @@ public interface FileUploadService {
      * @return
      */
     List<FileCheckEntity> checkFileExist(List<FileCheckEntity> fileCheckEntities);
+
+    /**
+     * 检查用户权限
+     *
+     * @param userId
+     * @return
+     */
+    String checkPermission(Integer userId);
 }
