@@ -7,6 +7,7 @@ import com.potoyang.learn.fileupload.config.Constants;
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
 import com.potoyang.learn.fileupload.controller.response.ResultStatus;
 import com.potoyang.learn.fileupload.controller.response.ResultVo;
+import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.service.FileUploadService;
 import io.swagger.annotations.Api;
@@ -20,6 +21,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
@@ -53,6 +55,7 @@ public class FileUploadController {
      * 允许上传的视频文件类型
      */
     private static final String VIDEO_FILE_TYPE = "mp4,avi,rmvb,rm,mov,flv,3gp,wmv,asf,asx,m4v,dat,mkv,vob";
+    private static final String XLS = "xls", XLSX = "xlsx";
 
     @Autowired
     public FileUploadController(StringRedisTemplate stringRedisTemplate, FileUploadService fileUploadService) {
@@ -69,6 +72,9 @@ public class FileUploadController {
     @ApiOperation("检测用户上传权限")
     @RequestMapping(value = "checkPermission", method = RequestMethod.POST)
     public Object checkPermission(Integer userId) {
+        if (null == userId) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "该用户为空", -1);
+        }
         String result = fileUploadService.checkPermission(userId);
         return new ResultVo<>(ResultStatus.SUCCESS, "用户上传权限", result);
     }
@@ -82,6 +88,9 @@ public class FileUploadController {
     @ApiOperation("检测视频文件的有效性")
     @RequestMapping(value = "checkVideoNameValidation", method = RequestMethod.POST)
     public Object checkVideoValidation(String dirName, String videoNames) {
+        if (null == dirName || null == videoNames) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
+        }
         List<String> videoNameList = Arrays.asList(videoNames.split("\\|"));
         List<String> allowFormat = Arrays.asList(VIDEO_FILE_TYPE.split(","));
         List<FileCheckEntity> fileCheckEntities = new ArrayList<>();
@@ -105,8 +114,22 @@ public class FileUploadController {
 
     @ApiOperation("检测表格文件的有效性")
     @RequestMapping(value = "checkExcelValidation", method = RequestMethod.POST)
-    public Object checkExcelValidation(MultipartFileParam param, HttpServletRequest request) {
-        return new ResultVo<>(ResultStatus.SUCCESS, param.getName());
+    public Object checkExcelValidation(MultipartFile file, HttpServletRequest request) {
+        if (null == file) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "Excel文件为空", -1);
+        }
+        // 验证文件名是否合格
+        String format = validateExcel(file.getOriginalFilename());
+        if (null == format) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "不是Excel文件", -1);
+        }
+        List<ExcelInfo> excelInfoList = fileUploadService.getExcelInfo(file, format);
+
+        if (null == excelInfoList || excelInfoList.size() == 0) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "Excel没有数据", -1);
+        } else {
+            return new ResultVo<>(ResultStatus.SUCCESS, "Excel数据", excelInfoList);
+        }
     }
 
     /**
@@ -132,9 +155,12 @@ public class FileUploadController {
      */
     @ApiOperation("检查节目名及视频是否存在")
     @RequestMapping(value = "checkExist", method = RequestMethod.POST)
-    private Object checkExist(String dirNameStr, String fileNameStr) {
-        List<FileCheckEntity> dirCheckEntities = arrayToList(dirNameStr);
-        List<FileCheckEntity> fileCheckEntities = arrayToList(fileNameStr);
+    private Object checkExist(String dirCheckArray, String fileCheckArray) {
+        if (null == dirCheckArray || null == fileCheckArray) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
+        }
+        List<FileCheckEntity> dirCheckEntities = arrayToList(dirCheckArray);
+        List<FileCheckEntity> fileCheckEntities = arrayToList(fileCheckArray);
         dirCheckEntities = fileUploadService.checkDirExist(dirCheckEntities);
         dirCheckEntities.forEach(System.out::println);
         if (dirCheckEntities.get(0).getIsFileExist() == 0) {
@@ -157,6 +183,9 @@ public class FileUploadController {
     @ApiOperation("检查文件的MD5值")
     @RequestMapping(value = "checkFileMd5", method = RequestMethod.POST)
     public Object checkFileMd5(String md5) throws IOException {
+        if (null == md5) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "MD5值为空", -1);
+        }
         Object processingObj = stringRedisTemplate.opsForHash().get(Constants.FILE_UPLOAD_STATUS, md5);
         if (processingObj == null) {
             return new ResultVo<>(ResultStatus.NONE);
@@ -189,7 +218,10 @@ public class FileUploadController {
      */
     @ApiOperation("上传视频文件")
     @RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
-    public ResultVo<String> fileUpload(MultipartFileParam param, HttpServletRequest request) {
+    public Object fileUpload(MultipartFileParam param, HttpServletRequest request) {
+        if (null == param) {
+            return new ResultVo<>(ResultStatus.SUCCESS, "上传的视频为空", -1);
+        }
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (isMultipart) {
             logger.info("上传文件start");
@@ -221,5 +253,14 @@ public class FileUploadController {
             fileCheckEntities.add(fileCheckEntity);
         }
         return fileCheckEntities;
+    }
+
+    private String validateExcel(String fileName) {
+        if (!fileName.endsWith(XLS) && !fileName.endsWith(XLSX)) {
+            logger.error(fileName + "不是Excel文件");
+            return null;
+        } else {
+            return fileName.endsWith(XLS) ? XLS : XLSX;
+        }
     }
 }

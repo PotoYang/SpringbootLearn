@@ -1,5 +1,8 @@
 package com.potoyang.learn.fileupload.entity;
 
+/**
+ * @author potoyang
+ */
 public class UserInfo {
     private Integer userId;
 

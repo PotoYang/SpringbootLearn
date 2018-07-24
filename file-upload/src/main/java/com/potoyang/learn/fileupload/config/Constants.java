@@ -25,5 +25,21 @@ public class Constants {
      */
     public static final String FILE_UPLOAD_STATUS = "FILE_UPLOAD_STATUS";
 
+    /**
+     * 需要在Excel中提取的列数据
+     */
+    public static final Map<String, Integer> TITLE_FIELDS = new HashMap<String, Integer>() {
+        private static final long serialVersionUID = -906222466953119489L;
+
+        {
+            put("节目集ID", 1);
+            put("节目集名称", 2);
+            put("节目ID", 3);
+            put("节目名称", 4);
+            put("集/期数", 5);
+            put("视频地址", 6);
+
+        }
+    };
 
 }

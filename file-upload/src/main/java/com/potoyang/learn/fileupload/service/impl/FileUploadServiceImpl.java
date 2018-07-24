@@ -2,12 +2,21 @@ package com.potoyang.learn.fileupload.service.impl;
 
 import com.potoyang.learn.fileupload.config.Constants;
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
+import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.entity.UserInfo;
+import com.potoyang.learn.fileupload.mapper.ExcelInfoMapper;
 import com.potoyang.learn.fileupload.mapper.UserInfoMapper;
 import com.potoyang.learn.fileupload.service.FileUploadService;
 import com.potoyang.learn.fileupload.util.FileMD5Util;
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +24,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.nio.MappedByteBuffer;
@@ -23,7 +33,10 @@ import java.nio.channels.WritableByteChannel;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with Intellij IDEA.
@@ -41,6 +54,8 @@ public class FileUploadServiceImpl implements FileUploadService {
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private UserInfoMapper userInfoMapper;
+    @Autowired
+    private ExcelInfoMapper excelInfoMapper;
 
     @Value("${upload.chunkSize}")
     private static long CHUNK_SIZE;
@@ -204,5 +219,86 @@ public class FileUploadServiceImpl implements FileUploadService {
     public List<FileCheckEntity> checkFileExist(List<FileCheckEntity> fileCheckEntities) {
         fileCheckEntities.forEach(map -> map.setIsFileExist(1));
         return fileCheckEntities;
+    }
+
+    @Override
+    public List<ExcelInfo> getExcelInfo(MultipartFile file, String format) {
+        try {
+            InputStream is = file.getInputStream();
+            Workbook workbook = "xls".equals(format) ? new HSSFWorkbook(is) : new XSSFWorkbook(is);
+            return readExcelValue(workbook);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    private List<ExcelInfo> readExcelValue(Workbook workbook) {
+        logger.info("---> ReadExcel begin to readExcelValue");
+        // 得到第一个shell
+        Sheet sheet = workbook.getSheetAt(0);
+
+        // 得到Excel的行数
+        int totalRows = sheet.getPhysicalNumberOfRows();
+
+        int totalCells;
+        // 得到Excel的列数(前提是有行数)
+        if (totalRows >= 1 && sheet.getRow(0) != null) {
+            totalCells = sheet.getRow(0).getPhysicalNumberOfCells();
+        } else {
+            return null;
+        }
+
+        // 读取excel标题
+        Row row = sheet.getRow(0);
+        Map<Integer, Integer> titleFiledsMap = new HashMap<>();
+        for (int i = 0; i < totalCells; i++) {
+            Cell cell = row.getCell(i);
+            String title = cell.getStringCellValue();
+            if (Constants.TITLE_FIELDS.containsKey(title)) {
+                titleFiledsMap.put(i, Constants.TITLE_FIELDS.get(title));
+            }
+        }
+
+        List<ExcelInfo> excelInfoList = new ArrayList<>();
+
+        for (int i = 1; i < totalRows; i++) {
+            Row tempRow = sheet.getRow(i);
+            ExcelInfo excelInfo = new ExcelInfo();
+            titleFiledsMap.forEach((k, v) -> {
+                Cell cell = tempRow.getCell(k);
+                switch (v) {
+                    case 1:
+                        excelInfo.setProgramSetId((int) cell.getNumericCellValue());
+                        break;
+                    case 2:
+                        if (cell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
+                            excelInfo.setProgramSetName(cell.getStringCellValue());
+                        } else {
+                            excelInfo.setProgramSetName(String.valueOf(cell.getNumericCellValue()));
+                        }
+                        break;
+                    case 3:
+                        excelInfo.setProgramId((int) cell.getNumericCellValue());
+                        break;
+                    case 4:
+                        excelInfo.setProgramName(cell.getStringCellValue());
+                        break;
+                    case 5:
+                        excelInfo.setPeriodNumber((int) cell.getNumericCellValue());
+                        break;
+                    case 6:
+                        excelInfo.setPath(cell.getStringCellValue());
+                        break;
+                    default:
+                        break;
+                }
+            });
+            excelInfoList.add(excelInfo);
+        }
+        logger.info("<--- Finish readExcelValue");
+
+        return excelInfoList;
     }
 }
