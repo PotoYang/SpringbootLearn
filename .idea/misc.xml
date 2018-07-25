@@ -6,6 +6,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/file-upload/pom.xml" />
         <option value="$PROJECT_DIR$/security-oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-first-application/pom.xml" />
+        <option value="$PROJECT_DIR$/mail/pom.xml" />
       </list>
     </option>
   </component>

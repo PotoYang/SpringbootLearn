@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.potoyang.learn.fileupload.config.Constants;
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
 import com.potoyang.learn.fileupload.controller.response.ResultStatus;
-import com.potoyang.learn.fileupload.controller.response.ResultVo;
+import com.potoyang.learn.fileupload.controller.response.ResultVO;
 import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.service.FileUploadService;
@@ -73,10 +73,10 @@ public class FileUploadController {
     @RequestMapping(value = "checkPermission", method = RequestMethod.POST)
     public Object checkPermission(Integer userId) {
         if (null == userId) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "该用户为空", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "该用户为空", -1);
         }
         String result = fileUploadService.checkPermission(userId);
-        return new ResultVo<>(ResultStatus.SUCCESS, "用户上传权限", result);
+        return new ResultVO<>(ResultStatus.SUCCESS, "用户上传权限", result);
     }
 
     /**
@@ -89,7 +89,7 @@ public class FileUploadController {
     @RequestMapping(value = "checkVideoNameValidation", method = RequestMethod.POST)
     public Object checkVideoValidation(String dirName, String videoNames) {
         if (null == dirName || null == videoNames) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
         }
         List<String> videoNameList = Arrays.asList(videoNames.split("\\|"));
         List<String> allowFormat = Arrays.asList(VIDEO_FILE_TYPE.split(","));
@@ -109,26 +109,26 @@ public class FileUploadController {
             }
         };
 
-        return new ResultVo<>(ResultStatus.SUCCESS, "有效视频文件列表", checkExist(dirCheckEntities, fileCheckEntities));
+        return new ResultVO<>(ResultStatus.SUCCESS, "有效视频文件列表", checkExist(dirCheckEntities, fileCheckEntities));
     }
 
     @ApiOperation("检测表格文件的有效性")
     @RequestMapping(value = "checkExcelValidation", method = RequestMethod.POST)
     public Object checkExcelValidation(MultipartFile file, HttpServletRequest request) {
         if (null == file) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "Excel文件为空", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "Excel文件为空", -1);
         }
         // 验证文件名是否合格
         String format = validateExcel(file.getOriginalFilename());
         if (null == format) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "不是Excel文件", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "不是Excel文件", -1);
         }
         List<ExcelInfo> excelInfoList = fileUploadService.getExcelInfo(file, format);
 
         if (null == excelInfoList || excelInfoList.size() == 0) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "Excel没有数据", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "Excel没有数据", -1);
         } else {
-            return new ResultVo<>(ResultStatus.SUCCESS, "Excel数据", excelInfoList);
+            return new ResultVO<>(ResultStatus.SUCCESS, "Excel数据", excelInfoList);
         }
     }
 
@@ -157,7 +157,7 @@ public class FileUploadController {
     @RequestMapping(value = "checkExist", method = RequestMethod.POST)
     private Object checkExist(String dirCheckArray, String fileCheckArray) {
         if (null == dirCheckArray || null == fileCheckArray) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
         }
         List<FileCheckEntity> dirCheckEntities = arrayToList(dirCheckArray);
         List<FileCheckEntity> fileCheckEntities = arrayToList(fileCheckArray);
@@ -165,12 +165,12 @@ public class FileUploadController {
         dirCheckEntities.forEach(System.out::println);
         if (dirCheckEntities.get(0).getIsFileExist() == 0) {
             dirCheckEntities.addAll(fileCheckEntities);
-            return new ResultVo<>(ResultStatus.SUCCESS, "视频是否存在检测结果", dirCheckEntities);
+            return new ResultVO<>(ResultStatus.SUCCESS, "视频是否存在检测结果", dirCheckEntities);
         } else {
             fileCheckEntities = fileUploadService.checkFileExist(fileCheckEntities);
             fileCheckEntities.forEach(System.out::println);
             dirCheckEntities.addAll(fileCheckEntities);
-            return new ResultVo<>(ResultStatus.SUCCESS, "视频是否存在检测结果", dirCheckEntities);
+            return new ResultVO<>(ResultStatus.SUCCESS, "视频是否存在检测结果", dirCheckEntities);
         }
 
     }
@@ -184,17 +184,17 @@ public class FileUploadController {
     @RequestMapping(value = "checkFileMd5", method = RequestMethod.POST)
     public Object checkFileMd5(String md5) throws IOException {
         if (null == md5) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "MD5值为空", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "MD5值为空", -1);
         }
         Object processingObj = stringRedisTemplate.opsForHash().get(Constants.FILE_UPLOAD_STATUS, md5);
         if (processingObj == null) {
-            return new ResultVo<>(ResultStatus.NONE);
+            return new ResultVO<>(ResultStatus.NONE);
         }
         String processingStr = processingObj.toString();
         boolean processing = Boolean.parseBoolean(processingStr);
         String value = stringRedisTemplate.opsForValue().get(Constants.FILE_MD5_KEY + md5);
         if (processing) {
-            return new ResultVo<>(ResultStatus.EXISTED, value);
+            return new ResultVO<>(ResultStatus.EXISTED, value);
         } else {
             File confFile = new File(value);
             byte[] completeList = FileUtils.readFileToByteArray(confFile);
@@ -204,7 +204,7 @@ public class FileUploadController {
                     missChunkList.add(i + "");
                 }
             }
-            return new ResultVo<>(ResultStatus.ING, missChunkList);
+            return new ResultVO<>(ResultStatus.ING, missChunkList);
         }
     }
 
@@ -220,7 +220,7 @@ public class FileUploadController {
     @RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
     public Object fileUpload(MultipartFileParam param, HttpServletRequest request) {
         if (null == param) {
-            return new ResultVo<>(ResultStatus.SUCCESS, "上传的视频为空", -1);
+            return new ResultVO<>(ResultStatus.SUCCESS, "上传的视频为空", -1);
         }
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (isMultipart) {
@@ -237,7 +237,7 @@ public class FileUploadController {
             }
             logger.info("上传文件end");
         }
-        return new ResultVo<>(ResultStatus.SUCCESS, "上传成功");
+        return new ResultVO<>(ResultStatus.SUCCESS, "上传成功");
     }
 
     private List<FileCheckEntity> arrayToList(String arrayStr) {

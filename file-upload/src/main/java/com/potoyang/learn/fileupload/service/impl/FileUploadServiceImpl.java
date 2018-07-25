@@ -6,6 +6,7 @@ import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.entity.UserInfo;
 import com.potoyang.learn.fileupload.mapper.ExcelInfoMapper;
+import com.potoyang.learn.fileupload.mapper.MapperTest;
 import com.potoyang.learn.fileupload.mapper.UserInfoMapper;
 import com.potoyang.learn.fileupload.service.FileUploadService;
 import com.potoyang.learn.fileupload.util.FileMD5Util;

@@ -43,4 +43,14 @@ public class UserInfo {
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }
