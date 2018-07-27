@@ -1,0 +1,6 @@
+2018-07-27 16:00:56  [ main:10 ] - [ ERROR ]  This is error message!
+2018-07-27 16:00:56  [ main:10 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero
+2018-07-27 16:02:03  [ main:9 ] - [ ERROR ]  This is error message!
+2018-07-27 16:02:03  [ main:10 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero
+2018-07-27 16:02:42  [ main:8 ] - [ ERROR ]  This is error message!
+2018-07-27 16:02:42  [ main:9 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero

@@ -1,4 +1,4 @@
-package com.potoyang.learn.securityoauth2;
+package com.potoyang.learn.elk;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SecurityOauth2ApplicationTests {
+public class ElkApplicationTests {
 
     @Test
     public void contextLoads() {
     }
-
 }

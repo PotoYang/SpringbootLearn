@@ -1,0 +1,15 @@
+2018-07-27 16:00:56  [ main:0 ] - [ DEBUG ]  This is a debug message!
+2018-07-27 16:00:56  [ main:8 ] - [ INFO ]  This is info message!
+2018-07-27 16:00:56  [ main:9 ] - [ WARN ]  This is a warn message!
+2018-07-27 16:00:56  [ main:10 ] - [ ERROR ]  This is error message!
+2018-07-27 16:00:56  [ main:10 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero
+2018-07-27 16:02:03  [ main:0 ] - [ DEBUG ]  This is a debug message!
+2018-07-27 16:02:03  [ main:7 ] - [ INFO ]  This is info message!
+2018-07-27 16:02:03  [ main:8 ] - [ WARN ]  This is a warn message!
+2018-07-27 16:02:03  [ main:9 ] - [ ERROR ]  This is error message!
+2018-07-27 16:02:03  [ main:10 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero
+2018-07-27 16:02:42  [ main:0 ] - [ DEBUG ]  This is a debug message!
+2018-07-27 16:02:42  [ main:6 ] - [ INFO ]  This is info message!
+2018-07-27 16:02:42  [ main:7 ] - [ WARN ]  This is a warn message!
+2018-07-27 16:02:42  [ main:8 ] - [ ERROR ]  This is error message!
+2018-07-27 16:02:42  [ main:9 ] - [ ERROR ]  java.lang.ArithmeticException: / by zero

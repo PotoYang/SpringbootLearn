@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/security-oauth2/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-first-application/pom.xml" />
         <option value="$PROJECT_DIR$/mail/pom.xml" />
+        <option value="$PROJECT_DIR$/elk/pom.xml" />
       </list>
     </option>
   </component>

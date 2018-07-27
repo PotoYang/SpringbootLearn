@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="patternLayout">[%d{yyyy-MM-dd'T'HH:mm:ss,SSSXXX}] %-5p [%t] %c{2} - %m%n</Property>
+        <Property name="logdir">F:/tmp/</Property>
+    </Properties>
+    <Appenders>
+        <Socket name="Logstash" host="127.0.0.1" port="4560" protocol="TCP">
+            <PatternLayout>%d{HH:mm:ss,SSS} %-5level [%c{1.}] %C{1} %m%n</PatternLayout>
+        </Socket>
+
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="${patternLayout}"/>
+        </Console>
+        <Async name="ASYNC">
+            <AppenderRef ref="CONSOLE"/>
+        </Async>
+        <RollingFile name="DebugLogger" fileName="${logdir}/logs/debug/log.log"
+                     filePattern="${logdir}/logs/debug/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-log-%i.log" append="true">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${patternLayout}"/>
+            <!--<SizeBasedTriggeringPolicy size="1MB"/>-->
+            <DefaultRolloverStrategy max="10"/>
+            <Policies>
+                <!--根据时间来滚动-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="1"/>-->
+                <!--根据文件大小来滚动-->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="InfoLogger" fileName="${logdir}/logs/info/log.log"
+                     filePattern="${logdir}/logs/info/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-log-%i.log" append="true">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${patternLayout}"/>
+            <!--<SizeBasedTriggeringPolicy size="1MB"/>-->
+            <DefaultRolloverStrategy max="10"/>
+            <Policies>
+                <!--根据时间来滚动-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="1"/>-->
+
+                <!--根据文件大小来滚动-->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <!--add   by  yu-->
+        <RollingFile name="importDataLog" fileName="${logdir}/logs/priceMonitor/log.log"
+                     filePattern="${logdir}/logs/priceMonitor/log-%i.log" append="true">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${patternLayout}"/>
+            <!--<SizeBasedTriggeringPolicy size="1MB"/>-->
+            <DefaultRolloverStrategy max="10"/>
+            <Policies>
+                <!--根据时间来滚动-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="1"/>-->
+
+                <!--根据文件大小来滚动-->
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+        </RollingFile>
+        <!--end-->
+
+
+        <RollingFile name="WarnLogger" fileName="${logdir}/logs/warn/log.log"
+                     filePattern="${logdir}/logs/warn/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-log-%i.log" append="true">
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${patternLayout}"/>
+            <!--<SizeBasedTriggeringPolicy size="1MB"/>-->
+            <DefaultRolloverStrategy max="10"/>
+            <Policies>
+                <!--根据时间来滚动-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="1"/>-->
+
+                <!--根据文件大小来滚动-->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="ErrorLogger" fileName="${logdir}/logs/error/log.log"
+                     filePattern="${logdir}/logs/error/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-log-%i.log" append="true">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${patternLayout}"/>
+            <!--<SizeBasedTriggeringPolicy size="1MB"/>-->
+            <DefaultRolloverStrategy max="10"/>
+            <Policies>
+                <!--根据时间来滚动-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="1"/>-->
+
+                <!--根据文件大小来滚动-->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <loggers>
+        <root level="info">
+            <AppenderRef ref="ASYNC"/>
+            <appender-ref ref="DebugLogger"/>
+            <appender-ref ref="InfoLogger"/>
+            <appender-ref ref="WarnLogger"/>
+            <appender-ref ref="ErrorLogger"/>
+            <AppenderRef ref="Logstash"/>
+        </root>
+    </loggers>
+</Configuration>
+

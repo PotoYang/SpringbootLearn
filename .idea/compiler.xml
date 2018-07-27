@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="elk" />
         <module name="file-upload" />
         <module name="mail" />
         <module name="security-oauth2" />
@@ -14,6 +15,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="elk" target="1.8" />
       <module name="file-upload" target="1.8" />
       <module name="mail" target="1.8" />
       <module name="security-oauth2" target="1.8" />
