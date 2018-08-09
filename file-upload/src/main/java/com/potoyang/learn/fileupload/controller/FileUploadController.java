@@ -114,7 +114,7 @@ public class FileUploadController {
 
     @ApiOperation("检测表格文件的有效性")
     @RequestMapping(value = "checkExcelValidation", method = RequestMethod.POST)
-    public Object checkExcelValidation(MultipartFile file, HttpServletRequest request) {
+    public Object checkExcelValidation(MultipartFile file) {
         if (null == file) {
             return new ResultVO<>(ResultStatus.SUCCESS, "Excel文件为空", -1);
         }
@@ -230,6 +230,7 @@ public class FileUploadController {
                 //storageService.uploadFileRandomAccessFile(param);
                 // 方法2 这个更快点
                 System.out.println(param.toString());
+//                LOG.info(" *** editImageRemark enter id:{},title={},remark={}", id, title, remark);
                 fileUploadService.uploadFileByMappedByteBuffer(param);
             } catch (IOException e) {
                 e.printStackTrace();

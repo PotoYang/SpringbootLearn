@@ -6,7 +6,6 @@ import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.entity.UserInfo;
 import com.potoyang.learn.fileupload.mapper.ExcelInfoMapper;
-import com.potoyang.learn.fileupload.mapper.MapperTest;
 import com.potoyang.learn.fileupload.mapper.UserInfoMapper;
 import com.potoyang.learn.fileupload.service.FileUploadService;
 import com.potoyang.learn.fileupload.util.FileMD5Util;
@@ -23,6 +22,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -143,6 +143,11 @@ public class FileUploadServiceImpl implements FileUploadService {
         FileMD5Util.freedMappedByteBuffer(mappedByteBuffer);
         fileChannel.close();
 
+        merge(param, uploadDirPath, fileName);
+    }
+
+    @Async
+    public void merge(MultipartFileParam param, String uploadDirPath, String fileName) throws IOException {
         boolean isOk = checkAndSetUploadProgress(param, uploadDirPath);
         if (isOk) {
             // 全部传输完成后合并全部分片文件
@@ -159,7 +164,7 @@ public class FileUploadServiceImpl implements FileUploadService {
                 input.close();
                 new File(uploadDirPath + "/" + i).delete();
                 i++;
-            } while (i < param.getChunk());
+            } while (i < param.getChunks());
             targetChannel.close();
             output.close();
             logger.info("all jobs done...");
@@ -179,7 +184,7 @@ public class FileUploadServiceImpl implements FileUploadService {
         String fileName = param.getName();
         File confFile = new File(uploadDirPath, fileName + ".conf");
         RandomAccessFile accessConfFile = new RandomAccessFile(confFile, "rw");
-        //把该分段标记为 true 表示完成
+        // 把该分段标记为 true 表示完成
         logger.info("set part " + param.getChunk() + " complete");
         accessConfFile.setLength(param.getChunks());
         accessConfFile.seek(param.getChunk());
@@ -189,12 +194,14 @@ public class FileUploadServiceImpl implements FileUploadService {
         byte[] completeList = FileUtils.readFileToByteArray(confFile);
         byte isComplete = Byte.MAX_VALUE;
         for (int i = 0; i < completeList.length && isComplete == Byte.MAX_VALUE; i++) {
-            //与运算, 如果有部分没有完成则 isComplete 不是 Byte.MAX_VALUE
+            // 与运算, 如果有部分没有完成则 isComplete 不是 Byte.MAX_VALUE
             isComplete = (byte) (isComplete & completeList[i]);
-            logger.info("check part " + i + " complete?:" + completeList[i]);
+//            logger.info("check part " + i + " complete?:" + completeList[i]);
         }
+        logger.info("check complete");
 
         accessConfFile.close();
+        // 将记录已经传递的片，存在redis里面
         if (isComplete == Byte.MAX_VALUE) {
             stringRedisTemplate.opsForHash().put(Constants.FILE_UPLOAD_STATUS, param.getMd5(), "true");
             stringRedisTemplate.opsForValue().set(Constants.FILE_MD5_KEY + param.getMd5(), uploadDirPath + "/" + fileName);

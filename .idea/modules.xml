@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringbootLearn.iml" filepath="$PROJECT_DIR$/SpringbootLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-algorithm/common-algorithm.iml" filepath="$PROJECT_DIR$/common-algorithm/common-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/elk/elk.iml" filepath="$PROJECT_DIR$/elk/elk.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-upload/file-upload.iml" filepath="$PROJECT_DIR$/file-upload/file-upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/mail/mail.iml" filepath="$PROJECT_DIR$/mail/mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-oauth2/security-oauth2.iml" filepath="$PROJECT_DIR$/security-oauth2/security-oauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-first-application/springboot-first-application.iml" filepath="$PROJECT_DIR$/springboot-first-application/springboot-first-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-rabbitmq/websocket-rabbitmq.iml" filepath="$PROJECT_DIR$/websocket-rabbitmq/websocket-rabbitmq.iml" />
     </modules>
   </component>
 </project>

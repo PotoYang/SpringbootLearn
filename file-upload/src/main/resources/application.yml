@@ -8,7 +8,7 @@ spring:
   servlet:
     multipart:
       max-file-size: 10Mb
-      max-request-size: 1000Mb
+      max-request-size: 10000Mb
   datasource:
     name: test
     url: jdbc:mysql://127.0.0.1:3306/test

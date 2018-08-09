@@ -1,0 +1,15 @@
+# rabbitmq配置
+spring:
+  rabbitmq:
+    host: 119.29.175.180
+    port: 5672
+    username: asdf
+    password: asdf
+# 开启消息发送确认
+    publisher-confirms: true
+    publisher-returns: true
+# 返回无法插入队列的消息
+    template:
+      mandatory: true
+server:
+  port: 8001

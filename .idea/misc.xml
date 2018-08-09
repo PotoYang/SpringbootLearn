@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/springboot-first-application/pom.xml" />
         <option value="$PROJECT_DIR$/mail/pom.xml" />
         <option value="$PROJECT_DIR$/elk/pom.xml" />
+        <option value="$PROJECT_DIR$/websocket-rabbitmq/pom.xml" />
       </list>
     </option>
   </component>
