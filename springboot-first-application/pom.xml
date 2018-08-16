@@ -47,6 +47,12 @@
             <version>1.5.14.RELEASE</version>
         </dependency>
 
+        <!-- mystarter -->
+        <dependency>
+            <groupId>com.potoyang.learn</groupId>
+            <artifactId>mystarter-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 	<build>

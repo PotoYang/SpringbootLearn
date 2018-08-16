@@ -230,7 +230,7 @@ public class FileUploadServiceImpl implements FileUploadService {
     }
 
     @Override
-    public List<ExcelInfo> getExcelInfo(MultipartFile file, String format) {
+    public List<ExcelInfo> getExcelInfo(MultipartFile file, String format) throws Exception {
         try {
             InputStream is = file.getInputStream();
             Workbook workbook = "xls".equals(format) ? new HSSFWorkbook(is) : new XSSFWorkbook(is);

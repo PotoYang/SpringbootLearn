@@ -45,7 +45,7 @@ public class WebSocketServerEndpoint {
         String queueName = "exchange_test";
         try {
             ConnectionFactory factory = new ConnectionFactory();
-            factory.setHost("119.29.175.180");
+            factory.setHost("192.168.20.108");
             factory.setPort(5672);
             factory.setUsername("asdf");
             factory.setPassword("asdf");

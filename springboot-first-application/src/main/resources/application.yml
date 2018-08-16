@@ -1,0 +1,4 @@
+example:
+  service:
+    enabled: true
+    config: abc-des-dde,SSS-AAA-DDD,SDA-AJH

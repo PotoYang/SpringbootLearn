@@ -19,7 +19,7 @@
 </div>
 <!--引入JS-->
 <script src="/js/jquery-2.1.1.js"></script>
-<script type="text/javascript" src="js/webuploader.js"></script>
+<script type="text/javascript" src="/js/webuploader.js"></script>
 <script>
     var $btn = $('#ctlBtn');
     var $thelist = $('#thelist');
@@ -56,7 +56,7 @@
                 // file.uid = new Date().getTime() + "_" + Math.random() * 100;
                 file.uid = WebUploader.Base.guid();
                 // 进行md5判断
-                $.post("upload/checkFileMd5", {uid: file.uid, md5: file.md5},
+                $.post("/upload/checkFileMd5", {uid: file.uid, md5: file.md5},
                     function (data) {
                         console.log(data.status);
                         var status = data.status.value;
@@ -121,14 +121,14 @@
         chunked: true,
         chunkSize: chunkSize, // 字节 5M分块
         threads: 3,
-        server: 'upload/fileUpload',
+        server: '/upload/fileUpload',
         auto: false,
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
         disableGlobalDnd: true,
         fileNumLimit: 1024,
-        fileSizeLimit: 10 * 1024 * 1024 * 1024,    // 1G
-        fileSingleSizeLimit: 20 * 1024 * 1024 * 1024    // 1G
+        fileSizeLimit: 10 * 1024 * 1024 * 1024,    // 10G
+        fileSingleSizeLimit: 20 * 1024 * 1024 * 1024    // 20G
     });
 
     //当文件被加入队列之前触发
@@ -150,7 +150,7 @@
         console.log(JSON.stringify(dirCheckArray));
         console.log(JSON.stringify(fileCheckArray));
 
-        $.post("upload/checkExist",
+        $.post("/upload/checkExist",
             {
                 dirCheckArray: JSON.stringify(dirCheckArray),
                 fileCheckArray: JSON.stringify(fileCheckArray)

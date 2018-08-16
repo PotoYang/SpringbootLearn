@@ -114,7 +114,7 @@ public class FileUploadController {
 
     @ApiOperation("检测表格文件的有效性")
     @RequestMapping(value = "checkExcelValidation", method = RequestMethod.POST)
-    public Object checkExcelValidation(MultipartFile file) {
+    public Object checkExcelValidation(MultipartFile file) throws Exception {
         if (null == file) {
             return new ResultVO<>(ResultStatus.SUCCESS, "Excel文件为空", -1);
         }
@@ -155,7 +155,7 @@ public class FileUploadController {
      */
     @ApiOperation("检查节目名及视频是否存在")
     @RequestMapping(value = "checkExist", method = RequestMethod.POST)
-    private Object checkExist(String dirCheckArray, String fileCheckArray) {
+    public Object checkExist(String dirCheckArray, String fileCheckArray) {
         if (null == dirCheckArray || null == fileCheckArray) {
             return new ResultVO<>(ResultStatus.SUCCESS, "节目或视频信息为空", -1);
         }

@@ -9,4 +9,6 @@
 
 - 集成log4j2，实现日志向elk输送
 
-- 集成websocket+rabbitmq实现实时聊天
+- 集成websocket+rabbitmq，实现实时聊天
+
+- 集成shiro+jwt，后端无状态实现认证授权

@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>WebSocket</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat Haha</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .pre-scrollable {
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+    </style>
 </head>
 <body>
-<div id="main">
-    Send Message:
-    <label>
-        <input id="msg" type="text"/>
-    </label>
-    <input type="button" onclick="send()" value="Send"/>
-    <div id="message"></div>
+<div class="container">
+    <h2 class="text-center"><b>Chahaha</b></h2>
+    <div class="row" style="padding:0px 10px 10px;">
+        <div id="message" class="panel panel-primary pre-scrollable">
+            <!--<div class="panel panel-default" style="margin:10px 10px 10px;">-->
+            <!--<div class="panel-body">-->
+            <!--&lt;!&ndash;<img src="/wp-content/uploads/2014/06/download.png" class="img-circle" width="24" height="24">&ndash;&gt;-->
+            <!--这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom"
+         style="padding:10px 10px 50px 10px; background:#ffffff">
+        <div class="input-group">
+            <input id="msg" type="text" class="form-control"/>
+            <span class="input-group-btn">
+                    <button class="btn btn-primary" onclick="send()">Send</button>
+                </span>
+        </div>
+    </nav>
 </div>
 </body>
-<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
     var websocket = null;
+    var count = 0, h = 0;
 
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
-        websocket = new WebSocket("ws://119.29.175.180:8001/mysocket");
+        websocket = new WebSocket("ws://192.168.20.108:8001/mysocket");
     }
     else {
         alert('当前浏览器 不支持WebSocket')
@@ -39,6 +63,7 @@
     //接收到消息的回调方法，此处添加处理接收消息方法，当前是将接收到的信息显示在网页上
     websocket.onmessage = function (event) {
         setMessageInnerHTML(event.data);
+        s();
     }
 
     function send() {
@@ -57,8 +82,23 @@
     }
 
     //将消息显示在网页上，如果不需要显示在网页上，则不调用该方法
-    function setMessageInnerHTML(innerHTML) {
-        document.getElementById('message').innerHTML += innerHTML + '<br/>';
+    function setMessageInnerHTML(msg) {
+        document.getElementById('message').innerHTML +=
+            '<div class="panel panel-default" style="margin:10px 10px 10px;">' +
+            '<div class="panel-body">' + msg +
+            '</div>' +
+            '</div>';
+        // h +=
+
+        // count++;
+
+        // $("#message").animate({scrollTop: $("#message").height()}, 50);
+    }
+
+    function s() {
+        $("#message div").each(function () {
+            console.log($(this).height());
+        })
     }
 </script>
 </html>

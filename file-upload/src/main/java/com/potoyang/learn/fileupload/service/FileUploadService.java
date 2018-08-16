@@ -75,5 +75,5 @@ public interface FileUploadService {
      * @param format
      * @return
      */
-    List<ExcelInfo> getExcelInfo(MultipartFile file, String format);
+    List<ExcelInfo> getExcelInfo(MultipartFile file, String format) throws Exception;
 }
