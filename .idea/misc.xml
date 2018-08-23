@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/websocket-rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/shiro-jwt/pom.xml" />
         <option value="$PROJECT_DIR$/mystarter-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/get-some-novel/pom.xml" />
       </list>
     </option>
   </component>

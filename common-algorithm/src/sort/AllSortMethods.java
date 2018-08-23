@@ -2,8 +2,8 @@ package sort;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.regex.Pattern;
 
 /**
  * Created with Intellij IDEA.
@@ -112,7 +112,6 @@ public class AllSortMethods {
         for (int anArr : arr) {
             System.out.print(anArr + "  ");
         }
-
 
         String source = "abchhabchabchabchcaaaabceabddh";
         String target = "abceab";

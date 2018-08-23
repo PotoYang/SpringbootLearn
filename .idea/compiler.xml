@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="elk" />
         <module name="file-upload" />
+        <module name="get-some-novel" />
         <module name="mail" />
         <module name="mystarter-spring-boot-starter" />
         <module name="security-oauth2" />
@@ -21,6 +22,7 @@
     <bytecodeTargetLevel>
       <module name="elk" target="1.8" />
       <module name="file-upload" target="1.8" />
+      <module name="get-some-novel" target="1.8" />
       <module name="mail" target="1.8" />
       <module name="my-starter" target="1.8" />
       <module name="mystarter-spring-boot-starter" target="1.8" />
