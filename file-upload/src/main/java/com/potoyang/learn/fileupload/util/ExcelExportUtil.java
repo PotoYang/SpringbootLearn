@@ -16,7 +16,13 @@ import java.util.List;
  * @author potoyang
  * Create: 2018/8/29 10:16
  * Modified By:
- * Description: 依赖于poi构建的工具类
+ * Description: 依赖于poi构建的excel表格导出工具类
+ * <!-- poi -->
+ * <dependency>
+ * <groupId>org.apache.poi</groupId>
+ * <artifactId>poi-ooxml</artifactId>
+ * <version>3.10-FINAL</version>
+ * </dependency>
  */
 public class ExcelExportUtil<T> {
     private Class<T> clazz;
@@ -59,8 +65,9 @@ public class ExcelExportUtil<T> {
                         flag = true;
                         continue;
                     }
-                    Method method = clazz.getMethod("get" + change(fieldName), (Class<?>) null);
-                    Object obj = method.invoke(t, (Object) null);
+                    // 类中需要有类成员的get方法
+                    Method method = clazz.getMethod("get" + change(fieldName), (Class<?>[]) null);
+                    Object obj = method.invoke(t, (Object[]) null);
                     if (flag) {
                         hssfRow.createCell(j - 1).setCellValue(String.valueOf(obj));
                     } else {
@@ -69,7 +76,7 @@ public class ExcelExportUtil<T> {
                 }
             }
 
-            //输出文件到浏览器
+            // 输出文件到浏览器
             try {
                 workbook.write(outputStream);
                 outputStream.flush();
