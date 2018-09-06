@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -263,5 +264,12 @@ public class FileUploadController {
         } else {
             return fileName.endsWith(XLS) ? XLS : XLSX;
         }
+    }
+
+    @ApiOperation("Test")
+    @RequestMapping(value = "test", method = RequestMethod.POST)
+    public String test(ExcelInfo info) {
+        System.out.println(info.getPath());
+        return "123";
     }
 }

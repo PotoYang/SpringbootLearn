@@ -105,6 +105,11 @@
             <artifactId>poi-ooxml</artifactId>
             <version>3.5-FINAL</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>

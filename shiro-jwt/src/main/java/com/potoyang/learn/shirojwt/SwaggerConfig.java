@@ -34,8 +34,9 @@ public class SwaggerConfig {
                 .defaultValue("")
                 .description("token")
                 .modelRef(new ModelRef("String"))
+                .defaultValue("123")
                 .parameterType("header")
-                .required(false)
+//                .required(true)
                 .build();
         List<Parameter> parameterList = new ArrayList<>();
         parameterList.add(parameterBuilder.build());

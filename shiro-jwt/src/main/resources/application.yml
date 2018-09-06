@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/delivery_center?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10240Mb
+server:
+  port: 8002

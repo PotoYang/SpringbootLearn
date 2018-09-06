@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>
+        123
+    </title>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<body>
+<input type="button" onclick="login()" value="login"/>
+<input type="button" onclick="art()" value="article">
+<input type="button" onclick="art_t()" value="article_token">
+<input type="button" onclick="auth()" value="require_auth"/>
+<input type="button" onclick="role()" value="require_role"/>
+<input type="button" onclick="perm()" value="require_permission"/>
+</body>
+<script type="text/javascript">
+    var token;
+
+    function login() {
+        var settings = {
+            "url": "login",
+            "data": {"username": "456", "password": "456"},
+            "method": "post"
+        };
+        $.ajax(settings).done(function (response) {
+            token = response;
+            alert(response);
+        });
+    }
+
+    function art() {
+        $.ajax({
+            type: "get",
+            url: "/article",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                alert("su" + data.data);
+                console.log(data);
+            }, error: function (error) {
+                alert("er" + error.data);
+                console.log(error);
+            }
+        });
+    }
+
+    function art_t() {
+        $.ajax({
+            type: "get",
+            url: "/article",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("Authorization", token);
+            },
+            success: function (data) {
+                alert("su" + data.data);
+                console.log(data);
+            }, error: function (error) {
+                alert("er" + error.data);
+                console.log(error);
+            }
+        });
+    }
+
+    function auth() {
+        $.ajax({
+            type: "get",
+            url: "/require_auth",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("Authorization", token);
+            },
+            success: function (data) {
+                alert("su" + data.data);
+                console.log(data);
+            }, error: function (error) {
+                alert("er" + error.data);
+                console.log(error);
+            }
+        });
+    }
+
+    function role() {
+        $.ajax({
+            type: "get",
+            url: "/require_role",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("Authorization", token);
+            },
+            success: function (data) {
+                alert("su" + data.data);
+                console.log(data);
+            }, error: function (error) {
+                alert("er" + error.data);
+                console.log(error);
+            }
+        });
+    }
+
+    function perm() {
+        $.ajax({
+            type: "get",
+            url: "/require_permission",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("Authorization", token);
+            },
+            success: function (data) {
+                alert("su" + data.data);
+                console.log(data);
+            }, error: function (error) {
+                alert("er" + error.data);
+                console.log(error);
+            }
+        });
+    }
+</script>
+</html>

@@ -1,5 +1,6 @@
 package com.potoyang.learn.shirojwt;
 
+import com.potoyang.learn.shirojwt.filter.JwtFilter;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.mgt.SecurityManager;
@@ -13,7 +14,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 import javax.servlet.Filter;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -35,17 +35,23 @@ public class ShiroConfig {
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         // 配置不会拦截的链接 顺序判断
         filterChainDefinitionMap.put("/login/**", "anon");
-        filterChainDefinitionMap.put("/**.js", "anon");
+        filterChainDefinitionMap.put("/js/**.js", "anon");
+        filterChainDefinitionMap.put("/**.html", "anon");
         filterChainDefinitionMap.put("/swagger**/**", "anon");
         filterChainDefinitionMap.put("/webjars/**", "anon");
         filterChainDefinitionMap.put("/v2/**", "anon");
         filterChainDefinitionMap.put("/401", "anon");
+        filterChainDefinitionMap.put("/require_auth", "authc");
+        filterChainDefinitionMap.put("/require_permission", "authc,perms[view]");
+        filterChainDefinitionMap.put("/require_role", "authc,roles[admin]");
+//        filterChainDefinitionMap.put("/user/**", "authc,roles[ROLE_USER]");//用户为ROLE_USER 角色可以访问。由用户角色控制用户行为。
+//        filterChainDefinitionMap.put("/events/**", "authc,roles[ROLE_ADMIN]");
         // 添加自己的过滤器
-        Map<String, Filter> filterMap = new HashMap<>(1);
-        filterMap.put("jwt", new JwtFilter());
+        Map<String, Filter> filterMap = new LinkedHashMap<>(1);
+        filterMap.put("shiroLoginFilter", new JwtFilter());
         shiroFilterFactoryBean.setFilters(filterMap);
 
-        filterChainDefinitionMap.put("/**", "jwt");
+        filterChainDefinitionMap.put("/**", "shiroLoginFilter");
 
         shiroFilterFactoryBean.setUnauthorizedUrl("/401");
 

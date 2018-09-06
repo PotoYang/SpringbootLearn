@@ -12,3 +12,5 @@
 - 集成websocket+rabbitmq，实现实时聊天
 
 - 集成shiro+jwt，后端无状态实现认证授权
+
+- 集成security+jwt，实现细粒度、动态权限认证与授权

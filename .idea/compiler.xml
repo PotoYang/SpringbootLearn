@@ -12,6 +12,7 @@
         <module name="get-some-novel" />
         <module name="mail" />
         <module name="mystarter-spring-boot-starter" />
+        <module name="security-jwt" />
         <module name="security-oauth2" />
         <module name="shiro-jwt" />
         <module name="springboot-first-application" />
@@ -26,6 +27,7 @@
       <module name="mail" target="1.8" />
       <module name="my-starter" target="1.8" />
       <module name="mystarter-spring-boot-starter" target="1.8" />
+      <module name="security-jwt" target="1.8" />
       <module name="security-oauth2" target="1.8" />
       <module name="shiro-jwt" target="1.8" />
       <module name="springboot-first-application" target="1.8" />

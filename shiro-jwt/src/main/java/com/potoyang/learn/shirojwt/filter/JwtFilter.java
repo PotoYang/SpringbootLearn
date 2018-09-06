@@ -1,5 +1,6 @@
-package com.potoyang.learn.shirojwt;
+package com.potoyang.learn.shirojwt.filter;
 
+import com.potoyang.learn.shirojwt.JwtToken;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -54,7 +55,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
             try {
                 executeLogin(request, response);
             } catch (Exception e) {
-                response401(request, response);
+                response401(response);
             }
         }
         return true;
@@ -66,12 +67,16 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 //    }
 
     @Override
-    protected boolean executeLogin(ServletRequest request, ServletResponse response) throws Exception {
-        HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-        String token = httpServletRequest.getHeader("Authorization");
-        JwtToken jwtToken = new JwtToken(token);
-        getSubject(request, response).login(jwtToken);
-        return true;
+    protected boolean executeLogin(ServletRequest request, ServletResponse response) {
+        try {
+            HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+            String token = httpServletRequest.getHeader("Authorization");
+            JwtToken jwtToken = new JwtToken(token);
+            getSubject(request, response).login(jwtToken);
+        } catch (Exception e) {
+            System.out.println("executeLogin fail");
+        }
+        return false;
     }
 
     @Override
@@ -89,7 +94,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
         return super.preHandle(request, response);
     }
 
-    private void response401(ServletRequest request, ServletResponse response) {
+    private void response401(ServletResponse response) {
         try {
             HttpServletResponse httpServletResponse = (HttpServletResponse) response;
             httpServletResponse.sendRedirect("/401");

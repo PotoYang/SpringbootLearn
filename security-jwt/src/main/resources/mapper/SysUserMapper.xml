@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.potoyang.learn.securityjwt.mapper.SysUserMapper">
+    <resultMap id="BaseResultMap" type="SysUser">
+        <id column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="login_name" property="loginName"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="email" property="email"/>
+        <result column="enabled" property="enabled"/>
+        <result column="cp_id" property="cpId"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="selectByLoginName" resultType="com.potoyang.learn.securityjwt.entity.SysUser">
+        SELECT *
+        FROM sys_user
+        WHERE login_name = #{loginName, jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectUserByLoginNameAndUserPassword" resultMap="BaseResultMap">
+        SELECT *
+        FROM sys_user
+        WHERE login_name = #{loginName, jdbcType=VARCHAR}
+              AND user_password = #{userPassword, jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectById" resultType="com.potoyang.learn.securityjwt.entity.SysUser">
+        SELECT *
+        FROM sys_user
+        WHERE id = #{id, jdbcType=INTEGER}
+    </select>
+</mapper>

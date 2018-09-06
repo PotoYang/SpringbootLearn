@@ -8,6 +8,8 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +27,9 @@ import java.util.Set;
  */
 @Component
 public class MyRealm extends AuthorizingRealm {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyRealm.class);
+    private static final String TAG = MyRealm.class.getSimpleName();
 
     @Autowired
     private SysUserService sysUserService;
@@ -63,14 +68,20 @@ public class MyRealm extends AuthorizingRealm {
         String token = (String) auth.getCredentials();
         String username = JwtUtil.getUsername(token);
         if (username == null) {
-            throw new AuthenticationException("token无效");
+            LOGGER.error(TAG + " token无效");
+            return null;
+//            throw new AuthenticationException("token无效");
         }
         SysUser user = sysUserService.findByUsername(username);
         if (user == null) {
-            throw new AuthenticationException("用户不存在");
+            LOGGER.error("用户不存在");
+            return null;
+//            throw new AuthenticationException("用户不存在");
         }
         if (!JwtUtil.verify(token, username, user.getPassword())) {
-            throw new AuthenticationException("用户名或密码错误");
+            LOGGER.error("用户名或密码错误");
+            return null;
+//            throw new AuthenticationException("用户名或密码错误");
         }
         return new SimpleAuthenticationInfo(token, token, "my_realm");
     }
