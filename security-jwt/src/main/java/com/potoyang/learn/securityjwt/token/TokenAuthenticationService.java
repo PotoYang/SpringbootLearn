@@ -44,8 +44,9 @@ public class TokenAuthenticationService {
             // 生成JWT
             String token = Jwts.builder()
                     // 保存权限（角色）
-                    .claim("authorities", "ROLE_ADMIN,AUTH_WRITE")
-                    // 登陆帐号写入标题
+//                    .claim("authorities", "ROLE_ADMIN,AUTH_WRITE")
+                    // 登陆帐
+                    // 号写入标题
                     .setSubject(loginName)
                     // 有效期设置
                     .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
