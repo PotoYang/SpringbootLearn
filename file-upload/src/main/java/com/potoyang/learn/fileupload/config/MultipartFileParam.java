@@ -3,24 +3,20 @@ package com.potoyang.learn.fileupload.config;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.Serializable;
+
 /**
  * Created with Intellij IDEA.
  *
  * @author potoyang
  * Create: 2018/7/12 15:04
- * Modified By:
+ * Modified By: 删除uid和id
  * Description:
  */
 @Data
-public class MultipartFileParam {
-    /**
-     * 用户id
-     */
-    private String uid;
-    /**
-     * 任务id
-     */
-    private String id;
+public class MultipartFileParam implements Serializable {
+    private static final long serialVersionUID = 4449279197776004720L;
+
     /**
      * 总分片数量
      */
@@ -34,7 +30,7 @@ public class MultipartFileParam {
      */
     private long size = 0L;
     /**
-     * 文件名
+     * 文件名,例:xxx.mp4
      */
     private String name;
     /**
@@ -42,20 +38,18 @@ public class MultipartFileParam {
      */
     private MultipartFile file;
     /**
-     * MD5
+     * md5
      */
     private String md5;
 
     @Override
     public String toString() {
         return "MultipartFileParam{" +
-                "uid='" + uid + '\'' +
-                ", id='" + id + '\'' +
-                ", chunks=" + chunks +
+                "chunks=" + chunks +
                 ", chunk=" + chunk +
                 ", size=" + size +
                 ", name='" + name + '\'' +
-                ", file=" + file +
+                ", file=" + file.getOriginalFilename() +
                 ", md5='" + md5 + '\'' +
                 '}';
     }

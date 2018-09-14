@@ -1,0 +1,35 @@
+{
+  "obj" : null,
+  "name" : "SysPermission",
+  "comment" : null,
+  "fullColumn" : [ {
+    "obj" : null,
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  }, {
+    "obj" : null,
+    "name" : "permissionName",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  }, {
+    "obj" : null,
+    "name" : "permissionUrl",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  }, {
+    "obj" : null,
+    "name" : "parentId",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.potoyang.learn.shirojwt",
+  "savePath" : "./shiro-jwt/src/main/java/com/potoyang/learn/shirojwt",
+  "saveModelName" : "shiro-jwt"
+}

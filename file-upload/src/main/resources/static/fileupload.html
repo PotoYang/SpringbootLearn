@@ -46,7 +46,7 @@
             // Deferred对象在钩子回掉函数中经常要用到，用来处理需要等待的异步操作。
             var task = new $.Deferred();
             // 根据文件内容来查询MD5
-            uploader.md5File(file).progress(function (percentage) {   // 及时显示进度
+            uploader.md5File(file, 0, 1024 * 1024).progress(function (percentage) {   // 及时显示进度
                 console.log('计算md5进度:', percentage);
                 getProgressBar(file, percentage, "MD5", "MD5");
             }).then(function (val) { // 完成
@@ -56,7 +56,7 @@
                 // file.uid = new Date().getTime() + "_" + Math.random() * 100;
                 file.uid = WebUploader.Base.guid();
                 // 进行md5判断
-                $.post("/upload/checkFileMd5", {uid: file.uid, md5: file.md5},
+                $.post("/upload/checkFileMd5", {md5: file.md5},
                     function (data) {
                         console.log(data.status);
                         var status = data.status.value;

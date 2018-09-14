@@ -1,12 +1,15 @@
 package com.potoyang.learn.fileupload.service;
 
+import com.potoyang.learn.fileupload.config.BoMerge;
 import com.potoyang.learn.fileupload.config.MultipartFileParam;
 import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.Future;
 
 /**
  * Created with Intellij IDEA.
@@ -76,4 +79,6 @@ public interface FileUploadService {
      * @return
      */
     List<ExcelInfo> getExcelInfo(MultipartFile file, String format) throws Exception;
+
+    Future<String> mergeVideo(BoMerge boMerge);
 }

@@ -3,6 +3,7 @@ package com.potoyang.learn.fileupload.util;
 import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeUtility;
 import org.apache.poi.hssf.usermodel.*;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -32,14 +33,23 @@ public class ExcelExportUtil<T> {
         this.clazz = clazz;
     }
 
+    /**
+     * 直接在浏览器输出excel表格
+     *
+     * @param excelName 导出excel名称
+     * @param titles    导出excel的表头
+     * @param data      导出excel中的数据
+     * @param response  请求输出流
+     * @return 是否成功
+     */
     public String getExcel(String excelName, String[] titles, List<T> data, HttpServletResponse response) {
         try {
-//            response.setContentType("application/x-xls;charset=UTF-8");
+            response.setContentType("application/x-xls;charset=UTF-8");
             Long milliSecond = LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli();
             String fileName = excelName + "-" + milliSecond + ".xls";
             fileName = MimeUtility.encodeText(URLEncoder.encode(fileName, "UTF-8"), "UTF-8", "B");
-//            response.setHeader("Content-disposition", "attachment;filename=" + fileName);
-//            ServletOutputStream outputStream = response.getOutputStream();
+            response.setHeader("Content-disposition", "attachment;filename=" + fileName);
+            ServletOutputStream outputStream = response.getOutputStream();
             HSSFWorkbook workbook = new HSSFWorkbook();
             HSSFSheet hssfSheet = workbook.createSheet("sheet1");
             HSSFRow hssfRow = hssfSheet.createRow(0);
@@ -78,21 +88,20 @@ public class ExcelExportUtil<T> {
                 }
             }
 
-//             输出文件到浏览器
-//            try {
-//                workbook.write(outputStream);
-//                outputStream.flush();
-//                outputStream.close();
-//                return "success";
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//                return e.getMessage();
-//            }
+            // 输出文件到浏览器
+            try {
+                workbook.write(outputStream);
+                outputStream.flush();
+                outputStream.close();
+                return "success";
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return e.getMessage();
         }
-        return "12";
     }
 
     /**
@@ -108,4 +117,5 @@ public class ExcelExportUtil<T> {
             return null;
         }
     }
+
 }

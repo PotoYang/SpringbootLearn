@@ -1,0 +1,29 @@
+{
+  "obj" : null,
+  "name" : "SysRole",
+  "comment" : null,
+  "fullColumn" : [ {
+    "obj" : null,
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  }, {
+    "obj" : null,
+    "name" : "roleName",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  }, {
+    "obj" : null,
+    "name" : "memo",
+    "comment" : null,
+    "type" : null,
+    "ext" : null
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.potoyang.learn.shirojwt",
+  "savePath" : "./shiro-jwt/src/main/java/com/potoyang/learn/shirojwt",
+  "saveModelName" : "shiro-jwt"
+}

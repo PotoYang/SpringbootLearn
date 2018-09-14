@@ -39,5 +39,5 @@ mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.potoyang.learn.fileupload.entity
 upload:
-  dir: /data/uploads/
+  dir: D:/uploads/
   chunkSize: 5242880

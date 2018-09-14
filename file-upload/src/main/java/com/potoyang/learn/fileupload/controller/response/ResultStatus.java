@@ -16,7 +16,9 @@ public enum ResultStatus {
 
     ING(102, "该文件上传了一部分"),
 
-    SUCCESS(200, "成功");
+    SUCCESS(200, "成功"),
+
+    FAILED(-1, "失败s");
 
     private final int value;
 
