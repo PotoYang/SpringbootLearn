@@ -24,7 +24,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -40,7 +39,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Future;
 
 /**
  * Created with Intellij IDEA.
@@ -179,7 +177,7 @@ public class FileUploadServiceImpl implements FileUploadService {
 
     @Override
     @Async
-    public Future<String> mergeVideo(BoMerge merge) {
+    public void mergeVideo(BoMerge merge) {
 //        String url = request.getRequestURL().toString();
 //        boolean isOk = checkAndSetUploadProgress(param, uploadDirPath);
         try {
@@ -206,12 +204,13 @@ public class FileUploadServiceImpl implements FileUploadService {
             output.close();
             logger.info("all jobs done...");
             logger.info("upload complete !!" + true + " name=" + merge.getName());
-            return new AsyncResult<>("complete");
+//            return new AsyncResult<>("complete");
 //            return "complete";
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println(e.getMessage());
 //            return e.getMessage();
-            return new AsyncResult<>(e.getMessage());
+//            return new AsyncResult<>(e.getMessage());
         }
     }
 

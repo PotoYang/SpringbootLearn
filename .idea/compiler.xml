@@ -32,6 +32,7 @@
       <module name="shiro-jwt" target="1.8" />
       <module name="springboot-first-application" target="1.8" />
       <module name="SpringbootLearn" target="1.5" />
+      <module name="swagger-test" target="1.8" />
       <module name="websocket-rabbitmq" target="1.8" />
     </bytecodeTargetLevel>
   </component>

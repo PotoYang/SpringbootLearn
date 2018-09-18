@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.Future;
 
 /**
  * Created with Intellij IDEA.
@@ -250,7 +249,8 @@ public class FileUploadController {
 //        } catch (Exception e) {
 //            return new ResultVO<>(ResultStatus.FAILED, e.getMessage());
 //        }
-        return new ResultVO<>(ResultStatus.SUCCESS, fileUploadService.mergeVideo(boMerge));
+        fileUploadService.mergeVideo(boMerge);
+        return new ResultVO<>(ResultStatus.SUCCESS, "complete");
 //        while(fileUploadService.mergeVideo(boMerge, request).isDone()){
 //            return new ResultVO<>(ResultStatus.SUCCESS, "complete");
 //        }

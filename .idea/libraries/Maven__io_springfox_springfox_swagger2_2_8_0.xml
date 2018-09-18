@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.8.0/springfox-swagger2-2.8.0-sources.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.8.0" />
     </SOURCES>
   </library>
 </component>

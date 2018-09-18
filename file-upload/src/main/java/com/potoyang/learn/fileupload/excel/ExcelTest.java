@@ -1,8 +1,5 @@
 package com.potoyang.learn.fileupload.excel;
 
-import com.potoyang.learn.fileupload.util.ExcelExportUtil;
-import org.springframework.scheduling.annotation.Scheduled;
-
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
