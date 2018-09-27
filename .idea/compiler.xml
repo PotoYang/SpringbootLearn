@@ -14,6 +14,7 @@
         <module name="mystarter-spring-boot-starter" />
         <module name="security-jwt" />
         <module name="security-oauth2" />
+        <module name="shiro" />
         <module name="shiro-jwt" />
         <module name="springboot-first-application" />
         <module name="SpringbootLearn" />
@@ -29,6 +30,7 @@
       <module name="mystarter-spring-boot-starter" target="1.8" />
       <module name="security-jwt" target="1.8" />
       <module name="security-oauth2" target="1.8" />
+      <module name="shiro" target="1.8" />
       <module name="shiro-jwt" target="1.8" />
       <module name="springboot-first-application" target="1.8" />
       <module name="SpringbootLearn" target="1.5" />

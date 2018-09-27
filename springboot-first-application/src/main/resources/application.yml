@@ -2,3 +2,9 @@ example:
   service:
     enabled: true
     config: abc-des-dde,SSS-AAA-DDD,SDA-AJH
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/y-blog
+server:
+  port: 10002

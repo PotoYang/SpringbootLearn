@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/mystarter-spring-boot-starter/pom.xml" />
         <option value="$PROJECT_DIR$/get-some-novel/pom.xml" />
         <option value="$PROJECT_DIR$/security-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/shiro/pom.xml" />
       </list>
     </option>
   </component>
