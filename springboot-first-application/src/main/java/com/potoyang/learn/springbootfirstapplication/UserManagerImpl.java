@@ -38,6 +38,7 @@ public class UserManagerImpl implements UserManager {
 
     @Override
     public void insertUser(User user) {
+        user.setAvatar("../static/img/cjy.jpg");
         mongoOperations.insert(user);
     }
 

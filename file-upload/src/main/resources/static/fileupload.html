@@ -84,19 +84,27 @@
             console.log("当前分块：" + blockChunk);
             console.log("missChunks:" + missChunks);
             if (missChunks !== null && missChunks !== undefined && missChunks !== '') {
-                var flag = true;
-                for (var i = 0; i < missChunks.length; i++) {
+                // var flag = true;
+
+                var minValue  = missChunks;
+                if (blockChunk < minValue){
+                    task.reject();
+                }else {
+                    task.resolve();
+                }
+    /*            for (var i = 0; i < missChunks.length; i++) {
                     if (blockChunk == missChunks[i]) {
                         console.log(file.name + ":" + blockChunk + ":还没上传，现在上传去吧。");
                         flag = false;
                         break;
                     }
-                }
-                if (flag) {
+                }*/
+
+         /*       if (flag) {
                     task.reject();
                 } else {
                     task.resolve();
-                }
+                }*/
             } else {
                 task.resolve();
             }

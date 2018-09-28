@@ -17,6 +17,7 @@ public class User implements Serializable {
     private String password;
     private String email;
     private String phone;
+    private String avatar;
 
     public String getUsername() {
         return username;
@@ -50,6 +51,14 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -57,6 +66,7 @@ public class User implements Serializable {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", avatar='" + avatar + '\'' +
                 '}';
     }
 }

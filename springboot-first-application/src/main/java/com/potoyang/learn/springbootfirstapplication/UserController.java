@@ -28,7 +28,7 @@ public class UserController {
         System.out.println(user);
         LOGGER.info("==> reg()");
         userManager.insertUser(user);
-        return new RestResult<>(user);
+        return new RestResult<>(userManager.findUserByUsername(user.getUsername()));
     }
 
     @PostMapping("login")

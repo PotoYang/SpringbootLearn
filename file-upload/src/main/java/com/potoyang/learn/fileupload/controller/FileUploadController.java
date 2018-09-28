@@ -197,13 +197,15 @@ public class FileUploadController {
         } else {
             File confFile = new File(value);
             byte[] completeList = FileUtils.readFileToByteArray(confFile);
-            List<String> missChunkList = new LinkedList<>();
+            List<String> missChunkList = new ArrayList<>();
             for (int i = 0; i < completeList.length; i++) {
                 if (completeList[i] != Byte.MAX_VALUE) {
                     missChunkList.add(i + "");
                 }
             }
-            return new ResultVO<>(ResultStatus.ING, missChunkList);
+            System.out.println(missChunkList.get(0));
+//            missChunkList.forEach(System.out::print);
+            return new ResultVO<>(ResultStatus.ING, missChunkList.get(0));
         }
     }
 
