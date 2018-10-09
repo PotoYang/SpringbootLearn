@@ -5,7 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created with Intellij IDEA.
@@ -20,11 +23,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
+    private final UserManager userManager;
+
     @Autowired
-    private UserManager userManager;
+    public UserController(UserManager userManager) {
+        this.userManager = userManager;
+    }
 
     @PostMapping("reg")
-    public RestResult<User> reg(User user) {
+    public RestResult<User> reg(@RequestBody User user) {
         System.out.println(user);
         LOGGER.info("==> reg()");
         userManager.insertUser(user);
@@ -32,8 +39,8 @@ public class UserController {
     }
 
     @PostMapping("login")
-    public RestResult<User> login(User user) {
-        LOGGER.info("==> login()");
+    public RestResult<User> login(@RequestBody User user, HttpServletRequest request) {
+        LOGGER.info("==> login()" + request.getHeader("token"));
         User result = userManager.findUserByUsername(user.getUsername());
         if (result == null) {
             return new RestResult<>("不存在", RestResult.FAIL, null);
