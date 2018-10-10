@@ -1,5 +1,7 @@
 package com.potoyang.learn.springbootfirstapplication;
 
+import com.potoyang.learn.springbootfirstapplication.user.User;
+import com.potoyang.learn.springbootfirstapplication.user.UserManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

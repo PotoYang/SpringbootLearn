@@ -1,6 +1,5 @@
 package com.potoyang.learn.springbootfirstapplication;
 
-import com.potoyang.learn.mystarterspringbootstarter.StarterService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,9 +16,9 @@ import java.net.URL;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SpringbootFirstApplicationTests {
-
+/*
     @Autowired
-    StarterService starterService;
+    StarterService starterService;*/
 
     @LocalServerPort
     private int port;
@@ -41,11 +40,11 @@ public class SpringbootFirstApplicationTests {
     }
 
 
-    @Test
+ /*   @Test
     public void starterTest() {
         String[] splitArray = starterService.split(",");
         for (String s : splitArray) {
             System.out.println(s);
         }
-    }
+    }*/
 }

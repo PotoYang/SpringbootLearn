@@ -1,4 +1,4 @@
-package com.potoyang.learn.springbootfirstapplication;
+package com.potoyang.learn.springbootfirstapplication.user;
 
 import java.io.Serializable;
 
