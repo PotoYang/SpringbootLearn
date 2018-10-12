@@ -4,3 +4,5 @@ spring:
       uri: mongodb://127.0.0.1:27017/y-blog
 server:
   port: 10002
+upload:
+  dir: E:/workspace/intellij_workspace/y-blog/static/img/

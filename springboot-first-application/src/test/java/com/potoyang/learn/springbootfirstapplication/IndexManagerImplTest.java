@@ -27,8 +27,7 @@ public class IndexManagerImplTest {
     public void insertCarousel() {
         for (int i = 0; i < 6; i++) {
             Carousel carousel = new Carousel();
-//            /static/img/
-            carousel.setPath("/static/img/" + i + ".jpg");
+            carousel.setPath("../static/img/" + i + ".jpg");
             indexManager.insertCarousel(carousel);
             System.out.println("insert test success");
         }

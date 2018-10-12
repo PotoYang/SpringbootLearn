@@ -2,9 +2,8 @@ package com.potoyang.learn.springbootfirstapplication.index;
 
 import com.potoyang.learn.springbootfirstapplication.RestResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -28,4 +27,13 @@ public class IndexController {
         return new RestResult<>(indexManager.getCarousel());
     }
 
+    @DeleteMapping("carousel")
+    public RestResult<String> deleteCarousel(String path){
+        return new RestResult<>(indexManager.deleteCarousel(path));
+    }
+
+    @PostMapping("image")
+    public RestResult<String> addImage(MultipartFile multipartFile){
+        return new RestResult<>(indexManager.addImage(multipartFile));
+    }
 }

@@ -15,6 +15,13 @@ public class Carousel implements Serializable {
 
     private String path;
 
+    public Carousel() {
+    }
+
+    public Carousel(String path) {
+        this.path = path;
+    }
+
     public String getPath() {
         return path;
     }

@@ -1,5 +1,7 @@
 package com.potoyang.learn.springbootfirstapplication.index;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import java.util.List;
 
 /**
@@ -15,4 +17,8 @@ public interface IndexManager {
     void insertCarousel(Carousel carousel);
 
     List<Carousel> getCarousel();
+
+    String addImage(MultipartFile multipartFile);
+
+    String deleteCarousel(String path);
 }
