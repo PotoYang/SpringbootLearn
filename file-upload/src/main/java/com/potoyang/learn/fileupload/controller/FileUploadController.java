@@ -11,7 +11,8 @@ import com.potoyang.learn.fileupload.controller.response.ResultVO;
 import com.potoyang.learn.fileupload.entity.ExcelInfo;
 import com.potoyang.learn.fileupload.entity.FileCheckEntity;
 import com.potoyang.learn.fileupload.service.FileUploadService;
-import io.swagger.annotations.*;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -26,7 +27,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -40,6 +40,7 @@ import java.util.List;
 @Api(tags = "视频上传接口")
 @RequestMapping(value = "/upload")
 @RestController
+@CrossOrigin
 public class FileUploadController {
     private Logger logger = LoggerFactory.getLogger(FileUploadController.class);
 

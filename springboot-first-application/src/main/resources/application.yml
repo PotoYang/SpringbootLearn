@@ -1,4 +1,8 @@
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10000Mb
   data:
     mongodb:
       uri: mongodb://127.0.0.1:27017/y-blog
@@ -6,3 +10,4 @@ server:
   port: 10002
 upload:
   dir: E:/workspace/intellij_workspace/y-blog/static/img/
+  tempDir: E:/workspace/intellij_workspace/SpringbootLearn/springboot-first-application/target/classes/static/img/

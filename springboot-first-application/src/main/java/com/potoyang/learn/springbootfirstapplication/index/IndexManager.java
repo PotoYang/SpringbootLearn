@@ -18,7 +18,13 @@ public interface IndexManager {
 
     List<Carousel> getCarousel();
 
-    String addImage(MultipartFile multipartFile);
-
     String deleteCarousel(String path);
+
+    List<String> addImages(List<MultipartFile> files);
+
+    String addImage(MultipartFile file);
+
+    String addBlog(Blog blog);
+
+    List<Blog> getBlog();
 }
