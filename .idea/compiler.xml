@@ -17,6 +17,7 @@
         <module name="shiro" />
         <module name="shiro-jwt" />
         <module name="springboot-first-application" />
+        <module name="springboot-webflux" />
         <module name="SpringbootLearn" />
         <module name="websocket-rabbitmq" />
       </profile>
@@ -33,6 +34,7 @@
       <module name="shiro" target="1.8" />
       <module name="shiro-jwt" target="1.8" />
       <module name="springboot-first-application" target="1.8" />
+      <module name="springboot-webflux" target="1.8" />
       <module name="SpringbootLearn" target="1.5" />
       <module name="swagger-test" target="1.8" />
       <module name="websocket-rabbitmq" target="1.8" />

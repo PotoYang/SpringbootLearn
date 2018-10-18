@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/get-some-novel/pom.xml" />
         <option value="$PROJECT_DIR$/security-jwt/pom.xml" />
         <option value="$PROJECT_DIR$/shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-webflux/pom.xml" />
       </list>
     </option>
   </component>
