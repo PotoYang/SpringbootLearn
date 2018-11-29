@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/security-jwt/pom.xml" />
         <option value="$PROJECT_DIR$/shiro/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-webflux/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-redis/pom.xml" />
       </list>
     </option>
   </component>

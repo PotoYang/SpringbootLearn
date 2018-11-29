@@ -72,7 +72,6 @@ public class WebSocketServerEndpoint {
                         channel.basicAck(envelope.getDeliveryTag(), false);
                     }
                     logger.info("[x] Received '" + message + "'");
-
                 }
             };
 

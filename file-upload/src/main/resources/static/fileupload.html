@@ -86,25 +86,25 @@
             if (missChunks !== null && missChunks !== undefined && missChunks !== '') {
                 // var flag = true;
 
-                var minValue  = missChunks;
-                if (blockChunk < minValue){
-                    task.reject();
-                }else {
-                    task.resolve();
-                }
-    /*            for (var i = 0; i < missChunks.length; i++) {
-                    if (blockChunk == missChunks[i]) {
-                        console.log(file.name + ":" + blockChunk + ":还没上传，现在上传去吧。");
-                        flag = false;
-                        break;
-                    }
-                }*/
-
-         /*       if (flag) {
+                var minValue = missChunks;
+                if (blockChunk < minValue) {
                     task.reject();
                 } else {
                     task.resolve();
-                }*/
+                }
+                /*            for (var i = 0; i < missChunks.length; i++) {
+                                if (blockChunk == missChunks[i]) {
+                                    console.log(file.name + ":" + blockChunk + ":还没上传，现在上传去吧。");
+                                    flag = false;
+                                    break;
+                                }
+                            }*/
+
+                /*       if (flag) {
+                           task.reject();
+                       } else {
+                           task.resolve();
+                       }*/
             } else {
                 task.resolve();
             }
@@ -129,7 +129,7 @@
         chunked: true,
         chunkSize: chunkSize, // 字节 5M分块
         threads: 3,
-        server: '/upload/fileUpload',
+        server: 'http://192.168.20.108:8099/video/upload',
         auto: false,
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。

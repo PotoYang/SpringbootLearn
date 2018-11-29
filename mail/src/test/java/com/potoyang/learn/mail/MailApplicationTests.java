@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -19,12 +18,22 @@ public class MailApplicationTests {
     public SendMailService sendMailService;
 
     @Test
-    public void sendText() {
-        String subject = "Springboot Mail Test [Text]";
-        String text = "测试Springboot使用QQ邮箱发邮件";
-        String sender = "715792648@qq.com";
+    public void sendSimpleText() {
+        String subject = "工作";
+        String text = "你好我是Potoyang";
+        String sender = "yangycy@ipanel.cn";
+        String receiver1 = "ipaneltest001@163.com";
+//        String receiver2 = "yangycy@ipanel.cn";
+        sendMailService.sendTextMail(subject, text, sender, receiver1);
+    }
+
+    @Test
+    public void sendHtmlText() throws Exception {
+        String subject = "工作";
+        String text = "你好我是Potoyang";
+        String sender = "ipaneltest001@163.com";
         String receiver1 = "potoyang@163.com";
-        String receiver2 = "yangycy@ipanel.cn";
-        sendMailService.sendTextMail(subject, text, sender, receiver1, receiver2);
+//        String receiver2 = "yangycy@ipanel.cn";
+        sendMailService.sendHtmlMail(subject, text, sender, receiver1);
     }
 }

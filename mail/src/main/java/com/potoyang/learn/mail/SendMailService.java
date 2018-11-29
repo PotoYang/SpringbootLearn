@@ -76,6 +76,7 @@ public class SendMailService {
      */
     public void sendHtmlMails(String subject, String html, String sender, String[] receivers) throws Exception {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
+        mimeMessage.addRecipients(MimeMessage.RecipientType.CC, "ipaneltest001@163.com");
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
         mimeMessageHelper.setTo(receivers);
         mimeMessageHelper.setFrom(sender);
