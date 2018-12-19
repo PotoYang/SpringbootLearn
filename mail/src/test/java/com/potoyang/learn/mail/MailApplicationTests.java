@@ -20,9 +20,9 @@ public class MailApplicationTests {
     @Test
     public void sendSimpleText() {
         String subject = "工作";
-        String text = "你好我是Potoyang";
-        String sender = "yangycy@ipanel.cn";
-        String receiver1 = "ipaneltest001@163.com";
+        String text = "你好我是Wangyb";
+        String sender = "wangyb@ipanel.cn";
+        String receiver1 = "yangyuchuan5452@dingtalk.com";
 //        String receiver2 = "yangycy@ipanel.cn";
         sendMailService.sendTextMail(subject, text, sender, receiver1);
     }
@@ -31,8 +31,8 @@ public class MailApplicationTests {
     public void sendHtmlText() throws Exception {
         String subject = "工作";
         String text = "你好我是Potoyang";
-        String sender = "ipaneltest001@163.com";
-        String receiver1 = "potoyang@163.com";
+        String sender = "yangycy@ipanel.cn";
+        String receiver1 = "yangyuchuan5452@dingtalk.com";
 //        String receiver2 = "yangycy@ipanel.cn";
         sendMailService.sendHtmlMail(subject, text, sender, receiver1);
     }

@@ -87,4 +87,16 @@ public class FileMD5Util {
             e.printStackTrace();
         }
     }
+
+    private int getNumber() {
+        return 1;
+    }
+
+    private void test() {
+        switch (getNumber()) {
+            case 1:
+                System.out.println(1);
+                break;
+        }
+    }
 }
