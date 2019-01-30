@@ -18,4 +18,6 @@ public interface UserManager {
     List<User> findUsersByUsername(String username);
 
     List<User> findAll();
+
+    void update(List<User> users);
 }

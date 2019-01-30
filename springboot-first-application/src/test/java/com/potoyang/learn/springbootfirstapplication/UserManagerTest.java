@@ -50,5 +50,11 @@ public class UserManagerTest {
 
     @Test
     public void findAll() {
+        userManager.findAll().forEach(System.out::println);
+    }
+
+    @Test
+    public void testUpdate(){
+        userManager.update();
     }
 }

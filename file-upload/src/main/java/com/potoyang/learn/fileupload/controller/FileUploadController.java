@@ -18,16 +18,17 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.DefaultTypedTuple;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with Intellij IDEA.
@@ -48,6 +49,9 @@ public class FileUploadController {
      * redis缓存,存储分片文件的传输信息
      */
     private final StringRedisTemplate stringRedisTemplate;
+
+    private final RedisTemplate redisTemplate;
+
     private final FileUploadService fileUploadService;
 
     /**
@@ -57,8 +61,9 @@ public class FileUploadController {
     private static final String XLS = "xls", XLSX = "xlsx";
 
     @Autowired
-    public FileUploadController(StringRedisTemplate stringRedisTemplate, FileUploadService fileUploadService) {
+    public FileUploadController(StringRedisTemplate stringRedisTemplate, RedisTemplate redisTemplate, FileUploadService fileUploadService) {
         this.stringRedisTemplate = stringRedisTemplate;
+        this.redisTemplate = redisTemplate;
         this.fileUploadService = fileUploadService;
     }
 

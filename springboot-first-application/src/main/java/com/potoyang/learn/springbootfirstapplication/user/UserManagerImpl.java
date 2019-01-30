@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,5 +48,17 @@ public class UserManagerImpl implements UserManager {
     @Override
     public List<User> findAll() {
         return mongoOperations.findAll(User.class);
+    }
+
+    @Override
+    public void update(List<User> users) {
+        List<User> userList = findAll();
+        userList.forEach(user -> {
+            Query query = new Query(Criteria.where("id").is(user.getId()));
+//            Update.Modifier
+            Update update = new Update();
+            update.set("phone", "654");
+            mongoOperations.updateFirst(query, update, User.class);
+        });
     }
 }
