@@ -8,6 +8,8 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.25.Final/netty-transport-4.1.25.Final-sources.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.27.Final" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.25.Final/netty-transport-4.1.25.Final.jar!/" />
     </SOURCES>
   </library>
 </component>

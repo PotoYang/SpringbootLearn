@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/shiro/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-webflux/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/netty/pom.xml" />
       </list>
     </option>
   </component>

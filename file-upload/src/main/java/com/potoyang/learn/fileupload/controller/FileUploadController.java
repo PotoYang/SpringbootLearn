@@ -18,17 +18,17 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.DefaultTypedTuple;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created with Intellij IDEA.
@@ -290,8 +290,9 @@ public class FileUploadController {
 
     @ApiOperation("Test")
     @RequestMapping(value = "test", method = RequestMethod.POST)
-    public String test(ExcelInfo info) {
-        System.out.println(info.getPath());
+    public String test(@RequestBody List<String> infoList) {
+        infoList.forEach(System.out::println);
         return "123";
     }
+
 }

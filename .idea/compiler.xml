@@ -13,6 +13,7 @@
         <module name="mail" />
         <module name="mybatis-redis" />
         <module name="mystarter-spring-boot-starter" />
+        <module name="netty" />
         <module name="security-jwt" />
         <module name="security-oauth2" />
         <module name="shiro" />
@@ -31,6 +32,7 @@
       <module name="my-starter" target="1.8" />
       <module name="mybatis-redis" target="1.8" />
       <module name="mystarter-spring-boot-starter" target="1.8" />
+      <module name="netty" target="1.8" />
       <module name="security-jwt" target="1.8" />
       <module name="security-oauth2" target="1.8" />
       <module name="shiro" target="1.8" />
@@ -50,6 +52,7 @@
       <module name="mail" options="-parameters" />
       <module name="mybatis-redis" options="-parameters" />
       <module name="mystarter-spring-boot-starter" options="-parameters" />
+      <module name="netty" options="-parameters" />
       <module name="security-jwt" options="-parameters" />
       <module name="shiro" options="-parameters" />
       <module name="shiro-jwt" options="-parameters" />

@@ -1,0 +1,38 @@
+{
+  "name" : "Configuration",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "lifeCycle",
+    "comment" : "生命周期：0到期自动删除 1保存一个月 3三个月 6半年",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "releaseTime",
+    "comment" : "发布次数：0即时发布，1一次，2两次...",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "videoTotal",
+    "comment" : "系统中所有视频的总大小:G",
+    "type" : "java.lang.Float",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.potoyang.learn.securityjwt",
+  "savePath" : "./security-jwt/src/main/java/com/potoyang/learn/securityjwt",
+  "saveModelName" : "security-jwt"
+}

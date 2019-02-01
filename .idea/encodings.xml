@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elk" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/file-upload" charset="UTF-8" />
@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/mail" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mystarter-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-jwt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-oauth2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shiro" charset="UTF-8" />
