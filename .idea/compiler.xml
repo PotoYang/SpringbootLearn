@@ -18,10 +18,13 @@
         <module name="security-oauth2" />
         <module name="shiro" />
         <module name="shiro-jwt" />
+        <module name="shirojwt" />
         <module name="springboot-first-application" />
         <module name="springboot-webflux" />
         <module name="SpringbootLearn" />
+        <module name="unit-test-sample" />
         <module name="websocket-rabbitmq" />
+        <module name="websocketrabbitmq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,11 +40,14 @@
       <module name="security-oauth2" target="1.8" />
       <module name="shiro" target="1.8" />
       <module name="shiro-jwt" target="1.8" />
+      <module name="shirojwt" target="1.8" />
       <module name="springboot-first-application" target="1.8" />
       <module name="springboot-webflux" target="1.8" />
       <module name="SpringbootLearn" target="1.5" />
       <module name="swagger-test" target="1.8" />
+      <module name="unit-test-sample" target="1.8" />
       <module name="websocket-rabbitmq" target="1.8" />
+      <module name="websocketrabbitmq" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -56,9 +62,12 @@
       <module name="security-jwt" options="-parameters" />
       <module name="shiro" options="-parameters" />
       <module name="shiro-jwt" options="-parameters" />
+      <module name="shirojwt" options="-parameters" />
       <module name="springboot-first-application" options="-parameters" />
       <module name="springboot-webflux" options="-parameters" />
+      <module name="unit-test-sample" options="-parameters" />
       <module name="websocket-rabbitmq" options="-parameters" />
+      <module name="websocketrabbitmq" options="-parameters" />
     </option>
   </component>
 </project>
