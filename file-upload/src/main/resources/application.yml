@@ -7,8 +7,8 @@ server:
 spring:
   servlet:
     multipart:
-      max-file-size: 10Mb
-      max-request-size: 10000Mb
+      max-file-size: 100MB
+      max-request-size: 1000MB
   datasource:
     name: test
     url: jdbc:mysql://127.0.0.1:3306/test
@@ -31,7 +31,7 @@ spring:
       testOnReturn: false
       poolPreparedStatements: true
       maxPoolPreparedStatementPerConnectionSize: 50
-#      aop-patterns: com.example.dev.service.*
+  #      aop-patterns: com.example.dev.service.*
   redis:
     host: 127.0.0.1
     port: 6379

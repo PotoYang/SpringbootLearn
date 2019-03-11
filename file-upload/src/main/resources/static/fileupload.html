@@ -126,7 +126,8 @@
         formData: {
             uid: 0,
             md5: '',
-            chunkSize: chunkSize
+            chunkSize: chunkSize,
+            chunkmd5: ''
         },
         //dnd: '#dndArea',
         //paste: '#uploader',
@@ -134,7 +135,7 @@
         chunked: true,
         chunkSize: chunkSize, // 字节 5M分块
         threads: 3,
-        server: 'http://192.168.20.108:8099/video/upload',
+        server: 'http://192.168.20.150:8099/video/upload',
         auto: false,
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
@@ -195,17 +196,23 @@
 
     //当某个文件的分块在发送前触发，主要用来询问是否要添加附带参数，大文件在开起分片上传的前提下此事件可能会触发多次。
     uploader.onUploadBeforeSend = function (obj, data) {
+        var file = obj.file;
         console.log("onUploadBeforeSend");
 
         // 如果是webkitdirectory控件选择的文件，会包含webkitRelativePath属性，添加进formData发送
-        console.log(obj);//打印此对象，可以查看webkitRelativePath值
+        // console.log(obj);//打印此对象，可以查看webkitRelativePath值
         data.relativepath = obj.file.source.source.webkitRelativePath ? obj.file.source.source.webkitRelativePath : '';
         console.log("webkitRelativePath:" + data.relativepath);
+        var chunkmd5 = '';
 
+        var owner = this.owner;
+        uploader.md5File(file).then(function (ret) {
+            chunkmd5 = ret;
+        });
 
-        var file = obj.file;
         data.md5 = file.md5 || '';
         data.uid = file.uid;
+        data.chunkmd5 = chunkmd5 || '';
     };
 
     // 上传中
