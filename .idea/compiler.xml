@@ -11,6 +11,7 @@
         <module name="file-upload" />
         <module name="get-some-novel" />
         <module name="mail" />
+        <module name="my-file-upload" />
         <module name="mybatis-redis" />
         <module name="mystarter-spring-boot-starter" />
         <module name="netty" />
@@ -32,6 +33,7 @@
       <module name="file-upload" target="1.8" />
       <module name="get-some-novel" target="1.8" />
       <module name="mail" target="1.8" />
+      <module name="my-file-upload" target="1.8" />
       <module name="my-starter" target="1.8" />
       <module name="mybatis-redis" target="1.8" />
       <module name="mystarter-spring-boot-starter" target="1.8" />
@@ -56,6 +58,7 @@
       <module name="file-upload" options="-parameters" />
       <module name="get-some-novel" options="-parameters" />
       <module name="mail" options="-parameters" />
+      <module name="my-file-upload" options="-parameters" />
       <module name="mybatis-redis" options="-parameters" />
       <module name="mystarter-spring-boot-starter" options="-parameters" />
       <module name="netty" options="-parameters" />

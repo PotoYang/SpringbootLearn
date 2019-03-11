@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>XMLHttpRequest 文件上传</title>
+    <title>Y 文件上传</title>
 </head>
 <body>
 <progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
@@ -16,11 +16,11 @@
 <script src="/js/spark-md5.min.js"></script>
 <script src="/js/yuploader.js"></script>
 <script type="text/javascript">
-    var bytesPerPiece = 5242880;
+    var bytesPerPiece = 5 * 1024 * 1024;
     var totalPieces;
     var xhr, ot, oloaded;
     // 接收文件的后台地址
-    var url = "http://192.168.20.150:8001/my/video/upload";
+    var url = "http://192.168.20.150:8010/yupload/upload";
 
     // 上传文件的方法
     function UploadFile() {
@@ -30,7 +30,6 @@
         var end;
         var index = 0;
         var fileSize = fileObj.size;
-        var filename = fileObj.name;
 
         totalPieces = Math.ceil(fileSize / bytesPerPiece);
 
@@ -44,7 +43,8 @@
             var up = new YUploader();
             var param = {
                 url: url,
-                file: chunk,
+                file: fileObj,
+                chunk: chunk,
                 chunkNum: index
             };
             up.start(param);

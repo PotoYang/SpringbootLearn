@@ -19,6 +19,8 @@
         <option value="$PROJECT_DIR$/mybatis-redis/pom.xml" />
         <option value="$PROJECT_DIR$/netty/pom.xml" />
         <option value="$PROJECT_DIR$/unit-test-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/my_file_upload/pom.xml" />
+        <option value="$PROJECT_DIR$/my-file-upload/pom.xml" />
       </list>
     </option>
   </component>

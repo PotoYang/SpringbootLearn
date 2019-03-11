@@ -41,6 +41,10 @@ public class MultipartFileParam implements Serializable {
      * md5
      */
     private String md5;
+    /**
+     * chunkmd5
+     */
+    private String chunkmd5;
 
     @Override
     public String toString() {
@@ -51,6 +55,7 @@ public class MultipartFileParam implements Serializable {
                 ", name='" + name + '\'' +
                 ", file=" + file.getOriginalFilename() +
                 ", md5='" + md5 + '\'' +
+                ", chunkmd5='" + chunkmd5 + '\'' +
                 '}';
     }
 }

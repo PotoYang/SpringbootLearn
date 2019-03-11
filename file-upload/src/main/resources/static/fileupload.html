@@ -61,13 +61,13 @@
                         console.log(data.status);
                         var status = data.status.value;
                         task.resolve();
-                        if (status == 101) {
+                        if (status === 101) {
                             // 文件不存在，那就正常流程
-                        } else if (status == 100) {
+                        } else if (status === 100) {
                             // 忽略上传过程，直接标识上传成功；
                             uploader.skipFile(file);
                             file.pass = true;
-                        } else if (status == 102) {
+                        } else if (status === 102) {
                             // 部分已经上传到服务器了，但是差几个模块。
                             file.missChunks = data.data;
                         }
@@ -76,23 +76,22 @@
             return $.when(task);
         },
         beforeSend: function (block) {
-            console.log("block")
+            console.log("block");
             var task = new $.Deferred();
             var file = block.file;
             var missChunks = file.missChunks;
             var blockChunk = block.chunk;
-            var owner = this.owner;
-            owner.md5File(file.source, block.start, block.end).then(function (ret) {
-                console.log(blockChunk + " : " + ret)
-            });
+            // var chunkmd5 = block.chunkmd5;
+            // var owner = this.owner;
+            // owner.md5File(file.source, block.start, block.end).then(function (ret) {
+            //     console.log(blockChunk + " : " + ret)
+            // });
             // var chunkmd5 =
             console.log("当前分块：" + blockChunk);
             console.log("missChunks:" + missChunks);
             if (missChunks !== null && missChunks !== undefined && missChunks !== '') {
                 // var flag = true;
-
-                var minValue = missChunks;
-                if (blockChunk < minValue) {
+                if (blockChunk < missChunks) {
                     task.reject();
                 } else {
                     task.resolve();
@@ -135,7 +134,7 @@
         chunked: true,
         chunkSize: chunkSize, // 字节 5M分块
         threads: 3,
-        server: 'http://192.168.20.150:8099/video/upload',
+        server: 'http://192.168.20.150:8001/upload/fileUpload',
         auto: false,
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
@@ -161,9 +160,6 @@
     uploader.on('filesQueued', function (files) {
         console.log("filesQueued");
 
-        console.log(JSON.stringify(dirCheckArray));
-        console.log(JSON.stringify(fileCheckArray));
-
         $.post("/upload/checkExist",
             {
                 dirCheckArray: JSON.stringify(dirCheckArray),
@@ -177,8 +173,6 @@
                 for (var i = 1; i < data.data.length; i++) {
                     fileCheckArray.push(new FileCheck(data.data[i].fileName, data.data[i].isFileExist));
                 }
-                console.log(JSON.stringify(dirCheckArray));
-                console.log(JSON.stringify(fileCheckArray));
             }
         );
 
@@ -194,7 +188,7 @@
         flag = 0;
     });
 
-    //当某个文件的分块在发送前触发，主要用来询问是否要添加附带参数，大文件在开起分片上传的前提下此事件可能会触发多次。
+    // 当某个文件的分块在发送前触发，主要用来询问是否要添加附带参数，大文件在开起分片上传的前提下此事件可能会触发多次。
     uploader.onUploadBeforeSend = function (obj, data) {
         var file = obj.file;
         console.log("onUploadBeforeSend");
@@ -202,17 +196,18 @@
         // 如果是webkitdirectory控件选择的文件，会包含webkitRelativePath属性，添加进formData发送
         // console.log(obj);//打印此对象，可以查看webkitRelativePath值
         data.relativepath = obj.file.source.source.webkitRelativePath ? obj.file.source.source.webkitRelativePath : '';
-        console.log("webkitRelativePath:" + data.relativepath);
-        var chunkmd5 = '';
+        // var chunkmd5 = '';
 
-        var owner = this.owner;
-        uploader.md5File(file).then(function (ret) {
-            chunkmd5 = ret;
-        });
+        // var owner = this.owner;
+
+        // uploader.md5File(file).then(function (ret) {
+        //     chunkmd5 = ret;
+        // });
 
         data.md5 = file.md5 || '';
         data.uid = file.uid;
-        data.chunkmd5 = chunkmd5 || '';
+        data.chunkmd5 = obj.chunkMd5;
+        console.log("webkitRelativePath:" + data.relativepath + ", chunkmd5:" + data.chunkmd5);
     };
 
     // 上传中
