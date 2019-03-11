@@ -12,6 +12,6 @@ import com.potoyang.learn.unittestsample.model.ToDo;
  */
 public class PayloadValidator {
     public static boolean validateCreatePayload(ToDo toDo) {
-        return toDo != null;
+        return toDo.getId() != 0;
     }
 }

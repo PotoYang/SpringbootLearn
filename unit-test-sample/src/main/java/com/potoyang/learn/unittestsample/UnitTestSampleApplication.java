@@ -19,10 +19,10 @@ public class UnitTestSampleApplication {
     @Bean
     public CommandLineRunner setup(ToDoRepository toDoRepository) {
         return (args -> {
-            toDoRepository.save(new ToDo("Remove unused imports", true));
-            toDoRepository.save(new ToDo("Clean the code", true));
-            toDoRepository.save(new ToDo("Build the artifacts", false));
-            toDoRepository.save(new ToDo("Deploy the jar file", true));
+            toDoRepository.save(new ToDo("Remove unused imports.", true));
+            toDoRepository.save(new ToDo("Clean the code.", true));
+            toDoRepository.save(new ToDo("Build the artifacts.", false));
+            toDoRepository.save(new ToDo("Deploy the jar file.", true));
             log.info("The sample data has been generated.");
         });
     }

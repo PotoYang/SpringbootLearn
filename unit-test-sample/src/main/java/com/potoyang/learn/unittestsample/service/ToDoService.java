@@ -16,7 +16,7 @@ import java.util.Optional;
 public interface ToDoService {
     List<ToDo> getAllToDo();
 
-    Optional<ToDo> getToDoById(long id);
+    ToDo getToDoById(long id);
 
     ToDo saveToDo(ToDo toDo);
 

@@ -1,0 +1,3 @@
+config:
+  system:
+    file-upload-dir: /home/ubuntu/myupload/test/

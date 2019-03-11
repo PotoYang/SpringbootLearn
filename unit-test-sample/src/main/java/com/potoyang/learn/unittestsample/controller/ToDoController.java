@@ -12,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Created with Intellij IDEA.
@@ -34,28 +33,28 @@ public class ToDoController {
 
     @GetMapping("/todo")
     public ResponseEntity<List<ToDo>> getAllToDo() {
-        log.info("Returing all the ToDo's.");
+        log.info("Returning all the ToDo's.");
         return new ResponseEntity<>(toDoService.getAllToDo(), HttpStatus.OK);
     }
 
     @GetMapping("/todo/{id}")
     public ResponseEntity<ToDo> getToDoById(@PathVariable("id") long id) throws ToDoException {
         log.info("ToDo id = [{}] to return.", id);
-        Optional<ToDo> toDo = toDoService.getToDoById(id);
-        if (!toDo.isPresent()) {
+        ToDo toDo = toDoService.getToDoById(id);
+        if (toDo == null) {
             throw new ToDoException("ToDo doesn't exit.");
         }
-        return new ResponseEntity<>(toDo.get(), HttpStatus.OK);
+        return new ResponseEntity<>(toDo, HttpStatus.OK);
     }
 
     @DeleteMapping("/todo/{id}")
     public ResponseEntity<Response> removeToDoById(@PathVariable("id") long id) throws ToDoException {
         log.info("ToDo id = [{}] to remove.", id);
-        Optional<ToDo> toDo = toDoService.getToDoById(id);
-        if (!toDo.isPresent()) {
+        ToDo toDo = toDoService.getToDoById(id);
+        if (toDo == null) {
             throw new ToDoException("ToDo to delete doesn't exist.");
         }
-        toDoService.removeToDo(toDo.get());
+        toDoService.removeToDo(toDo);
         return new ResponseEntity<>(new Response(HttpStatus.OK.value(), "ToDo has been deleted"), HttpStatus.OK);
     }
 
@@ -63,7 +62,7 @@ public class ToDoController {
     public ResponseEntity<ToDo> saveToDo(@RequestBody ToDo payload) throws ToDoException {
         log.info("Payload = [{}] to save.", payload);
         if (!PayloadValidator.validateCreatePayload(payload)) {
-            throw new ToDoException("Payload malformed, id must be defined.");
+            throw new ToDoException("Payload malformed, id must not be defined.");
         }
         return new ResponseEntity<>(toDoService.saveToDo(payload), HttpStatus.OK);
     }
@@ -71,8 +70,8 @@ public class ToDoController {
     @PatchMapping("/todo")
     public ResponseEntity<ToDo> updateToDo(@RequestBody ToDo payload) throws ToDoException {
         log.info("Payload = [{}] to update.", payload);
-        Optional<ToDo> toDo = toDoService.getToDoById(payload.getId());
-        if (!toDo.isPresent()) {
+        ToDo toDo = toDoService.getToDoById(payload.getId());
+        if (toDo == null) {
             throw new ToDoException("ToDo to update doesn't exit.");
         }
         return new ResponseEntity<>(toDoService.saveToDo(payload), HttpStatus.OK);

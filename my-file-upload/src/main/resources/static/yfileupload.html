@@ -9,7 +9,7 @@
 <span id="percentage"></span><span id="time"></span>
 <br/>
 <input type="file" id="file" name="myFile"/>
-<input type="button" onclick="UploadFile()" value="上传"/>
+<input type="button" onclick="generateFileMd5()" value="上传"/>
 <input type="button" onclick="cancelUploadFile()" value="取消"/>
 </body>
 </html>
@@ -20,10 +20,11 @@
     var totalPieces;
     var xhr, ot, oloaded;
     // 接收文件的后台地址
-    var url = "http://192.168.20.150:8010/yupload/upload";
+    var url = "http://localhost:8010/yupload/upload";
+    // var url = "http://119.29.175.180:8010/yupload/upload";
 
     // 上传文件的方法
-    function UploadFile() {
+    function UploadFile(fileMd5) {
         // 原生 js 获取文件对象
         var fileObj = document.getElementById("file").files[0];
         var start = 0;
@@ -43,7 +44,7 @@
             var up = new YUploader();
             var param = {
                 url: url,
-                file: fileObj,
+                fileMd5: fileMd5,
                 chunk: chunk,
                 chunkNum: index
             };
@@ -67,6 +68,40 @@
         }
 
         return null;
+    }
+
+    function generateFileMd5() {
+        var fileObj = document.getElementById("file").files[0];
+        var chunk,
+            spark = new SparkMD5(),
+            fileReader = new FileReader();
+        var fileSize = fileObj.size;
+
+        if (fileSize <= 100 << 10) {
+            chunk = fileObj;
+        } else if (fileSize <= 1 << 30) {
+            chunk = blobSlice(fileObj, fileSize * 0.4, fileSize * 0.5);
+        } else if (fileSize <= 2 << 30) {
+            chunk = blobSlice(fileObj, fileSize * 0.43, fileSize * 0.48);
+        } else if (fileSize <= 3 << 30) {
+            chunk = blobSlice(fileObj, fileSize * 0.44, fileSize * 0.47);
+        } else {
+            chunk = blobSlice(fileObj, fileSize * 0.45, fileSize * 0.46);
+        }
+
+        fileReader.readAsBinaryString(chunk);
+
+        fileReader.onload = function (e) {
+            if (e.target.readyState === FileReader.DONE) {
+                spark.appendBinary(e.target.result);
+                var fileMd5 = spark.end();
+                UploadFile(fileMd5);
+            }
+        };
+
+        fileReader.onerror = function () {
+            console.log("Generate md5 failed.");
+        };
     }
 
     // 取消上传

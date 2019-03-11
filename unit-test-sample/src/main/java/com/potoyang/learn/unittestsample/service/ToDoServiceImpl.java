@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Created with Intellij IDEA.
@@ -31,8 +30,8 @@ public class ToDoServiceImpl implements ToDoService {
     }
 
     @Override
-    public Optional<ToDo> getToDoById(long id) {
-        return toDoRepository.findById(id);
+    public ToDo getToDoById(long id) {
+        return toDoRepository.findById(id).get();
     }
 
     @Override
