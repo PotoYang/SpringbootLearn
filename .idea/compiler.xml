@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="blog" />
         <module name="elk" />
         <module name="file-upload" />
         <module name="get-some-novel" />
@@ -29,6 +30,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="blog" target="1.8" />
       <module name="elk" target="1.8" />
       <module name="file-upload" target="1.8" />
       <module name="get-some-novel" target="1.8" />
@@ -54,6 +56,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="blog" options="-parameters" />
       <module name="elk" options="-parameters" />
       <module name="file-upload" options="-parameters" />
       <module name="get-some-novel" options="-parameters" />

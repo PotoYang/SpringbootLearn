@@ -106,9 +106,8 @@ public class YUploadServiceImpl implements YUploadService {
                     Cleaner cleaner = (Cleaner) getCleanerMethod.invoke(mappedByteBuffer, new Object[0]);
                     cleaner.clean();
                 } catch (Exception e) {
-                    log.error("clean MappedByteBuffer error!!!", e);
+                    log.error("clean MappedByteBuffer error!", e);
                 }
-                log.info("clean MappedByteBuffer completed!!!");
                 return null;
             });
 

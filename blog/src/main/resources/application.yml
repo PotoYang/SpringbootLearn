@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+mybatis-plus:
+  mapper-locations: classpath:/com/potoyang/learn/blog/*/mapper/*Mapper.xml
+  type-aliases-package: com.potoyang.learn.blog.*.model
+  global-config:
+    db-config:
+      id-type: auto
+    refresh: true

@@ -46,7 +46,7 @@
             // Deferred对象在钩子回掉函数中经常要用到，用来处理需要等待的异步操作。
             var task = new $.Deferred();
             // 根据文件内容来查询MD5
-            uploader.md5File(file).progress(function (percentage) {   // 及时显示进度
+            uploader.md5File(file, 877000000, 980000000).progress(function (percentage) {   // 及时显示进度
                 console.log('计算md5进度:', percentage);
                 getProgressBar(file, percentage, "MD5", "MD5");
             }).then(function (val) { // 完成

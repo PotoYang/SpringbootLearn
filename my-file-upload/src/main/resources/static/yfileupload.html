@@ -5,22 +5,53 @@
     <title>Y 文件上传</title>
 </head>
 <body>
-<progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
-<span id="percentage"></span><span id="time"></span>
-<br/>
-<input type="file" id="file" name="myFile"/>
+
+<input type="file" id="files" name="myFile" multiple/>
+<input type="button" onclick="preExecute()" value="预处理"/>
 <input type="button" onclick="generateFileMd5()" value="上传"/>
 <input type="button" onclick="cancelUploadFile()" value="取消"/>
+<br/>
+<ul id="upload-ul" style="list-style-type:none">
+</ul>
 </body>
 </html>
 <script src="/js/spark-md5.min.js"></script>
 <script src="/js/yuploader.js"></script>
 <script type="text/javascript">
+    function preExecute() {
+        clearUL();
+
+        var fileList = document.getElementById("files").files;
+        var uploadUL = document.getElementById("upload-ul");
+        for (var i = 0; i < fileList.length; i++) {
+            var uploadLi = document.createElement("li");
+            var uploadProgressBar = document.createElement("progress");
+            var uploadTitle = document.createElement("div");
+            var br = document.createElement("br");
+
+            uploadUL.appendChild(uploadLi);
+            uploadLi.setAttribute("id", "upload-li-" + (i + 1));
+
+            uploadLi.append(uploadTitle);
+            uploadTitle.setAttribute("id", "upload-title-" + (i + 1));
+            uploadTitle.innerHTML = fileList[i].name;
+
+            uploadLi.append(uploadProgressBar);
+            uploadProgressBar.setAttribute("id", "upload-progress-" + (i + 1));
+            uploadProgressBar.setAttribute("value", "0");
+            uploadProgressBar.setAttribute("max", "100");
+            uploadProgressBar.setAttribute("style", "width: 300px;");
+
+            uploadUL.append(br);
+        }
+    }
+
+    // 上传流程
     var bytesPerPiece = 5 * 1024 * 1024;
     var totalPieces;
     var xhr, ot, oloaded;
     // 接收文件的后台地址
-    var url = "http://localhost:8010/yupload/upload";
+    var url = "http://192.168.20.150:8010/yupload/upload";
     // var url = "http://119.29.175.180:8010/yupload/upload";
 
     // 上传文件的方法

@@ -1,6 +1,6 @@
 package com.potoyang.learn.fileupload.controller;
 
-import com.potoyang.learn.fileupload.controller.response.MyResponse;
+import com.potoyang.learn.fileupload.controller.response.RestResult;
 import com.potoyang.learn.fileupload.entity.MyFileParam;
 import com.potoyang.learn.fileupload.util.FileMD5Util;
 import org.springframework.http.HttpStatus;
@@ -27,7 +27,7 @@ import java.nio.channels.FileChannel;
 public class MyFileUploadController {
 
     @PostMapping("/my/video/upload")
-    public ResponseEntity<MyResponse> uploadMyVideo(MyFileParam param) throws Exception {
+    public ResponseEntity<RestResult> uploadMyVideo(MyFileParam param) throws Exception {
         System.out.println(param.getFile().getOriginalFilename() + ":" + param.getChunkMd5() + ":" + param.getChunkNum());
         File dir = new File("F:/ttt");
         if (!dir.exists()) {
@@ -56,6 +56,6 @@ public class MyFileUploadController {
         String md5 = DigestUtils.md5DigestAsHex(new FileInputStream(readFile));
         System.out.println(param.getChunkNum() + ":" + md5);
 
-        return new ResponseEntity<>(new MyResponse(Boolean.TRUE), HttpStatus.OK);
+        return new ResponseEntity<>(new RestResult(Boolean.TRUE), HttpStatus.OK);
     }
 }
