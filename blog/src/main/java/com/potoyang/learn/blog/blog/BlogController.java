@@ -5,10 +5,10 @@ import com.potoyang.learn.blog.blog.service.BlogService;
 import com.potoyang.learn.blog.global.RestResult;
 import com.potoyang.learn.blog.global.exception.BlogException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Created with Intellij IDEA.
@@ -29,7 +29,12 @@ public class BlogController {
     }
 
     @PostMapping("")
-    public RestResult<Integer> addBlog(@RequestBody Blog blog) throws BlogException {
+    public RestResult<Integer> addBlog(@RequestBody Blog blog) throws BlogException, IOException {
         return new RestResult<>(blogService.addBlog(blog));
+    }
+
+    @GetMapping("")
+    public RestResult<List<Blog>> getBlogPage(){
+        return new RestResult<>(blogService.getBlogPage());
     }
 }

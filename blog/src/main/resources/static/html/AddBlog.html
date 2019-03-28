@@ -122,7 +122,11 @@
                 contentType: "application/json",
                 data: JSON.stringify(new Blog(title, content, temp)),
                 success: function (data) {
-                    console.log(data);
+                    if (data.code === 0) {
+                        layer.msg('Blog save success.', {icon: 1});
+                    } else {
+                        layer.msg('Something error!', {icon: 2});
+                    }
                 }
             });
         });

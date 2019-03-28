@@ -7,6 +7,8 @@
         <result column="title" property="title"/>
         <result column="content" property="content"/>
         <result column="temp" property="temp"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modify_time" property="modifyTime"/>
     </resultMap>
 
 </mapper>

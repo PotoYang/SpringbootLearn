@@ -21,6 +21,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("tb_blog")
 public class Blog implements Serializable {
+    private static final long serialVersionUID = -4487896138010237208L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
@@ -38,5 +39,5 @@ public class Blog implements Serializable {
     private LocalDateTime createTime;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @TableField(value = "modify_time")
-    private LocalDateTime modify_time;
+    private LocalDateTime modifyTime;
 }

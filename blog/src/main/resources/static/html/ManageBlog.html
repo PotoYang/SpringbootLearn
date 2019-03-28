@@ -68,31 +68,41 @@
         </div>
     </div>
 
-    <div class="layui-body">
+    <div class="layui-body" style="padding: 10px">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">Manage</div>
-        <input id="title" type="text" required="required" placeholder="Title" maxlength="20"/>
-        <div id="myeditor">
-            <!-- 富文本编辑器 -->
-            <div id="test-editormd"></div>
-        </div>
-        <div class="layui-btn-container" style="margin: 10px; text-align: right;">
+        <div class="layui-btn-container" style="margin: 10px; text-align: left;">
             <button id="saveBlogTemp" class="layui-btn layui-btn-danger">存为草稿</button>
             <button id="saveBlog" class="layui-btn">保存文章</button>
         </div>
+        <table id="demo"></table>
     </div>
 
-    <div class="layui-footer">
-        <!-- 底部固定区域 -->
-        © <a href="https://github.com/PotoYang" target="_blank">potoyang</a>
+    <div class="layui-footer" style="text-align: center">
+        &copy;&nbsp;<a href="https://github.com/PotoYang" target="_blank"><b>PotoYang</b></a>
     </div>
 </div>
 <script src="layui/layui.js"></script>
 <script>
     //JavaScript代码区域
-    layui.use('element', function () {
+    layui.use(['element', 'table'], function () {
         var element = layui.element;
+        var table = layui.table;
 
+        table.render({
+            elem: '#demo'
+            , height: 312
+            , url: 'http://192.168.20.150:8001/blog' //数据接口
+            , page: true //开启分页
+            , cols: [[ //表头
+                {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
+                , {field: 'title', title: '标题', width: 80}
+                , {field: 'content', title: '内容', width: 200, sort: true}
+                , {field: 'temp', title: '是否草稿', width: 100}
+                , {field: 'createTime', title: '创建时间', width: 160}
+                , {field: 'modifyTime', title: '修改时间', width: 160}
+                , {field: '', title: '操作'}
+            ]]
+        });
     });
 </script>
 </body>

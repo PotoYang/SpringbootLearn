@@ -3,7 +3,9 @@ package com.potoyang.learn.blog.blog.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.potoyang.learn.blog.blog.model.Blog;
 import com.potoyang.learn.blog.global.exception.BlogException;
-import org.springframework.stereotype.Service;
+
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Created with Intellij IDEA.
@@ -14,5 +16,7 @@ import org.springframework.stereotype.Service;
  * Description:
  */
 public interface BlogService extends IService<Blog> {
-    int addBlog(Blog blog) throws BlogException;
+    int addBlog(Blog blog) throws BlogException, IOException;
+
+    List<Blog> getBlogPage();
 }
