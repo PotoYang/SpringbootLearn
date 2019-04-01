@@ -5,32 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>MyBlog</title>
     <link rel="stylesheet" href="layui/css/layui.css">
-    <link rel="stylesheet" href="editormd/css/editormd.css"/>
-    <style>
-        input, textarea {
-            width: 94%;
-            background: none;
-            color: black;
-            font-size: 24px;
-            font-weight: bold;
-            display: block;
-            margin: 10px 2% 10px 2%;
-            padding: 10px;
-            border-radius: 0;
-            border: none;
-            border-bottom: 1px solid #c6c6c6;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-        }
-
-        input:focus ~ input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label {
-            top: -14px;
-            font-size: 12px;
-            color: #2196F3;
-        }
-    </style>
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -68,13 +42,15 @@
         </div>
     </div>
 
-    <div class="layui-body" style="padding: 10px">
+    <div class="layui-body" style="height: 100%; margin: 10px 20px">
         <!-- 内容主体区域 -->
-        <div class="layui-btn-container" style="margin: 10px; text-align: left;">
+        <div class="layui-btn-container" style="text-align: left;">
             <button id="saveBlogTemp" class="layui-btn layui-btn-danger">存为草稿</button>
             <button id="saveBlog" class="layui-btn">保存文章</button>
         </div>
-        <table id="demo"></table>
+        <div style="width: 100%;">
+            <table id="tb-blog-list"></table>
+        </div>
     </div>
 
     <div class="layui-footer" style="text-align: center">
@@ -82,6 +58,13 @@
     </div>
 </div>
 <script src="layui/layui.js"></script>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="show">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
 <script>
     //JavaScript代码区域
     layui.use(['element', 'table'], function () {
@@ -89,18 +72,20 @@
         var table = layui.table;
 
         table.render({
-            elem: '#demo'
-            , height: 312
+            elem: '#tb-blog-list'
+            , height: 'full-200'
+            , cellMinWidth: 80
             , url: 'http://192.168.20.150:8001/blog' //数据接口
-            , page: true //开启分页
+            // , page: true //开启分页
             , cols: [[ //表头
-                {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
-                , {field: 'title', title: '标题', width: 80}
-                , {field: 'content', title: '内容', width: 200, sort: true}
-                , {field: 'temp', title: '是否草稿', width: 100}
-                , {field: 'createTime', title: '创建时间', width: 160}
-                , {field: 'modifyTime', title: '修改时间', width: 160}
-                , {field: '', title: '操作'}
+                {type: 'checkbox'}
+                , {field: 'id', title: 'ID', width: '5%', sort: true}
+                , {field: 'title', title: '标题', width: '8%'}
+                , {field: 'content', title: '内容'}
+                , {field: 'temp', title: '是否草稿', width: '8%'}
+                , {field: 'createTime', title: '创建时间', width: '13%', unresize: true}
+                , {field: 'modifyTime', title: '修改时间', width: '13%', unresize: true}
+                , {title: '操作', toolbar: '#barDemo', width: '20%', unresize: true}
             ]]
         });
     });

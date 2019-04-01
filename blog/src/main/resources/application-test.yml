@@ -6,3 +6,5 @@ spring:
     url: jdbc:mysql://119.29.175.180:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: root
+config:
+  blog-save-dir: /home/ubuntu/blog/
