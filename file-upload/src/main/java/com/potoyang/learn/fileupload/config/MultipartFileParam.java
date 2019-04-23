@@ -51,7 +51,7 @@ public class MultipartFileParam implements Serializable {
         return "MultipartFileParam{" +
                 "chunks=" + chunks +
                 ", chunk=" + chunk +
-                ", size=" + size +
+                ", size=" + file.getSize() +
                 ", name='" + name + '\'' +
                 ", file=" + file.getOriginalFilename() +
                 ", md5='" + md5 + '\'' +

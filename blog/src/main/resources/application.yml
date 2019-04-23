@@ -1,11 +1,8 @@
 server:
   port: 8001
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.20.150:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: root
+  profiles:
+    active: test
 mybatis-plus:
   mapper-locations: classpath:/com/potoyang/learn/blog/*/mapper/*Mapper.xml
   type-aliases-package: com.potoyang.learn.blog.*.model
@@ -21,5 +18,3 @@ management:
   metrics:
     tags:
       application: "blogApplication"
-config:
-  blog-save-dir: F:/blog/
