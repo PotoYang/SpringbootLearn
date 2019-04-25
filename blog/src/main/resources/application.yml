@@ -2,7 +2,7 @@ server:
   port: 8001
 spring:
   profiles:
-    active: test
+    active: dev
 mybatis-plus:
   mapper-locations: classpath:/com/potoyang/learn/blog/*/mapper/*Mapper.xml
   type-aliases-package: com.potoyang.learn.blog.*.model

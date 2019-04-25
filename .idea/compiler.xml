@@ -7,26 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="blog" />
-        <module name="elk" />
-        <module name="file-upload" />
-        <module name="get-some-novel" />
-        <module name="mail" />
-        <module name="my-file-upload" />
-        <module name="mybatis-redis" />
-        <module name="mystarter-spring-boot-starter" />
-        <module name="netty" />
-        <module name="security-jwt" />
-        <module name="security-oauth2" />
-        <module name="shiro" />
-        <module name="shiro-jwt" />
-        <module name="shirojwt" />
-        <module name="springboot-first-application" />
         <module name="springboot-webflux" />
-        <module name="SpringbootLearn" />
-        <module name="unit-test-sample" />
+        <module name="mail" />
         <module name="websocket-rabbitmq" />
+        <module name="shirojwt" />
+        <module name="elk" />
+        <module name="blog" />
+        <module name="netty" />
+        <module name="shiro" />
+        <module name="mybatis-redis" />
+        <module name="file-upload" />
+        <module name="security-jwt" />
+        <module name="springboot-first-application" />
         <module name="websocketrabbitmq" />
+        <module name="my-file-upload" />
+        <module name="unit-test-sample" />
+        <module name="shiro-jwt" />
+        <module name="SpringbootLearn" />
+        <module name="mystarter-spring-boot-starter" />
+        <module name="security-oauth2" />
+        <module name="get-some-novel" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

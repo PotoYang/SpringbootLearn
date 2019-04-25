@@ -124,6 +124,7 @@
                 success: function (data) {
                     if (data.code === 0) {
                         layer.msg('Blog save success.', {icon: 1});
+                        $('#title').val('');
                     } else {
                         layer.msg('Something error!', {icon: 2});
                     }
@@ -146,10 +147,10 @@
                 success: function (data) {
                     if (data.code === 0) {
                         layer.msg('Blog save success.', {icon: 1});
+                        $('#title').val('');
                     } else {
                         layer.msg('Something error!', {icon: 2});
                     }
-                    // layer.console.log(data.code);
                 }
             });
         });
