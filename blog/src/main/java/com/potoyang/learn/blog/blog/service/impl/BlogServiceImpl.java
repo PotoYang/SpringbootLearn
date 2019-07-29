@@ -8,6 +8,7 @@ import com.potoyang.learn.blog.blog.service.BlogService;
 import com.potoyang.learn.blog.config.MyConfig;
 import com.potoyang.learn.blog.global.exception.BlogException;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -31,12 +32,16 @@ import java.util.List;
 @Slf4j
 public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements BlogService {
 
+
+    private final SqlSession sqlSession;
+
     private final BlogMapper blogMapper;
 
     private final MyConfig myConfig;
 
     @Autowired
-    public BlogServiceImpl(BlogMapper blogMapper, MyConfig myConfig) {
+    public BlogServiceImpl(SqlSession sqlSession, BlogMapper blogMapper, MyConfig myConfig) {
+        this.sqlSession = sqlSession;
         this.blogMapper = blogMapper;
         this.myConfig = myConfig;
     }

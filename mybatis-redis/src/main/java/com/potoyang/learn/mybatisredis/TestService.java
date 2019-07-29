@@ -24,12 +24,12 @@ public class TestService {
         this.testMapper = testMapper;
     }
 
-    @Cacheable("getAllTest")
+//    @Cacheable("getAllTest")
     public List<Test> getAllTest() {
         return testMapper.selectAll();
     }
 
-    @Cacheable("getTest")
+//    @Cacheable("getTest")
     public Test getTest(Integer id) {
         return testMapper.selectTestById(id);
     }

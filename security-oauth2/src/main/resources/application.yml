@@ -1,28 +1,18 @@
 server:
-  port: 8888
-  servlet:
-    session:
-      timeout: 2520000
+  port: 8000
 spring:
-  thymeleaf:
-    prefix: classpath:/views/
-    suffix: .html
-    cache: false
-  redis:
-    host: 192.168.20.150
-    database: 0
-    timeout: 10000
-    jedis:
-      pool:
-        max-active: 8
-        max-wait: 60
-        max-idle: 8
-        min-idle: 0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.20.150:3306/ipanel_smarthome_base?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+mybatis:
+  config-location: classpath:mybatis-config.xml
+mapper:
+  mappers:
+    - com.potoyang.learn.securityoauth2.config.BaseMapper
+  identity: MYSQL
+  not-empty: false
 logging:
   level:
     org.springframework: info
-security:
-  oauth2:
-    client:
-      client-id: test
-      client-secret: test

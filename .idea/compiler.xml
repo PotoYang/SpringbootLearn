@@ -9,24 +9,24 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-webflux" />
         <module name="mail" />
-        <module name="websocket-rabbitmq" />
         <module name="shirojwt" />
-        <module name="elk" />
         <module name="blog" />
-        <module name="netty" />
-        <module name="shiro" />
+        <module name="websocket-rabbitmq" />
+        <module name="elk" />
         <module name="mybatis-redis" />
-        <module name="file-upload" />
+        <module name="netty" />
         <module name="security-jwt" />
         <module name="springboot-first-application" />
         <module name="websocketrabbitmq" />
+        <module name="shiro" />
         <module name="my-file-upload" />
         <module name="unit-test-sample" />
-        <module name="shiro-jwt" />
+        <module name="file-upload" />
         <module name="SpringbootLearn" />
         <module name="mystarter-spring-boot-starter" />
-        <module name="security-oauth2" />
+        <module name="shiro-jwt" />
         <module name="get-some-novel" />
+        <module name="security-oauth2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -66,6 +66,7 @@
       <module name="mystarter-spring-boot-starter" options="-parameters" />
       <module name="netty" options="-parameters" />
       <module name="security-jwt" options="-parameters" />
+      <module name="security-oauth2" options="-parameters" />
       <module name="shiro" options="-parameters" />
       <module name="shiro-jwt" options="-parameters" />
       <module name="shirojwt" options="-parameters" />

@@ -11,6 +11,7 @@ import java.util.List;
  * @since 2018/11/20 11:54
  * Modified:
  * Description:
+ * java -classpath "%JAVA_HOME%/lib/sa-jdi.jar" sun.jvm.hotspot.HSDB
  */
 @Mapper
 public interface TestMapper {
