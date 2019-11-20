@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/dubbo-parent/dubbo-api" />
+    <file type="web" url="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -22,6 +27,7 @@
         <option value="$PROJECT_DIR$/my_file_upload/pom.xml" />
         <option value="$PROJECT_DIR$/my-file-upload/pom.xml" />
         <option value="$PROJECT_DIR$/blog/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-parent/pom.xml" />
       </list>
     </option>
   </component>

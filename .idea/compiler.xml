@@ -9,28 +9,35 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-webflux" />
         <module name="mail" />
-        <module name="shirojwt" />
-        <module name="blog" />
         <module name="websocket-rabbitmq" />
+        <module name="shirojwt" />
+        <module name="dubbo-api" />
         <module name="elk" />
-        <module name="mybatis-redis" />
+        <module name="blog" />
         <module name="netty" />
+        <module name="shiro" />
+        <module name="mybatis-redis" />
+        <module name="shiro-jwt" />
         <module name="security-jwt" />
         <module name="springboot-first-application" />
+        <module name="dubbo-provider" />
         <module name="websocketrabbitmq" />
-        <module name="shiro" />
-        <module name="my-file-upload" />
+        <module name="dubbo-consumer" />
         <module name="unit-test-sample" />
         <module name="file-upload" />
         <module name="SpringbootLearn" />
         <module name="mystarter-spring-boot-starter" />
-        <module name="shiro-jwt" />
+        <module name="my-file-upload" />
         <module name="get-some-novel" />
         <module name="security-oauth2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="blog" target="1.8" />
+      <module name="dubbo-api" target="1.8" />
+      <module name="dubbo-consumer" target="1.8" />
+      <module name="dubbo-parent" target="1.8" />
+      <module name="dubbo-provider" target="1.8" />
       <module name="elk" target="1.8" />
       <module name="file-upload" target="1.8" />
       <module name="get-some-novel" target="1.8" />
@@ -57,6 +64,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blog" options="-parameters" />
+      <module name="dubbo-api" options="-parameters" />
+      <module name="dubbo-consumer" options="-parameters" />
+      <module name="dubbo-provider" options="-parameters" />
       <module name="elk" options="-parameters" />
       <module name="file-upload" options="-parameters" />
       <module name="get-some-novel" options="-parameters" />

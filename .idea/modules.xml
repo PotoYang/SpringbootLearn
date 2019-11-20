@@ -5,6 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/SpringbootLearn.iml" filepath="$PROJECT_DIR$/SpringbootLearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/blog/blog.iml" filepath="$PROJECT_DIR$/blog/blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-algorithm/common-algorithm.iml" filepath="$PROJECT_DIR$/common-algorithm/common-algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-parent/dubbo-api/dubbo-api.iml" filepath="$PROJECT_DIR$/dubbo-parent/dubbo-api/dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/dubbo-parent/dubbo-consumer/dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-parent/dubbo-parent.iml" filepath="$PROJECT_DIR$/dubbo-parent/dubbo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/dubbo-provider.iml" filepath="$PROJECT_DIR$/dubbo-parent/dubbo-provider/dubbo-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/elk/elk.iml" filepath="$PROJECT_DIR$/elk/elk.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-upload/file-upload.iml" filepath="$PROJECT_DIR$/file-upload/file-upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/get-some-novel/get-some-novel.iml" filepath="$PROJECT_DIR$/get-some-novel/get-some-novel.iml" />
