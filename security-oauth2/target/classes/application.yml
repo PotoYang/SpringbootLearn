@@ -1,0 +1,18 @@
+server:
+  port: 8000
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.20.150:3306/ipanel_smarthome_base?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+mybatis:
+  config-location: classpath:mybatis-config.xml
+mapper:
+  mappers:
+    - com.potoyang.learn.securityoauth2.config.BaseMapper
+  identity: MYSQL
+  not-empty: false
+logging:
+  level:
+    org.springframework: info

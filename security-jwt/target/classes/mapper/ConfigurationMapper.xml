@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.potoyang.learn.securityjwt.mapper.ConfigurationMapper">
+    <resultMap id="BaseResultMap" type="Configuration">
+      <id column="id" property="id"/>
+      <result column="life_cycle" property="lifeCycle"/>
+      <result column="release_time" property="releaseTime"/>
+      <result column="video_total" property="videoTotal"/>
+    </resultMap>
+</mapper>

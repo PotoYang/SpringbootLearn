@@ -1,29 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://E:/Download/Chrome/my_file_upload" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blog" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-parent/dubbo-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-parent/dubbo-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elk" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elk/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/file-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-upload/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-upload/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/get-some-novel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/get-some-novel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/get-some-novel/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mail" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mail/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mail/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-file-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-file-upload/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-file-upload/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mystarter-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mystarter-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mystarter-spring-boot-starter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpClientService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-jwt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security-jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security-jwt/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-oauth2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security-oauth2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security-oauth2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shiro" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shiro-jwt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shiro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shiro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopee/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-first-application" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-first-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-first-application/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-webflux" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-webflux/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-webflux/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/unit-test-sample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/unit-test-sample/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/unit-test-sample/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/websocket-rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/websocket-rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/websocket-rabbitmq/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

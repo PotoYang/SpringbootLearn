@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest 文件上传</title>
+</head>
+<body>
+<progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
+<span id="percentage"></span><span id="time"></span>
+<br/>
+<input type="file" id="file" name="myFile"/>
+<input type="button" onclick="UploadFile()" value="上传"/>
+<input type="button" onclick="cancelUploadFile()" value="取消"/>
+</body>
+</html>
+<script src="/js/spark-md5.min.js"></script>
+<script src="/js/yuploader.js"></script>
+<script type="text/javascript">
+    var bytesPerPiece = 5242880;
+    var totalPieces;
+    var xhr, ot, oloaded;
+    // 接收文件的后台地址
+    var url = "http://192.168.20.150:8001/my/video/upload";
+
+    // 上传文件的方法
+    function UploadFile() {
+        // 原生 js 获取文件对象
+        var fileObj = document.getElementById("file").files[0];
+        var start = 0;
+        var end;
+        var index = 0;
+        var fileSize = fileObj.size;
+        var filename = fileObj.name;
+
+        totalPieces = Math.ceil(fileSize / bytesPerPiece);
+
+        while (start < fileSize) {
+            end = start + bytesPerPiece;
+            if (end > fileSize) {
+                end = fileSize;
+            }
+
+            var chunk = blobSlice(fileObj, start, end);
+            var up = new YUploader();
+            var param = {
+                url: url,
+                file: chunk,
+                chunkNum: index
+            };
+            up.start(param);
+            start = end;
+            index++;
+        }
+    }
+
+    function blobSlice(blob, start, end) {
+        if (blob.slice) {
+            return blob.slice(start, end);
+        }
+
+        if (blob.mozSlice) {
+            return blob.mozSlice(start, end);
+        }
+
+        if (blob.webkitSlice) {
+            return blob.webkitSlice(start, end);
+        }
+
+        return null;
+    }
+
+    // 取消上传
+    function cancelUploadFile() {
+        xhr.abort();
+    }
+
+    // 上传进度
+    function progressFunction(event) {
+        var progressBar = document.getElementById("progressBar");
+        var percentageDiv = document.getElementById("percentage");
+
+        // event.total 传输的总字节，event.loaded 已经传输的字节
+        // 如果 event.lengthComputable 不为真，则 event.total = 0
+        if (event.lengthComputable) {
+            progressBar.max = event.total;
+            progressBar.value = event.loaded;
+            percentageDiv.innerHTML = Math.round(event.loaded / event.total * 100) + "%";
+        }
+
+        var time = document.getElementById("time");
+        // 获取当前时间
+        var nt = new Date().getTime();
+        var pertime = (nt - ot) / 1000;
+        ot = new Date().getTime();
+        var perload = event.loaded = oloaded;
+        oloaded = event.loaded;
+
+        // 计算上传速度(b/s)
+        var speed = perload / pertime;
+        var bspeed = speed;
+        var units = 'b/s';
+        if (speed / 1024 > 1) {
+            speed = speed / 1024;
+            units = 'k/s';
+        }
+        if (speed / 1024 > 1) {
+            speed = speed / 1024;
+            units = 'M/s';
+        }
+        speed = speed.toFixed(1);
+        // 剩余时间
+        var resttime = ((event.total - event.loaded) / bspeed).toFixed(1);
+        time.innerHTML = '，速度：' + speed + units + '，剩余时间：' + resttime + 's';
+        if (bspeed === 0) {
+            time.innerHTML = '上传已取消';
+        }
+    }
+
+    // 上传进度
+    function progressChunkFunction(event) {
+        var progressBar = document.getElementById("progressBar");
+        var percentageDiv = document.getElementById("percentage");
+
+        // event.total 传输的总字节，event.loaded 已经传输的字节
+        // 如果 event.lengthComputable 不为真，则 event.total = 0
+        if (event.lengthComputable) {
+            progressBar.max = event.total;
+            progressBar.value = event.loaded;
+            percentageDiv.innerHTML = Math.round(event.loaded / event.total * 100) + "%";
+        }
+
+        var time = document.getElementById("time");
+        // 获取当前时间
+        var nt = new Date().getTime();
+        var pertime = (nt - ot) / 1000;
+        ot = new Date().getTime();
+        var perload = event.loaded = oloaded;
+        oloaded = event.loaded;
+
+        // 计算上传速度(b/s)
+        var speed = perload / pertime;
+        var bspeed = speed;
+        var units = 'b/s';
+        if (speed / 1024 > 1) {
+            speed = speed / 1024;
+            units = 'k/s';
+        }
+        if (speed / 1024 > 1) {
+            speed = speed / 1024;
+            units = 'M/s';
+        }
+        speed = speed.toFixed(1);
+        // 剩余时间
+        var resttime = ((event.total - event.loaded) / bspeed).toFixed(1);
+        time.innerHTML = '，速度：' + speed + units + '，剩余时间：' + resttime + 's';
+        if (bspeed === 0) {
+            time.innerHTML = '上传已取消';
+        }
+    }
+</script>

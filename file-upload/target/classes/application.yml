@@ -1,0 +1,43 @@
+server:
+  port: 8001
+  tomcat:
+    protocolHeader: x-forwarded-proto
+    remoteIpHeader: x-forwarded-for
+    basedir:
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    # Druid数据源配置
+    druid:
+      filters: stat
+      maxActive: 20
+      minIdle: 1
+      maxWait: 60000
+      initialSize: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 50
+  #      aop-patterns: com.example.dev.service.*
+  redis:
+    host: 127.0.0.1
+    port: 6379
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.potoyang.learn.fileupload.entity
+upload:
+  dir: D:/uploads/
+  chunkSize: 5242880

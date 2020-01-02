@@ -95,7 +95,7 @@ public class HttpClientService {
 
 //        httpGet.addHeader("x-api-source", "pc");
 //        httpGet.addHeader("x-requested-with", "XMLHttpRequest");
-        httpGet.addHeader("referer", "https://shopee.sg/search?keyword=protein");
+        httpGet.addHeader("Referer", "https://shopee.sg/search?keyword=protein");
 
         // 发起请求
         try (CloseableHttpResponse response = this.httpClient.execute(httpGet)) {
@@ -111,6 +111,10 @@ public class HttpClientService {
             HttpClientService service = new HttpClientService();
             String url = "https://shopee.sg/api/v2/search_items?by=relevancy&keyword=protein&limit=50&newest=0&order=desc&page_type=search&version=2";
             HttpResult result = service.doGet(url);
+            if (result == null) {
+                System.out.println("null");
+                return;
+            }
             System.out.println(result.code + " " + result.body);
         } catch (Exception e) {
             e.printStackTrace();

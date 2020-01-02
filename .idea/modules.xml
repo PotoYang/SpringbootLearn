@@ -21,11 +21,14 @@
       <module fileurl="file://$PROJECT_DIR$/security-jwt/security-jwt.iml" filepath="$PROJECT_DIR$/security-jwt/security-jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-oauth2/security-oauth2.iml" filepath="$PROJECT_DIR$/security-oauth2/security-oauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/shiro/shiro.iml" filepath="$PROJECT_DIR$/shiro/shiro.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shiro-jwt/shiro-jwt.iml" filepath="$PROJECT_DIR$/shiro-jwt/shiro-jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shirojwt/shiro-jwt.iml" filepath="$PROJECT_DIR$/shirojwt/shiro-jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shirojwt/shirojwt.iml" filepath="$PROJECT_DIR$/shirojwt/shirojwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopee/shopee.iml" filepath="$PROJECT_DIR$/shopee/shopee.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-first-application/springboot-first-application.iml" filepath="$PROJECT_DIR$/springboot-first-application/springboot-first-application.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-webflux/springboot-webflux.iml" filepath="$PROJECT_DIR$/springboot-webflux/springboot-webflux.iml" />
       <module fileurl="file://$PROJECT_DIR$/unit-test-sample/unit-test-sample.iml" filepath="$PROJECT_DIR$/unit-test-sample/unit-test-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/websocket-rabbitmq/websocket-rabbitmq.iml" filepath="$PROJECT_DIR$/websocket-rabbitmq/websocket-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-rabbitmq/websocketrabbitmq.iml" filepath="$PROJECT_DIR$/websocket-rabbitmq/websocketrabbitmq.iml" />
     </modules>
   </component>
 </project>
