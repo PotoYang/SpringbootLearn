@@ -1,4 +1,4 @@
-package com.potoyang.learn.getsomenovel.Config;
+package com.potoyang.learn.getsomenovel.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

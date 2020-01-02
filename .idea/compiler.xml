@@ -9,30 +9,30 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-webflux" />
         <module name="mail" />
-        <module name="websocket-rabbitmq" />
-        <module name="shirojwt" />
         <module name="dubbo-api" />
-        <module name="elk" />
+        <module name="shirojwt" />
+        <module name="rtsp-test" />
         <module name="blog" />
-        <module name="netty" />
-        <module name="shiro" />
+        <module name="websocket-rabbitmq" />
+        <module name="elk" />
         <module name="mybatis-redis" />
-        <module name="shiro-jwt" />
+        <module name="netty" />
         <module name="security-jwt" />
         <module name="springboot-first-application" />
         <module name="dubbo-provider" />
         <module name="websocketrabbitmq" />
-        <module name="dubbo-consumer" />
+        <module name="shiro" />
         <module name="unit-test-sample" />
+        <module name="dubbo-consumer" />
         <module name="file-upload" />
-        <module name="SpringbootLearn" />
         <module name="mystarter-spring-boot-starter" />
         <module name="my-file-upload" />
+        <module name="shiro-jwt" />
         <module name="get-some-novel" />
         <module name="security-oauth2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="blog" target="1.8" />
       <module name="dubbo-api" target="1.8" />
       <module name="dubbo-consumer" target="1.8" />
@@ -43,22 +43,19 @@
       <module name="get-some-novel" target="1.8" />
       <module name="mail" target="1.8" />
       <module name="my-file-upload" target="1.8" />
-      <module name="my-starter" target="1.8" />
       <module name="mybatis-redis" target="1.8" />
       <module name="mystarter-spring-boot-starter" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="rtsp-test" target="8" />
       <module name="security-jwt" target="1.8" />
       <module name="security-oauth2" target="1.8" />
       <module name="shiro" target="1.8" />
       <module name="shiro-jwt" target="1.8" />
-      <module name="shirojwt" target="1.8" />
       <module name="springboot-first-application" target="1.8" />
       <module name="springboot-webflux" target="1.8" />
-      <module name="SpringbootLearn" target="1.5" />
-      <module name="swagger-test" target="1.8" />
+      <module name="SpringbootLearn" target="8" />
       <module name="unit-test-sample" target="1.8" />
       <module name="websocket-rabbitmq" target="1.8" />
-      <module name="websocketrabbitmq" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -79,12 +76,10 @@
       <module name="security-oauth2" options="-parameters" />
       <module name="shiro" options="-parameters" />
       <module name="shiro-jwt" options="-parameters" />
-      <module name="shirojwt" options="-parameters" />
       <module name="springboot-first-application" options="-parameters" />
       <module name="springboot-webflux" options="-parameters" />
       <module name="unit-test-sample" options="-parameters" />
       <module name="websocket-rabbitmq" options="-parameters" />
-      <module name="websocketrabbitmq" options="-parameters" />
     </option>
   </component>
 </project>
