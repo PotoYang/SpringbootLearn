@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.potoyang.learn.shirojwt.mapper.SysRoleMapper">
+    <resultMap id="BaseResultMap" type="SysRole">
+        <id column="id" property="id"/>
+        <result column="role_name" property="roleName"/>
+        <result column="memo" property="memo"/>
+    </resultMap>
+
+    <resultMap id="SysUserRoleMap" type="SysUserRole">
+        <result column="user_id" property="userId"/>
+        <result column="role_id" property="roleId"/>
+    </resultMap>
+
+    <select id="selectSysRoleNameByUserName" resultType="java.lang.String">
+        SELECT sr.memo
+        FROM sys_role sr, sys_user_role sur, sys_user su
+        WHERE su.login_name = #{loginName, jdbcType=VARCHAR}
+              AND sur.user_id = su.id AND sr.id = sur.role_id
+    </select>
+
+    <select id="selectSysRoleNameByUserId" resultType="java.lang.String">
+        SELECT sr.role_name
+        FROM sys_user su, sys_user_role sur, sys_role sr
+        WHERE su.id = #{userId,jdbcType=INTEGER}
+              AND su.id = sur.user_id
+              AND sur.role_id = sr.id;
+    </select>
+
+    <select id="selectByUserId" resultMap="SysUserRoleMap">
+        SELECT
+            ur.user_id,
+            ur.role_id
+        FROM sys_user u, sys_user_role ur
+        WHERE u.id = #{id, jdbcType=INTEGER}
+              AND u.id = ur.user_id
+    </select>
+
+    <select id="selectRoleNameById" resultType="java.lang.String">
+        SELECT role_name
+        FROM sys_role
+        WHERE id = #{id, jdbcType=INTEGER}
+    </select>
+</mapper>
