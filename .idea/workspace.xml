@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8af8c03-984b-49f3-acf3-a0810ebf3026" name="Default" comment="update" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/file-upload/target/" />
+    <ignored path="$PROJECT_DIR$/security-oauth2/target/" />
+    <ignored path="$PROJECT_DIR$/springboot-first-application/target/" />
+    <ignored path="$PROJECT_DIR$/mail/target/" />
+    <ignored path="$PROJECT_DIR$/elk/target/" />
+    <ignored path="$PROJECT_DIR$/websocket-rabbitmq/target/" />
+    <ignored path="$PROJECT_DIR$/shiro-jwt/target/" />
+    <ignored path="$PROJECT_DIR$/my-starter/target/" />
+    <ignored path="$PROJECT_DIR$/mystarter-spring-boot-starter/target/" />
+    <ignored path="$PROJECT_DIR$/get-some-novel/target/" />
+    <ignored path="$PROJECT_DIR$/security-jwt/target/" />
+    <ignored path="$PROJECT_DIR$/swagger-test/target/" />
+    <ignored path="$PROJECT_DIR$/shiro/target/" />
+    <ignored path="$PROJECT_DIR$/springboot-webflux/target/" />
+    <ignored path="$PROJECT_DIR$/mybatis-redis/target/" />
+    <ignored path="$PROJECT_DIR$/netty/target/" />
+    <ignored path="$PROJECT_DIR$/unit-test-sample/target/" />
+    <ignored path="E:/Download/Chrome/my_file_upload/target/" />
+    <ignored path="$PROJECT_DIR$/my_file_upload/target/" />
+    <ignored path="$PROJECT_DIR$/blog/target/" />
+    <ignored path="$PROJECT_DIR$/my-file-upload/target/classes/" />
+    <ignored path="$PROJECT_DIR$/dubbo-parent/target/" />
+    <ignored path="$PROJECT_DIR$/dubbo-parent/dubbo-api/target/" />
+    <ignored path="$PROJECT_DIR$/dubbo-parent/dubbo-provider/target/" />
+    <ignored path="$PROJECT_DIR$/dubbo-parent/dubbo-consumer/target/" />
+    <ignored path="$PROJECT_DIR$/rtsp-test/target/" />
+    <manually-removed-from-ignored>
+      <directory path="$PROJECT_DIR$/my-file-upload/target/" />
+      <directory path=".idea/" />
+    </manually-removed-from-ignored>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ipanel_smarthome_base: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SpringbootLearn" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test3.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="JUnit4 Test Class" />
+        <option value="Singleton" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Mapper.class</find>
+      <find>Proxy.newProxyInstance</find>
+      <find>AuthenticationManagerBuilder</find>
+      <find>isAuthenticated</find>
+      <find>There is no PasswordEncoder mapped for the id</find>
+      <find>refresh_token</find>
+      <find>client_credentials</find>
+      <find>denyAll</find>
+      <find>permitAll</find>
+      <find>tokenKeyAccess</find>
+      <find>oauth/token_key</find>
+      <find>jwt</find>
+      <find>HttpClientGenerator</find>
+      <find>buildSSLConnectionSocketFactory</find>
+      <find>ConsolePipeline</find>
+      <find>MyHttpClientGenerator</find>
+      <find>hb</find>
+      <find>search_items</find>
+      <find>json</find>
+      <find>ads_</find>
+      <find>TrackingItem</find>
+      <find>ads</find>
+      <find>keyword</find>
+      <find>ads_keyword&quot;: &quot;tea&quot;</find>
+      <find>adsid</find>
+      <find>ads_keyword</find>
+      <find>&quot;ads_keyword&quot;: &quot;protein&quot;</find>
+      <find>2325696154</find>
+      <find>wkdaelpmissisiht</find>
+      <find>ads_keyword&quot;: &quot;</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/controller/BaseMainController.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/controller/GrantController.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/security/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/service/MyClientDetailService.java" />
+        <option value="$PROJECT_DIR$/blog/src/main/java/com/potoyang/learn/blog/blog/service/impl/BlogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mybatis-redis/src/main/java/com/potoyang/learn/mybatisredis/TestService.java" />
+        <option value="$PROJECT_DIR$/mybatis-redis/src/main/java/com/potoyang/learn/mybatisredis/MybatisRedisApplication.java" />
+        <option value="$PROJECT_DIR$/mybatis-redis/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/mybatis-redis/src/main/java/com/potoyang/learn/mybatisredis/TestMapper.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/security/MyClientDetailsService.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/dao/ClientDao.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/service/MyClientDetailsService.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/config/BaseMapper.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/mapper/ClientMapper.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/mapper/ClientMapper.xml" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/service/ClientService.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/SecurityOauth2Application.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/entity/Client.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/service/MyClientDetails.java" />
+        <option value="$PROJECT_DIR$/security-oauth2/src/main/java/com/potoyang/learn/securityoauth2/config/AuthorizationServerConfig.java" />
+        <option value="$PROJECT_DIR$/mail/pom.xml" />
+        <option value="$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/MyHttpClientGenerator.java" />
+        <option value="$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/MyHttpClientDownloader.java" />
+        <option value="$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/GithubRepoPageProcessor.java" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-api/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-api/src/main/java/com/potoyang/learn/MyService.java" />
+        <option value="$PROJECT_DIR$/dubbo-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/java/com/potoyang/learn/ProviderApplication.java" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/java/com/potoyang/learn/ConsumerApplication.java" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/java/com/potoyang/learn/service/MyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/java/com/potoyang/learn/controller/MyController.java" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/test/RtspTest.java" />
+        <option value="$PROJECT_DIR$/rtsp-test/pom.xml" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpResult.java" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/resources/test.js" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/resources/test2.js" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/resources/test2.json" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/resources/test3.json" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/resources/test.json" />
+        <option value="$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpClientService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\workspace\repo" />
+        <option name="userSettingsFile" value="E:\workspace\repo\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rtsp-test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rtsp-test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1401" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <showMembers ProjectPane="true" />
+      <hideEmptyPackages ProjectPane="false" />
+      <compactDirectories Scope="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="MyUtil" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="MyUtil" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringbootLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="rtsp-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SpringbootLearn" type="58d84e3e:PackageViewProjectNode" />
+              <item name="shiro-jwt" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="58d84e3e:PackageViewProjectNode" />
+              <item name="shiro-jwt" type="616d4139:PackageViewModuleNode" />
+              <item name="com.potoyang.learn.shirojwt" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="58d84e3e:PackageViewProjectNode" />
+              <item name="shiro-jwt" type="616d4139:PackageViewModuleNode" />
+              <item name="com.potoyang.learn.shirojwt" type="1f31426a:PackageElementNode" />
+              <item name="controller" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+              <item name="java" type="cbb8eebc:String" user="java" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+              <item name="java" type="cbb8eebc:String" user="java" />
+              <item name="com/securityjwt" type="cbb8eebc:String" user="com/securityjwt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="security-jwt" type="cbb8eebc:String" user="security-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+              <item name="resources" type="cbb8eebc:String" user="resources" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+              <item name="java" type="cbb8eebc:String" user="java" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+              <item name="java" type="cbb8eebc:String" user="java" />
+              <item name="com/potoyang/learn/shirojwt" type="cbb8eebc:String" user="com/potoyang/learn/shirojwt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="shiro-jwt" type="cbb8eebc:String" user="shiro-jwt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main" type="cbb8eebc:String" user="main" />
+              <item name="java" type="cbb8eebc:String" user="java" />
+              <item name="com/potoyang/learn/shirojwt" type="cbb8eebc:String" user="com/potoyang/learn/shirojwt" />
+              <item name="mapper" type="cbb8eebc:String" user="mapper" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.potoyang.learn.fileupload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.potoyang.learn.fileupload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test/java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="file-upload" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test/java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.potoyang.learn.fileupload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="websocket-rabbitmq" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="websocket-rabbitmq" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="websocket-rabbitmq" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="websocket-rabbitmq" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="SpringbootLearn" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="websocket-rabbitmq" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="GO_FMT" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="Operation&#9;PSI&#9;JAVA://springfox.documentation.service.Operation&#10;deprecated&#9;null&#9;null&#10;org.apache.shiro.subject.Subject&#9;PSI&#9;JAVA://org.apache.shiro.subject.Subject&#10;Fo&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0-sources.jar!/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.java&#10;AdviceFil&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0-sources.jar!/org/apache/shiro/web/servlet/AdviceFilter.java&#10;AccessControlFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0-sources.jar!/org/apache/shiro/web/filter/AccessControlFilter.java&#10;FormAuthenticationFilter&#9;PSI&#9;JAVA://org.apache.shiro.web.filter.authc.FormAuthenticationFilter&#10;authc&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc&#10;login.&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/org/apache/tomcat/util/descriptor/web/LoginConfig.class&#10;DefaultFilter&#9;PSI&#9;JAVA://org.apache.shiro.web.filter.mgt.DefaultFilter&#10;invalid_grant&#9;PSI&#9;JAVA://org.springframework.security.oauth2.common.exceptions.OAuth2Exception#INVALID_GRANT&#10;TokenEndpoint&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.15.RELEASE/spring-security-oauth2-2.0.15.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;InvalidGran&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.15.RELEASE/spring-security-oauth2-2.0.15.RELEASE-sources.jar!/org/springframework/security/oauth2/common/exceptions/InvalidGrantException.java" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="android.sdk.path" value="D:/AndroidSDK" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554279352348" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="Sybase&#10;GenericSQL" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-173.4674.33" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rtsp-test/src/main/java/rtsp" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Perforce" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.potoyang.learn.springbootfirstapplication.index" />
+      <recent name="com.potoyang.learn.springbootfirstapplication" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.potoyang.learn.netty" />
+      <recent name="com.potoyang.learn.springbootfirstapplication" />
+      <recent name="com.potoyang.learn.shirojwt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\springboot-first-application\src\main\resources\static" />
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\springboot-first-application\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\rtsp-test\src\main\java\rtsp" />
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\rtsp-test\lib" />
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\security-oauth2\src\main\java\com\potoyang\learn\securityoauth2\mapper" />
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\security-oauth2\src\main\resources" />
+      <recent name="E:\workspace\intellij_workspace\SpringbootLearn\blog\src\main\resources\static\html\layui" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.potoyang.learn.mail" />
+      <recent name="com.potoyang.learn.securityoauth2.config" />
+      <recent name="com.potoyang.learn.blog.config" />
+      <recent name="com.potoyang.learn.fileupload.entity" />
+      <recent name="com.potoyang.learn.fileupload.util" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.potoyang.learn.securityoauth2.service" />
+      <recent name="com.potoyang.learn.myfileupload.controller.response" />
+      <recent name="com.potoyang.learn.myfileupload.entity" />
+      <recent name="com.potoyang.learn.unittestsample.exception" />
+      <recent name="com.potoyang.learn.netty.learn" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8001/actuator/prometheus" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="text/plain;version=0.0.4;charset=utf-8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.16573349" />
+  </component>
+  <component name="RunManager" selected="Application.HttpClientService">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GithubRepoPageProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.potoyang.learn.mail.GithubRepoPageProcessor" />
+      <module name="mail" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.potoyang.learn.mail.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpClientService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rtsp.HttpClientService" />
+      <module name="rtsp-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rtsp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RtspTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rtsp.test.RtspTest" />
+      <module name="rtsp-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rtsp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generator" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/file-upload" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.blog.BlogApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="dubbo-consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.potoyang.learn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.ConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="elk" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.elk.ElkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileUploadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="file-upload" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.fileupload.FileUploadApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetSomeNovelApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="get-some-novel" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.getsomenovel.GetSomeNovelApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mail" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.mail.MailApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mybatis-redis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.mybatisredis.MybatisRedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="netty" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.netty.NettyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="dubbo-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.potoyang.learn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.ProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecurityJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="security-jwt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.securityjwt.SecurityJwtApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecurityOauth2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="security-oauth2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.securityoauth2.SecurityOauth2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShiroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shiro" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.shiro.ShiroApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShirojwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shiro-jwt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.shirojwt.ShirojwtApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootFirstApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-first-application" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.springbootfirstapplication.SpringbootFirstApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootWebfluxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-webflux" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.springbootwebflux.SpringbootWebfluxApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitTestSampleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="unit-test-sample" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.unittestsample.UnitTestSampleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebsocketrabbitmqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="websocket-rabbitmq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.potoyang.learn.websocketrabbitmq.WebsocketrabbitmqApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GithubRepoPageProcessor" />
+      <item itemvalue="Application.RtspTest" />
+      <item itemvalue="Application.HttpClientService" />
+      <item itemvalue="Maven.generator" />
+      <item itemvalue="Spring Boot.BlogApplication" />
+      <item itemvalue="Spring Boot.ElkApplication" />
+      <item itemvalue="Spring Boot.FileUploadApplication" />
+      <item itemvalue="Spring Boot.GetSomeNovelApplication" />
+      <item itemvalue="Spring Boot.MailApplication" />
+      <item itemvalue="Spring Boot.MybatisRedisApplication" />
+      <item itemvalue="Spring Boot.NettyApplication" />
+      <item itemvalue="Spring Boot.SecurityJwtApplication" />
+      <item itemvalue="Spring Boot.SecurityOauth2Application" />
+      <item itemvalue="Spring Boot.ShiroApplication" />
+      <item itemvalue="Spring Boot.ShirojwtApplication" />
+      <item itemvalue="Spring Boot.SpringbootFirstApplication" />
+      <item itemvalue="Spring Boot.SpringbootWebfluxApplication" />
+      <item itemvalue="Spring Boot.UnitTestSampleApplication" />
+      <item itemvalue="Spring Boot.WebsocketrabbitmqApplication" />
+      <item itemvalue="Spring Boot.ConsumerApplication" />
+      <item itemvalue="Spring Boot.ProviderApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HttpClientService" />
+        <item itemvalue="Application.RtspTest" />
+        <item itemvalue="Spring Boot.ConsumerApplication" />
+        <item itemvalue="Spring Boot.ProviderApplication" />
+        <item itemvalue="Application.GithubRepoPageProcessor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8af8c03-984b-49f3-acf3-a0810ebf3026" name="Default" comment="" />
+      <created>1531908888510</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531908888510</updated>
+      <workItem from="1531908890230" duration="2520000" />
+      <workItem from="1531960874892" duration="2063000" />
+      <workItem from="1531967030196" duration="4714000" />
+      <workItem from="1531986776502" duration="1487000" />
+      <workItem from="1531988342510" duration="7843000" />
+      <workItem from="1532047939865" duration="13612000" />
+      <workItem from="1532308627211" duration="13051000" />
+      <workItem from="1532337954180" duration="3455000" />
+      <workItem from="1532393364838" duration="13038000" />
+      <workItem from="1532417776692" duration="1911000" />
+      <workItem from="1532479124384" duration="15521000" />
+      <workItem from="1532565973314" duration="15273000" />
+      <workItem from="1532652863187" duration="630000" />
+      <workItem from="1532654264548" duration="599000" />
+      <workItem from="1532677627039" duration="6242000" />
+      <workItem from="1532911738021" duration="10293000" />
+      <workItem from="1533200562941" duration="2056000" />
+      <workItem from="1533258335142" duration="6445000" />
+      <workItem from="1533523950510" duration="1858000" />
+      <workItem from="1533606047695" duration="5594000" />
+      <workItem from="1533714025173" duration="2952000" />
+      <workItem from="1533718494325" duration="6999000" />
+      <workItem from="1533775477573" duration="5226000" />
+      <workItem from="1533784426840" duration="24746000" />
+      <workItem from="1534121710745" duration="2736000" />
+      <workItem from="1534138785119" duration="13906000" />
+      <workItem from="1534301108882" duration="17961000" />
+      <workItem from="1534380565557" duration="14276000" />
+      <workItem from="1534467374422" duration="4052000" />
+      <workItem from="1534477429081" duration="4635000" />
+      <workItem from="1534494683546" duration="489000" />
+      <workItem from="1534725411651" duration="585000" />
+      <workItem from="1534728030821" duration="1369000" />
+      <workItem from="1534832057827" duration="78000" />
+      <workItem from="1534833241891" duration="2879000" />
+      <workItem from="1534898051121" duration="4184000" />
+      <workItem from="1534924328840" duration="15672000" />
+      <workItem from="1534985330485" duration="11104000" />
+      <workItem from="1535446893270" duration="785000" />
+      <workItem from="1535503885162" duration="1027000" />
+      <workItem from="1535521882339" duration="30000" />
+      <workItem from="1535523241301" duration="3887000" />
+      <workItem from="1535612151907" duration="1965000" />
+      <workItem from="1535677282796" duration="15363000" />
+      <workItem from="1535945278871" duration="102349000" />
+      <workItem from="1536284719023" duration="12948000" />
+      <workItem from="1536543158624" duration="2542000" />
+      <workItem from="1536546676458" duration="22220000" />
+      <workItem from="1536627189589" duration="26408000" />
+      <workItem from="1536716787689" duration="22644000" />
+      <workItem from="1536830106945" duration="13746000" />
+      <workItem from="1537160793632" duration="795000" />
+      <workItem from="1537165491221" duration="9116000" />
+      <workItem from="1537337240446" duration="18109000" />
+      <workItem from="1537838000988" duration="1402000" />
+      <workItem from="1537926626458" duration="7647000" />
+      <workItem from="1538017756366" duration="20534000" />
+      <workItem from="1538106425929" duration="115000" />
+      <workItem from="1538115084982" duration="4404000" />
+      <workItem from="1538199730470" duration="1947000" />
+      <workItem from="1538269090833" duration="1235000" />
+      <workItem from="1538958913296" duration="4365000" />
+      <workItem from="1539046622233" duration="12971000" />
+      <workItem from="1539132671249" duration="2911000" />
+      <workItem from="1539161367946" duration="3248000" />
+      <workItem from="1539218770613" duration="23093000" />
+      <workItem from="1539594954268" duration="652000" />
+      <workItem from="1539651617453" duration="6936000" />
+      <workItem from="1539676339914" duration="1924000" />
+      <workItem from="1539764050979" duration="5282000" />
+      <workItem from="1539859677770" duration="2408000" />
+      <workItem from="1539910968479" duration="1399000" />
+      <workItem from="1539931657161" duration="606000" />
+      <workItem from="1540352123499" duration="1276000" />
+      <workItem from="1540546581347" duration="800000" />
+      <workItem from="1541058939699" duration="1000" />
+      <workItem from="1541406144169" duration="2563000" />
+      <workItem from="1541498444708" duration="1549000" />
+      <workItem from="1542175949936" duration="1574000" />
+      <workItem from="1542682980424" duration="8902000" />
+      <workItem from="1542865841582" duration="2360000" />
+      <workItem from="1543289752065" duration="238000" />
+      <workItem from="1543290024011" duration="5997000" />
+      <workItem from="1543300621935" duration="6765000" />
+      <workItem from="1543481315558" duration="850000" />
+      <workItem from="1543560530033" duration="2142000" />
+      <workItem from="1543915931156" duration="1538000" />
+      <workItem from="1543972604313" duration="2388000" />
+      <workItem from="1543990292807" duration="4545000" />
+      <workItem from="1544154964127" duration="827000" />
+      <workItem from="1544424091529" duration="2446000" />
+      <workItem from="1545101426532" duration="1336000" />
+      <workItem from="1545189618045" duration="751000" />
+      <workItem from="1545213435416" duration="683000" />
+      <workItem from="1545286117041" duration="1366000" />
+      <workItem from="1545358348936" duration="1995000" />
+      <workItem from="1545377440226" duration="723000" />
+      <workItem from="1545991000989" duration="1642000" />
+      <workItem from="1546069626314" duration="1084000" />
+      <workItem from="1546073620042" duration="2867000" />
+      <workItem from="1546398507773" duration="142000" />
+      <workItem from="1546398677375" duration="182000" />
+      <workItem from="1546398922184" duration="71000" />
+      <workItem from="1546833515500" duration="424000" />
+      <workItem from="1547716326951" duration="634000" />
+      <workItem from="1548298674923" duration="160000" />
+      <workItem from="1548315971778" duration="740000" />
+      <workItem from="1548316956016" duration="6602000" />
+      <workItem from="1548467603308" duration="317000" />
+      <workItem from="1548490956681" duration="3513000" />
+      <workItem from="1548755886335" duration="190000" />
+      <workItem from="1548758407278" duration="1854000" />
+      <workItem from="1548812009260" duration="185000" />
+      <workItem from="1548827704072" duration="1388000" />
+      <workItem from="1548920133067" duration="2229000" />
+      <workItem from="1549000027469" duration="258000" />
+      <workItem from="1549000418845" duration="9511000" />
+      <workItem from="1550047558168" duration="1305000" />
+      <workItem from="1550211375975" duration="744000" />
+      <workItem from="1550626952031" duration="599000" />
+      <workItem from="1551088285388" duration="6000" />
+      <workItem from="1551871307126" duration="199000" />
+      <workItem from="1551919839414" duration="3463000" />
+      <workItem from="1551934603805" duration="364000" />
+      <workItem from="1551945231552" duration="253000" />
+      <workItem from="1551952433844" duration="3600000" />
+      <workItem from="1551959372394" duration="1495000" />
+      <workItem from="1552015972807" duration="14018000" />
+      <workItem from="1552276751556" duration="25707000" />
+      <workItem from="1552351999164" duration="848000" />
+      <workItem from="1552352946716" duration="7950000" />
+      <workItem from="1553245298233" duration="1843000" />
+      <workItem from="1553258311937" duration="5000" />
+      <workItem from="1553665175280" duration="5910000" />
+      <workItem from="1553679852539" duration="4883000" />
+      <workItem from="1553734890361" duration="4782000" />
+      <workItem from="1553753039391" duration="4424000" />
+      <workItem from="1553830827004" duration="6786000" />
+      <workItem from="1553839759714" duration="5480000" />
+      <workItem from="1554099099166" duration="9440000" />
+      <workItem from="1554185093303" duration="1371000" />
+      <workItem from="1554276874692" duration="1865000" />
+      <workItem from="1554283294481" duration="932000" />
+      <workItem from="1555399123310" duration="4977000" />
+      <workItem from="1555404542450" duration="643000" />
+      <workItem from="1555657237973" duration="1198000" />
+      <workItem from="1555672485622" duration="16000" />
+      <workItem from="1556001553603" duration="419000" />
+      <workItem from="1556004205811" duration="163000" />
+      <workItem from="1556004446802" duration="1259000" />
+      <workItem from="1556006943010" duration="957000" />
+      <workItem from="1556009438646" duration="56000" />
+      <workItem from="1556179340942" duration="4268000" />
+      <workItem from="1556185268970" duration="2875000" />
+      <workItem from="1556248696429" duration="5769000" />
+      <workItem from="1556265725645" duration="6081000" />
+      <workItem from="1556416343121" duration="6858000" />
+      <workItem from="1557126633742" duration="18000" />
+      <workItem from="1557224562886" duration="666000" />
+      <workItem from="1557884763836" duration="26296000" />
+      <workItem from="1557918467690" duration="2825000" />
+      <workItem from="1557967897101" duration="353000" />
+      <workItem from="1557968513583" duration="27000" />
+      <workItem from="1557969433153" duration="580000" />
+      <workItem from="1560825845783" duration="5881000" />
+      <workItem from="1560838135653" duration="13096000" />
+      <workItem from="1560856987597" duration="182000" />
+      <workItem from="1561015680379" duration="418000" />
+      <workItem from="1561339516800" duration="6473000" />
+      <workItem from="1561424502750" duration="1254000" />
+      <workItem from="1561441344289" duration="3572000" />
+      <workItem from="1561516631712" duration="19488000" />
+      <workItem from="1561695249335" duration="7677000" />
+      <workItem from="1561964267962" duration="6580000" />
+      <workItem from="1562028752693" duration="19509000" />
+      <workItem from="1563179825029" duration="1000" />
+      <workItem from="1563183051179" duration="1365000" />
+      <workItem from="1564367963647" duration="11413000" />
+      <workItem from="1564382022314" duration="1604000" />
+      <workItem from="1564394095692" duration="278000" />
+      <workItem from="1564709974667" duration="642000" />
+      <workItem from="1566369471290" duration="65000" />
+      <workItem from="1566787758193" duration="650000" />
+      <workItem from="1567156552857" duration="120000" />
+      <workItem from="1574145783814" duration="4900000" />
+      <workItem from="1574222471179" duration="1634000" />
+      <workItem from="1576458911037" duration="2323000" />
+      <workItem from="1577763350313" duration="6951000" />
+      <workItem from="1577927503235" duration="10412000" />
+      <workItem from="1578013316407" duration="309000" />
+    </task>
+    <task id="LOCAL-00001" summary="init 2">
+      <created>1531911361568</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531911361568</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init 3">
+      <created>1531961429592</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531961429593</updated>
+    </task>
+    <task id="LOCAL-00003" summary="upload file with dir">
+      <created>1532059442410</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532059442410</updated>
+    </task>
+    <task id="LOCAL-00004" summary="视频已实现功能:权限检测、视频文件有效性检测、视频是否存在检测">
+      <created>1532330054932</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532330054932</updated>
+    </task>
+    <task id="LOCAL-00005" summary="视频已实现功能002:Excel信息解析">
+      <created>1532410960322</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532410960323</updated>
+    </task>
+    <task id="LOCAL-00006" summary="jms集成">
+      <created>1532512317103</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532512317103</updated>
+    </task>
+    <task id="LOCAL-00007" summary="日志输出到elk">
+      <created>1532682063624</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532682063624</updated>
+    </task>
+    <task id="LOCAL-00008" summary="实时聊天demo">
+      <created>1533786564848</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1533786564848</updated>
+    </task>
+    <task id="LOCAL-00009" summary="shiro+jwt">
+      <created>1534404636846</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1534404636846</updated>
+    </task>
+    <task id="LOCAL-00010" summary="download novel">
+      <created>1534997462901</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1534997462901</updated>
+    </task>
+    <task id="LOCAL-00011" summary="excel export in file-upload module">
+      <created>1535523367720</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1535523367720</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update excel export in file-upload module">
+      <created>1535612217558</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1535612217558</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修复excel导出文件,名称中文乱码问题">
+      <created>1535677347489</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1535677347489</updated>
+    </task>
+    <task id="LOCAL-00014" summary="security+jwt">
+      <created>1536202055240</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536202055240</updated>
+    </task>
+    <task id="LOCAL-00015" summary="language change">
+      <created>1536205674332</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1536205674332</updated>
+    </task>
+    <task id="LOCAL-00016" summary="日常更新">
+      <created>1536918897356</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1536918897356</updated>
+    </task>
+    <task id="LOCAL-00017" summary="日常更新02">
+      <created>1537263957362</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1537263957362</updated>
+    </task>
+    <task id="LOCAL-00018" summary="添加MongoDB  连接Vue">
+      <created>1538047786697</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1538047786697</updated>
+    </task>
+    <task id="LOCAL-00019" summary="改进对y-blog项目支持">
+      <created>1538133888939</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1538133888939</updated>
+    </task>
+    <task id="LOCAL-00020" summary="日常更新03">
+      <created>1539069487558</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1539069487558</updated>
+    </task>
+    <task id="LOCAL-00021" summary="日常更新04">
+      <created>1539165228821</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1539165228821</updated>
+    </task>
+    <task id="LOCAL-00022" summary="对接VUE轮播图管理">
+      <created>1539333677828</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1539333677828</updated>
+    </task>
+    <task id="LOCAL-00023" summary="初步对接Markdown">
+      <created>1539775546089</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1539775546089</updated>
+    </task>
+    <task id="LOCAL-00024" summary="springboot webflux">
+      <created>1539862066930</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1539862066930</updated>
+    </task>
+    <task id="LOCAL-00025" summary="日常更新05">
+      <created>1543481558276</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1543481558276</updated>
+    </task>
+    <task id="LOCAL-00026" summary="日常更新06">
+      <created>1545189711463</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1545189711463</updated>
+    </task>
+    <task id="LOCAL-00027" summary="日常更新06">
+      <created>1548812154920</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1548812154920</updated>
+    </task>
+    <task id="LOCAL-00028" summary="日常更新06">
+      <created>1549010120162</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1549010120163</updated>
+    </task>
+    <task id="LOCAL-00029" summary="日常更新07">
+      <created>1551960850568</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1551960850568</updated>
+    </task>
+    <task id="LOCAL-00030" summary="日常更新08">
+      <created>1552272729909</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1552272729909</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add my-file-upload">
+      <created>1552306947672</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1552306947672</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add my-blog">
+      <created>1553689803580</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1553689803581</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add manage my-blog">
+      <created>1553756802353</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1553756802353</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update manage blog">
+      <created>1554119960735</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1554119960735</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update dependencies">
+      <created>1556004947456</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1556004947456</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update blog">
+      <created>1556193955833</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1556193955833</updated>
+    </task>
+    <task id="LOCAL-00037" summary="learn Oauth2">
+      <created>1560857154605</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1560857154605</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update mail">
+      <created>1564394352540</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1564394352540</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add dubbo learn">
+      <created>1574222629996</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1574222629996</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add rtsp test">
+      <created>1577959512704</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1577959512704</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update">
+      <created>1578013472855</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1578013472855</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FileUploadApplicationTests_testRedisZadd - 2018.12.29 at 15h 58m 39s.xml">
+      <configuration name="FileUploadApplicationTests.testRedisZadd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileUploadApplicationTests_testRedisZadd - 2018.12.29 at 15h 59m 53s.xml">
+      <configuration name="FileUploadApplicationTests.testRedisZadd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileUploadApplicationTests_testRedisZadd - 2018.12.29 at 16h 54m 04s.xml">
+      <configuration name="FileUploadApplicationTests.testRedisZadd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileUploadApplicationTests_testRedisZadd - 2018.12.29 at 17h 10m 05s.xml">
+      <configuration name="FileUploadApplicationTests.testRedisZadd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileUploadApplicationTests_testRedisZadd - 2018.12.29 at 17h 12m 47s.xml">
+      <configuration name="FileUploadApplicationTests.testRedisZadd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileUploadApplicationTests_testRedisZadd - 2018.12.29 at 17h 23m 14s.xml">
+      <configuration name="FileUploadApplicationTests.testRedisZadd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testUpdate - 2019.01.29 at 18h 53m 05s.xml">
+      <configuration name="UserManagerTest.testUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_findAll - 2019.01.29 at 18h 56m 33s.xml">
+      <configuration name="UserManagerTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_findAll - 2019.01.29 at 18h 57m 28s.xml">
+      <configuration name="UserManagerTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BlogApplicationTests_testGetStorage - 2019.04.26 at 16h 27m 04s.xml">
+      <configuration name="BlogApplicationTests.testGetStorage" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1008048000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5694165" visible="true" weight="0.1652452" />
+      <window_info id="Structure" order="1" sideWeight="0.49946752" weight="0.2491731" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Web" order="5" sideWeight="0.4305835" side_tool="true" weight="0.21609703" />
+      <window_info id="Favorites" order="6" sideWeight="0.5005325" side_tool="true" weight="0.2491731" />
+      <window_info id="Designer" order="7" />
+      <window_info content_ui="combo" id="Hierarchy" order="8" sideWeight="0.33231708" side_tool="true" weight="0.21389195" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32694355" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36714444" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.399361" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290735" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50551265" side_tool="true" visible="true" weight="0.47020584" />
+      <window_info anchor="bottom" id="SQL Generator" order="8" weight="0.32921347" />
+      <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.3289183" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3290735" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32800853" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.3290735" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.38445154" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3217768" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49448732" weight="0.29144096" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.27843988" />
+      <window_info anchor="bottom" id="Database Changes" order="17" />
+      <window_info anchor="bottom" id="Statistic" order="18" />
+      <window_info anchor="bottom" id="Docker" order="19" show_stripe_button="false" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="20" />
+      <window_info anchor="bottom" id="File Transfer" order="21" weight="0.3290735" />
+      <window_info anchor="right" id="Mongo Explorer" order="0" weight="0.11727079" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Maven" order="2" weight="0.33777776" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.15480845" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.20801233" />
+      <window_info anchor="right" id="Quick Notes" order="11" />
+      <window_info anchor="right" id="ReST Console" order="12" weight="0.32934132" />
+      <window_info anchor="right" id="Remote Host" order="13" weight="0.2219768" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="language change" />
+    <MESSAGE value="日常更新" />
+    <MESSAGE value="日常更新02" />
+    <MESSAGE value="添加MongoDB  连接Vue" />
+    <MESSAGE value="改进对y-blog项目支持" />
+    <MESSAGE value="日常更新03" />
+    <MESSAGE value="日常更新04" />
+    <MESSAGE value="对接VUE轮播图管理" />
+    <MESSAGE value="初步对接Markdown" />
+    <MESSAGE value="springboot webflux" />
+    <MESSAGE value="日常更新05" />
+    <MESSAGE value="日常更新06" />
+    <MESSAGE value="日常更新07" />
+    <MESSAGE value="日常更新08" />
+    <MESSAGE value="add my-file-upload" />
+    <MESSAGE value="add my-blog" />
+    <MESSAGE value="add manage my-blog" />
+    <MESSAGE value="update manage blog" />
+    <MESSAGE value="update dependencies" />
+    <MESSAGE value="update blog" />
+    <MESSAGE value="learn Oauth2" />
+    <MESSAGE value="update mail" />
+    <MESSAGE value="add dubbo learn" />
+    <MESSAGE value="add rtsp test" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../repo/org/springframework/security/oauth/spring-security-oauth2/2.1.5.RELEASE/spring-security-oauth2-2.1.5.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mybatis-redis/src/main/java/com/potoyang/learn/mybatisredis/TestService.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../repo/org/springframework/security/spring-security-config/5.1.4.RELEASE/spring-security-config-5.1.4.RELEASE-sources.jar!/org/springframework/security/config/annotation/authentication/configuration/AuthenticationConfiguration.java</url>
+          <line>288</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../repo/org/springframework/security/oauth/spring-security-oauth2/2.1.5.RELEASE/spring-security-oauth2-2.1.5.RELEASE-sources.jar!/org/springframework/security/oauth2/config/annotation/builders/ClientDetailsServiceBuilder.java</url>
+          <line>110</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((UsernamePasswordAuthenticationToken)principal).details" custom="org.springframework.security.authentication.UsernamePasswordAuthenticationToken" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/../../repo/org/mybatis/mybatis/3.4.6/mybatis-3.4.6-sources.jar!/org/apache/ibatis/transaction/jdbc/JdbcTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3.jar!/us/codecraft/webmagic/downloader/HttpClientGenerator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/downloader/HttpClientGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="34" column="13" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/downloader/HttpClientDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="25" lean-forward="true" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+          <folding>
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/selector/HtmlNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/SendMailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="145" column="46" lean-forward="true" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/selector/CssSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1136">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/selector/Selectable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/selector/AbstractSelectable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/us/codecraft/webmagic-core/0.7.3/webmagic-core-0.7.3-sources.jar!/us/codecraft/webmagic/selector/XpathSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/GithubRepoPageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/MailApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/MyHttpClientGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail/src/main/java/com/potoyang/learn/mail/MyHttpClientDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="110" column="99" selection-start-line="110" selection-start-column="99" selection-end-line="110" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/java/com/potoyang/learn/fileupload/service/impl/FileUploadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/java/com/potoyang/learn/fileupload/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="120" column="54" selection-start-line="120" selection-start-column="54" selection-end-line="120" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-oauth2/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file-upload/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit-test-sample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-file-upload/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-api/src/main/java/com/potoyang/learn/MyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/dubbo-provider.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/java/com/potoyang/learn/controller/MyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/java/com/potoyang/learn/ConsumerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/java/com/potoyang/learn/ProviderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-consumer/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-parent/dubbo-provider/src/main/java/com/potoyang/learn/service/MyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/test/RtspTest.java" />
+    <entry file="file://$PROJECT_DIR$/get-some-novel/src/main/java/com/potoyang/learn/getsomenovel/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get-some-novel/src/main/java/com/potoyang/learn/getsomenovel/service/impl/NovelDownloadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1473">
+          <caret line="99" column="44" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8-sources.jar!/org/apache/http/impl/client/CloseableHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8-sources.jar!/org/apache/http/impl/client/DefaultHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="113" column="49" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../repo/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8-sources.jar!/org/apache/http/client/config/RequestConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7125">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyUtil/src/HttpClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test2.js" />
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test.js" />
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtsp-test/src/main/resources/test3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>dubbo-api:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jquery</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>rtsp-test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

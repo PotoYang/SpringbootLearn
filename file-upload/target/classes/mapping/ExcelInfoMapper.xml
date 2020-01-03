@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.potoyang.learn.fileupload.mapper.ExcelInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.potoyang.learn.fileupload.entity.ExcelInfo" >
+    <result column="program_set_id" property="programSetId" jdbcType="INTEGER" />
+    <result column="program_set_name" property="programSetName" jdbcType="VARCHAR" />
+    <result column="program_id" property="programId" jdbcType="INTEGER" />
+    <result column="program_name" property="programName" jdbcType="VARCHAR" />
+    <result column="period_number" property="periodNumber" jdbcType="INTEGER" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.potoyang.learn.fileupload.entity.ExcelInfo" >
+    insert into excel_info (program_set_id, program_set_name, program_id, 
+      program_name, period_number, path
+      )
+    values (#{programSetId,jdbcType=INTEGER}, #{programSetName,jdbcType=VARCHAR}, #{programId,jdbcType=INTEGER}, 
+      #{programName,jdbcType=VARCHAR}, #{periodNumber,jdbcType=INTEGER}, #{path,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.potoyang.learn.fileupload.entity.ExcelInfo" >
+    insert into excel_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="programSetId != null" >
+        program_set_id,
+      </if>
+      <if test="programSetName != null" >
+        program_set_name,
+      </if>
+      <if test="programId != null" >
+        program_id,
+      </if>
+      <if test="programName != null" >
+        program_name,
+      </if>
+      <if test="periodNumber != null" >
+        period_number,
+      </if>
+      <if test="path != null" >
+        path,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="programSetId != null" >
+        #{programSetId,jdbcType=INTEGER},
+      </if>
+      <if test="programSetName != null" >
+        #{programSetName,jdbcType=VARCHAR},
+      </if>
+      <if test="programId != null" >
+        #{programId,jdbcType=INTEGER},
+      </if>
+      <if test="programName != null" >
+        #{programName,jdbcType=VARCHAR},
+      </if>
+      <if test="periodNumber != null" >
+        #{periodNumber,jdbcType=INTEGER},
+      </if>
+      <if test="path != null" >
+        #{path,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

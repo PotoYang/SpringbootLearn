@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "config",
+      "type": "com.potoyang.learn.blog.config.MyConfig",
+      "sourceType": "com.potoyang.learn.blog.config.MyConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "config.blog-save-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.potoyang.learn.blog.config.MyConfig"
+    }
+  ],
+  "hints": []
+}

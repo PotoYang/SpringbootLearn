@@ -1,0 +1,11 @@
+spring:
+  mail:
+    host: smtp.ipanel.cn
+    protocol: smtp
+    port: 25
+    default-encoding: UTF-8
+#    username:
+#    password:
+#    username: ipaneltest001@163.com
+#    password: ipanel123456
+
