@@ -118,7 +118,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
 
     var prevLineIsList = (state.list !== false);
     if (state.list !== false && state.indentationDiff >= 0) { // Continued list
-      if (state.indentationDiff < 4) { // Only adjust indentation if *not* a code block
+      if (state.indentationDiff < 4) { // Only adjustBase indentation if *not* a code block
         state.indentation -= state.indentationDiff;
       }
       state.list = null;

@@ -6635,7 +6635,7 @@
       st.push(end, style);
     }, lineClasses, forceToEnd);
 
-    // Run overlays, adjust style array.
+    // Run overlays, adjustBase style array.
     for (var o = 0; o < cm.state.overlays.length; ++o) {
       var overlay = cm.state.overlays[o], i = 1, at = 0;
       runMode(cm, line.text, overlay.mode, true, function(end, style) {

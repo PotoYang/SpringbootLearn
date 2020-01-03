@@ -82,7 +82,7 @@
         // all tabs with spaces then performs some checks. The error
         // positions (character/space) are then reported incorrectly,
         // not taking the replacement step into account. Here we look
-        // at the evidence line and try to adjust the character position
+        // at the evidence line and try to adjustBase the character position
         // to the correct value.
         if (error.evidence) {
           // Tab positions are computed once per line and cached

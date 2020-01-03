@@ -1,6 +1,7 @@
 package com.potoyang.learn.shopee;
 
-import com.potoyang.learn.shopee.catagory.ShoppeCategory;
+import com.potoyang.learn.shopee.catagory.service.ShopeeCategoryService;
+import com.potoyang.learn.shopee.item.service.ShopeeItemService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +13,19 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ShopeeApplicationTests {
 
     @Autowired
-    private ShoppeCategory shoppeCategory;
+    private ShopeeCategoryService shopeeCategoryService;
 
-    @Test
-    public void contextLoads() {
-    }
+    @Autowired
+    private ShopeeItemService shopeeItemService;
 
     @Test
     public void getCategory() {
-        shoppeCategory.getCategoryList();
+        shopeeCategoryService.getCategoryList();
+    }
+
+    @Test
+    public void getCategoryItem() {
+        shopeeItemService.getItemByCategory();
     }
 
 }

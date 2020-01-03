@@ -1806,7 +1806,7 @@ layui.define('jquery', function (exports) {
                         return;
                 }
                 // For button 1, if it was clicked inside the editor
-                // (posFromMouse returning non-null), we have to adjust the
+                // (posFromMouse returning non-null), we have to adjustBase the
                 // selection.
                 if (!start) {
                     if (e_target(e) == display.scroller) e_preventDefault(e);
@@ -4937,7 +4937,7 @@ layui.define('jquery', function (exports) {
                     st.push(end, style);
                 });
 
-                // Run overlays, adjust style array.
+                // Run overlays, adjustBase style array.
                 for (var o = 0; o < cm.state.overlays.length; ++o) {
                     var overlay = cm.state.overlays[o], i = 1, at = 0;
                     runMode(cm, line.text, overlay.mode, true, function (end, style) {
@@ -5230,7 +5230,7 @@ layui.define('jquery', function (exports) {
                 var firstLine = getLine(doc, from.line), lastLine = getLine(doc, to.line);
                 var lastText = lst(text), lastSpans = spansFor(text.length - 1), nlines = to.line - from.line;
 
-                // First adjust the line structure
+                // First adjustBase the line structure
                 if (from.ch == 0 && to.ch == 0 && lastText == "") {
                     // This is a whole-line replace. Treated specially to make
                     // sure line objects move the way they are supposed to.
@@ -7301,7 +7301,7 @@ layui.define('jquery', function (exports) {
 
             var prevLineIsList = (state.list !== false);
             if (state.list !== false && state.indentationDiff >= 0) { // Continued list
-                if (state.indentationDiff < 4) { // Only adjust indentation if *not* a code block
+                if (state.indentationDiff < 4) { // Only adjustBase indentation if *not* a code block
                     state.indentation -= state.indentationDiff;
                 }
                 state.list = null;

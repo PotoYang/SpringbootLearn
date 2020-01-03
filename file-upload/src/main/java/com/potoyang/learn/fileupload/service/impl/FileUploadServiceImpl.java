@@ -20,7 +20,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.scheduling.annotation.Async;
@@ -52,17 +51,20 @@ import java.util.Map;
 public class FileUploadServiceImpl implements FileUploadService {
     private final Logger logger = LoggerFactory.getLogger(FileUploadServiceImpl.class);
     private Path rootPath;
-    @Autowired
-    private StringRedisTemplate stringRedisTemplate;
-    @Autowired
-    private UserInfoMapper userInfoMapper;
-    @Autowired
-    private ExcelInfoMapper excelInfoMapper;
+    private final StringRedisTemplate stringRedisTemplate;
+    private final UserInfoMapper userInfoMapper;
+    private final ExcelInfoMapper excelInfoMapper;
 
     @Value("${upload.chunkSize}")
     private static long CHUNK_SIZE;
     @Value("${upload.dir}")
     private String finalDirPath;
+
+    public FileUploadServiceImpl(StringRedisTemplate stringRedisTemplate, UserInfoMapper userInfoMapper, ExcelInfoMapper excelInfoMapper) {
+        this.stringRedisTemplate = stringRedisTemplate;
+        this.userInfoMapper = userInfoMapper;
+        this.excelInfoMapper = excelInfoMapper;
+    }
 
     @Override
     public String checkPermission(Integer userId) {

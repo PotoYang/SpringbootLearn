@@ -1,8 +1,10 @@
 package com.potoyang.learn.getsomenovel.entity;
 
+
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,7 +19,7 @@ import java.io.Serializable;
  */
 @Data
 @Entity
-@Table
+@Table(name = "nove_all")
 @DynamicUpdate
 @DynamicInsert
 public class NovelAll implements Serializable {

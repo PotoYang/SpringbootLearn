@@ -109,4 +109,32 @@ public class HttpClientService {
         }
         return result;
     }
+
+    /**
+     * 带参数的get请求，如果状态码为200，则返回body，如果不为200，则返回null
+     */
+    public HttpResult doGet(String url, Map<String, String> headers, Map<String, String> params) throws Exception {
+        StringBuilder paramStr = new StringBuilder();
+        if (params != null) {
+            params.forEach((k, v) -> {
+                paramStr.append("&").append(k).append("=").append(v);
+            });
+        }
+
+        HttpGet httpGet = new HttpGet(url + paramStr.toString().substring(1));
+        httpGet.setConfig(config);
+
+        if (headers != null) {
+            headers.forEach(httpGet::addHeader);
+        }
+
+        HttpResult result;
+
+        // 发起请求
+        try (CloseableHttpResponse response = this.httpClient.execute(httpGet)) {
+            HttpEntity entity = response.getEntity();
+            result = new HttpResult(response.getStatusLine().getStatusCode(), EntityUtils.toString(entity, "UTF-8"));
+        }
+        return result;
+    }
 }
