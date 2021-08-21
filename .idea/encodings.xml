@@ -33,7 +33,9 @@
     <file url="file://$PROJECT_DIR$/mystarter-spring-boot-starter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rtsp-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rtsp-test/src/main/java/rtsp/HttpClientService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rtsp-test/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-jwt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-jwt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security-jwt/src/main/resources" charset="UTF-8" />
