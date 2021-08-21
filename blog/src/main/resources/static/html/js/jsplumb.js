@@ -4345,7 +4345,7 @@
                                     var _one = function (_e) {
                                         if (_e[1] != null) {
                                             // run the reported offset through the code that takes parent containers
-                                            // into account, to adjust if necessary (issue 554)
+                                            // into account, to adjustBase if necessary (issue 554)
                                             uip = _currentInstance.getUIPosition([{
                                                 el: _e[2].el,
                                                 pos: [_e[1].left, _e[1].top]
@@ -7388,7 +7388,7 @@
                     op.offsetParent === container ? null : op.offsetParent;
             }
 
-            // if container is scrolled and the element (or its offset parent) is not absolute or fixed, adjust accordingly.
+            // if container is scrolled and the element (or its offset parent) is not absolute or fixed, adjustBase accordingly.
             if (container != null && !relativeToRoot && (container.scrollTop > 0 || container.scrollLeft > 0)) {
                 var pp = el.offsetParent != null ? this.getStyle(el.offsetParent, "position") : "static",
                     p = this.getStyle(el, "position");
@@ -9589,7 +9589,7 @@
 
                     var overlayExtents = {minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity};
 
-                    // compute overlays. we do this first so we can get their placements, and adjust the
+                    // compute overlays. we do this first so we can get their placements, and adjustBase the
                     // container if needs be (if an overlay would be clipped)
                     for (var i in this._jsPlumb.overlays) {
                         if (this._jsPlumb.overlays.hasOwnProperty(i)) {
@@ -13767,7 +13767,7 @@
                             ac: ac
                         });
                     } else {
-                        // dx + dy are used to adjust for line width.
+                        // dx + dy are used to adjustBase for line width.
                         var dx = (current[2] === current[0]) ? 0 : (current[2] > current[0]) ? (paintInfo.lw / 2) : -(paintInfo.lw / 2),
                             dy = (current[3] === current[1]) ? 0 : (current[3] > current[1]) ? (paintInfo.lw / 2) : -(paintInfo.lw / 2);
 
@@ -14264,7 +14264,7 @@
                 _tx = params.sourcePos[0] < params.targetPos[0] ? w : 0,
                 _ty = params.sourcePos[1] < params.targetPos[1] ? h : 0;
 
-            // now adjust for the margin
+            // now adjustBase for the margin
             if (params.sourcePos[2] === 0) {
                 _sx -= margin;
             }
@@ -15192,7 +15192,7 @@
             // here the position reported to us by Katavorio is relative to the element's offsetParent. For top
             // level nodes that is fine, but if we have a nested draggable then its offsetParent is actually
             // not going to be the jsplumb container; it's going to be some child of that element. In that case
-            // we want to adjust the UI position to account for the offsetParent's position relative to the Container
+            // we want to adjustBase the UI position to account for the offsetParent's position relative to the Container
             // origin.
             var el = eventArgs[0].el;
             if (el.offsetParent == null) {

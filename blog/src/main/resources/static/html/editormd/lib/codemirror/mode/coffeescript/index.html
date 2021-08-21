@@ -443,7 +443,7 @@ _.defer = (func) ->
 
 
 # Returns the first function passed as an argument to the second,
-# allowing you to adjust arguments, run code before and after, and
+# allowing you to adjustBase arguments, run code before and after, and
 # conditionally execute the original function.
 _.wrap = (func, wrapper) ->
   -> wrapper.apply wrapper, [func].concat arguments
